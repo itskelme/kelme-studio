@@ -14,8 +14,19 @@ const config: Config = {
 			screens: {
 				xs: "480px",
 			},
+			fontFamily: {
+				sans: ['var(--font-manrope)', 'sans-serif'],
+				mono: ['var(--font-space-mono)', 'monospace'],
+			},
 			colors: {
 				// Kelme Studio Custom Colors
+				harpia: {
+					black: '#030303',
+					dark: '#0A0A0A',
+					gray: '#1F1F1F',
+					gold: '#D4AF37',
+					silver: '#C0C0C0'
+				},
 				emerald: {
 					DEFAULT: "var(--color-emerald)",
 					light: "var(--color-emerald-light)",
@@ -94,6 +105,14 @@ const config: Config = {
 				text: 'text',
 			},
 			keyframes: {
+				scan: {
+					'0%': { top: '0%' },
+					'100%': { top: '100%' }
+				},
+				blink: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
 				"accordion-down": {
 					from: {
 						height: "0",
@@ -112,6 +131,9 @@ const config: Config = {
 				},
 			},
 			animation: {
+				'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'scan': 'scan 4s linear infinite',
+				'blink': 'blink 1s step-end infinite',
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				fadeIn: "fadeIn 0.5s ease-in-out",

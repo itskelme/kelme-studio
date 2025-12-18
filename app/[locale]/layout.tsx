@@ -49,11 +49,12 @@ export default async function RootLayout({
   const messages = await getMessages();
   
   return (
-    <html lang={locale} className={`${satoshi.variable} ${rubik.variable} antialiased dark`}>
+    <html lang={locale} className={`${manrope.variable} ${spaceMono.variable} antialiased scroll-smooth`}>
       <head>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" strategy="beforeInteractive" />
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" strategy="beforeInteractive" />
       </head>
-      <body className="font-satoshi bg-[#0F0E0D] text-[#F7F7F7]">
+      <body className="font-sans bg-harpia-black text-gray-100 overflow-x-hidden cursor-none">
         <NextIntlClientProvider locale={locale} messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
