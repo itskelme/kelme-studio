@@ -46,7 +46,11 @@ export async function generatePageMetadata({
   const localePrefix = locale === 'en' ? '' : locale;
   const canonical = `/${localePrefix}${pathSuffix}`;
   
+  // Define base URL for metadata (production or development)
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  
   return {
+    metadataBase: new URL(baseUrl),
     title: t(`${parts[1]}.${titleKey}`),
     description: t(`${parts[1]}.${descriptionKey}`),
     alternates: {

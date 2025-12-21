@@ -30,7 +30,7 @@ const spaceMono = Space_Mono({
 export async function generateMetadata({
   params
 }: {
-  params: { locale: AppLocale };
+  params: Promise<{ locale: AppLocale }>;
 }): Promise<Metadata> {
   return generatePageMetadata({
     namespace: 'metadata.home',
@@ -45,7 +45,7 @@ export default async function RootLayout({
   params 
 }: { 
   children: ReactNode;
-  params: Promise<{ locale: AppLocale }>
+  params: { locale: AppLocale }
 }) {
   const locale = await getLocale();
   const messages = await getMessages();
