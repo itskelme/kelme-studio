@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params
 }: {
-  params: { locale: AppLocale };
+  params: Promise<{ locale: AppLocale }>;
 }): Promise<Metadata> {
   return generatePageMetadata({
     namespace: 'metadata.work',
@@ -26,10 +26,11 @@ export async function generateMetadata({
 }
 
 export default async function WorkPage({
-  params: { locale }
+  params
 }: {
-  params: { locale: AppLocale };
+  params: Promise<{ locale: AppLocale }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'work' });
   
   return (

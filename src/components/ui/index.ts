@@ -11,6 +11,9 @@ export * from './button';
 export * from './mega-dropdown';
 export * from './typewriter';
 export * from './text-rotator';
+export * from './grid-overlay';
+export * from './custom-cursor';
 
 // Tipos
 export type { FAQItem } from './faq-schema';
+export type { CursorVariant } from './custom-cursor';

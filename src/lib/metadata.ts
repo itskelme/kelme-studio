@@ -6,7 +6,7 @@ export type MetadataProps = {
   namespace: string;
   titleKey: string;
   descriptionKey: string;
-  params: { locale: AppLocale };
+  params: Promise<{ locale: AppLocale }>;
   path?: string; // Caminho da página após o locale, ex: "contact" para "/pt/contact"
 };
 
@@ -21,11 +21,14 @@ export async function generatePageMetadata({
   params,
   path = "",
 }: MetadataProps): Promise<Metadata> {
+  // Await params before accessing properties (Next.js 15 requirement)
+  const { locale } = await params;
+  
   // Obtém as traduções para o locale atual
   // O namespace deve ser uma string separada por pontos como "metadata.home"
   // Extraímos as partes para navegar corretamente na estrutura JSON
   const parts = namespace.split('.');
-  const t = await getTranslations({ locale: params.locale, namespace: parts[0] });
+  const t = await getTranslations({ locale, namespace: parts[0] });
   
   // Prepara URLs alternativas para cada idioma suportado
   const alternativeLanguages: Record<string, string> = {};
@@ -40,7 +43,7 @@ export async function generatePageMetadata({
   });
   
   // Constrói URL canônica
-  const localePrefix = params.locale === 'en' ? '' : params.locale;
+  const localePrefix = locale === 'en' ? '' : locale;
   const canonical = `/${localePrefix}${pathSuffix}`;
   
   return {

@@ -235,5 +235,11 @@
     "faq4Answer": "Cost is based on the complexity, scope, and timeline of the project. Factors such as number of pages, custom features, exclusive design, and system integrations affect the price. We offer a transparent and detailed quote after our initial consultation.",
     "faq5Question": "Do you offer support after launch?",
     "faq5Answer": "Yes, we offer ongoing support and maintenance packages after launch. This includes security updates, bug fixes, minor improvements, and performance monitoring to ensure your project continues to run smoothly."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved. Let's get you back on track.",
+    "goHome": "Go Home",
+    "goBack": "Go Back"
   }
 }

@@ -7,6 +7,8 @@ import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { AppLocale, locales } from '@/i18n/routing';
 import { generatePageMetadata } from '@/lib/metadata';
+import { GridOverlay } from '@/components/ui/grid-overlay';
+import { CustomCursor } from '@/components/ui/custom-cursor';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -43,18 +45,16 @@ export default async function RootLayout({
   params 
 }: { 
   children: ReactNode;
-  params: { locale: AppLocale }
+  params: Promise<{ locale: AppLocale }>
 }) {
   const locale = await getLocale();
   const messages = await getMessages();
   
   return (
     <html lang={locale} className={`${manrope.variable} ${spaceMono.variable} antialiased scroll-smooth`}>
-      <head>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" strategy="beforeInteractive" />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" strategy="beforeInteractive" />
-      </head>
-      <body className="font-sans bg-harpia-black text-gray-100 overflow-x-hidden cursor-none">
+      <body className="font-sans bg-black text-gray-100 overflow-x-hidden">
+        <CustomCursor />
+        <GridOverlay />
         <NextIntlClientProvider locale={locale} messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

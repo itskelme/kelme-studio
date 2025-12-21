@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params
 }: {
-  params: { locale: AppLocale };
+  params: Promise<{ locale: AppLocale }>;
 }): Promise<Metadata> {
   return generatePageMetadata({
     namespace: 'metadata.home',
@@ -41,7 +41,7 @@ export default async function HomeLocalePage({ params }:{ params: Promise<{ loca
     <>
       <OrganizationSchema />
       
-      <main className="min-h-screen bg-[#0F0E0D]">
+      <main className="min-h-screen bg-black relative">
         <Navbar />
         <Hero />
         <Services />

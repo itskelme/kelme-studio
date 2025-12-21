@@ -46,7 +46,6 @@
     "embla-carousel-react": "latest",
     "framer-motion": "latest",
     "geist": "^1.5.1",
-    "gsap": "^3.14.2",
     "input-otp": "1.4.1",
     "jsrepo": "^2.5.2",
     "lucide-react": "^0.454.0",
@@ -57,7 +56,7 @@
     "react": "19.2.3",
     "react-country-flag": "^3.1.0",
     "react-dom": "19.2.3",
-    "react-hook-form": "^7.68.0",
+    "react-hook-form": "^7.69.0",
     "react-resizable-panels": "^2.1.9",
     "react-use-measure": "latest",
     "recharts": "2.15.4",
@@ -77,13 +76,7 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "@types/react": "19.1.12",
-    "@types/react-dom": "19.1.9"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.2.7",
-      "@types/react-dom": "19.2.3"
-    }
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
   }
 }

@@ -21,8 +21,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params
 }: {
-  params: { locale: AppLocale };
+  params: Promise<{ locale: AppLocale }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const baseMetadata = await generatePageMetadata({
     namespace: 'metadata.contact',
     titleKey: 'title',
@@ -45,7 +46,7 @@ export async function generateMetadata({
           alt: 'Kelme Studio - Contato',
         }
       ],
-      locale: params.locale,
+      locale: locale,
       type: 'website',
     },
     twitter: {

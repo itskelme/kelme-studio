@@ -1,13 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { TextPlugin } from 'gsap/TextPlugin';
-
-// Registrar plugin TextPlugin do GSAP
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(TextPlugin);
-}
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface TypewriterProps {
   text: string;
@@ -30,66 +24,61 @@ export function Typewriter({
   repeatDelay = 2,
   onComplete
 }: TypewriterProps) {
-  const textRef = useRef<HTMLDivElement>(null);
-  const cursorRef = useRef<HTMLSpanElement>(null);
+  const [displayText, setDisplayText] = useState('');
+  const [isComplete, setIsComplete] = useState(false);
+  const [isRepeating, setIsRepeating] = useState(false);
 
   useEffect(() => {
-    const element = textRef.current;
-    const cursorElement = cursorRef.current;
-    if (!element) return;
-
-    // Configurar elemento como vazio inicialmente
-    gsap.set(element, { text: "" });
-
-    // Criar timeline para animar a digitação
-    const tl = gsap.timeline({
-      delay: delay / 1000,
-      onComplete: () => {
+    let timeout: NodeJS.Timeout;
+    
+    const startTyping = () => {
+      if (displayText.length < text.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(text.substring(0, displayText.length + 1));
+        }, 1000 / speed);
+      } else if (!isComplete) {
+        setIsComplete(true);
         if (onComplete) onComplete();
-      }
-    });
-
-    // Animar a digitação do texto
-    tl.to(element, {
-      duration: text.length / (speed / 10), // Duração baseada no comprimento do texto e velocidade
-      text: text,
-      ease: "none"
-    });
-
-    // Se tiver cursor, animar o piscar
-    if (cursor && cursorElement) {
-      gsap.to(cursorElement, {
-        opacity: 0,
-        duration: 0.5,
-        repeat: -1,
-        yoyo: true,
-        ease: "power2.inOut"
-      });
-    }
-
-    // Configurar repetição se necessário
-    if (repeat) {
-      tl.to(element, {
-        duration: repeatDelay,
-        text: "",
-        delay: repeatDelay,
-        ease: "none"
-      }).repeat(-1);
-    }
-
-    return () => {
-      // Limpar animações ao desmontar
-      tl.kill();
-      if (cursor) {
-        gsap.killTweensOf(cursorElement);
+        
+        if (repeat) {
+          timeout = setTimeout(() => {
+            setDisplayText('');
+            setIsComplete(false);
+            setIsRepeating(true);
+          }, repeatDelay * 1000);
+        }
       }
     };
-  }, [text, speed, delay, cursor, repeat, repeatDelay, onComplete]);
+
+    if (delay > 0 && displayText.length === 0 && !isRepeating) {
+      timeout = setTimeout(() => {
+        setIsRepeating(true);
+        startTyping();
+      }, delay);
+    } else {
+      startTyping();
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, text, speed, delay, repeat, repeatDelay, isComplete, isRepeating, onComplete]);
 
   return (
     <div className={`inline-flex items-center ${className}`}>
-      <div ref={textRef}></div>
-      {cursor && <span ref={cursorRef} className="ml-0.5 text-[#27D182]">|</span>}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        {displayText}
+      </motion.div>
+      {cursor && (
+        <motion.span 
+          className="ml-0.5 text-[#27D182]"
+          animate={{ opacity: [1, 0, 1] }}
+          transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+        >
+          |
+        </motion.span>
+      )}
     </div>
   );
 }

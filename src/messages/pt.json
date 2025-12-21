@@ -229,5 +229,11 @@
     "faq4Answer": "O custo é baseado na complexidade, escopo e prazo do projeto. Fatores como número de páginas, funcionalidades personalizadas, design exclusivo e integrações de sistemas afetam o preço. Oferecemos um orçamento transparente e detalhado após nossa consulta inicial.",
     "faq5Question": "Vocês oferecem suporte após o lançamento?",
     "faq5Answer": "Sim, oferecemos pacotes de suporte e manutenção contínuos após o lançamento. Isso inclui atualizações de segurança, correções de bugs, pequenas melhorias e monitoramento de desempenho para garantir que seu projeto continue funcionando perfeitamente."
+  },
+  "notFound": {
+    "title": "Página Não Encontrada",
+    "description": "A página que você está procurando não existe ou foi movida. Vamos te colocar de volta no caminho certo.",
+    "goHome": "Ir para Início",
+    "goBack": "Voltar"
   }
 }
