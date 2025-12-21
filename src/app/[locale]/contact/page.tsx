@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { AppLocale, routing } from "@/i18n/routing";
 import { ContactSection } from "@/components/contact/contact-section";
-import { MainLayout } from "@/layouts/main-layout";
+import { MainLayout } from "@/components/layouts/main-layout";
 import { Metadata } from "next";
 import { FAQSchema } from "@/components/schema";
 import { generatePageMetadata } from "@/lib/metadata";

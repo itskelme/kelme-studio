@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import '@/app/globals.css';
-import { Inter, Rubik } from 'next/font/google';
+import { Manrope, Space_Mono } from 'next/font/google';
 import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
@@ -8,18 +8,18 @@ import { Metadata } from 'next';
 import { AppLocale, locales } from '@/i18n/routing';
 import { generatePageMetadata } from '@/lib/metadata';
 
-const satoshi = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-satoshi',
-  weight: ['400','500','600','700','800','900']
+  variable: '--font-manrope',
+  weight: ['400','500','600','700','800']
 });
 
-const rubik = Rubik({
+const spaceMono = Space_Mono({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-rubik',
-  weight: ['400', '500', '600', '700']
+  variable: '--font-space-mono',
+  weight: ['400', '700']
 });
 
 /**

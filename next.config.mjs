@@ -8,5 +8,5 @@ const nextConfig = {
 };
 
 // Integra plugin next-intl apontando para request config
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 export default withNextIntl(nextConfig);
