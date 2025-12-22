@@ -53,7 +53,7 @@ export function Footer() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-5xl md:text-7xl font-bold text-[#F7F7F7] mb-8 leading-tight">
             {f.cta.title.part1}{" "}
-            <span className="bg-gradient-to-r from-[#CB8D0F] to-[#E6A635] bg-clip-text text-transparent">{f.cta.title.highlight}</span>
+            <div className="bg-linear-to-r from-[#27D182]/10 to-transparent border-l-4 border-[#27D182] p-6 rounded-r-xl mb-6">{f.cta.title.highlight}</div>
             {f.cta.title.part2}
           </h2>
           <p className="text-xl text-[#F7F7F7]/60 mb-12 max-w-2xl mx-auto">{f.cta.subtitle}</p>
@@ -68,7 +68,7 @@ export function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-8">
-                <Image src="/kelme-icon.svg" alt="Kelme Studio" width={28} height={28} />
+                <Image src="/images/kelme-icon.svg" alt="Kelme Studio" width={28} height={28} />
                 <LanguageSelector />
               </div>
               <p className="text-[#F7F7F7]/50 text-sm leading-relaxed">{f.brandDescription}</p>

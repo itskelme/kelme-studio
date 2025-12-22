@@ -88,12 +88,12 @@ export function Work() {
             >
               <div className="relative h-[300px] overflow-hidden">
                 <Image
-                  src={item.image || "/placeholder.svg"}
+                  src={item.image || "/images/placeholder.svg"}
                   alt={item.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F0E0D]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0F0E0D]/80 via-transparent to-transparent" />
               </div>
 
               <div className="p-6">

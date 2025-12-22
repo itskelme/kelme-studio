@@ -112,18 +112,18 @@ const testimonials = [
     textKey: "testimonial1Text",
     authorKey: "testimonial1Author",
     positionKey: "testimonial1Position",
-    avatar: "/placeholder-user.jpg"
+    avatar: "/images/placeholder-user.jpg"
   },
   {
     textKey: "testimonial2Text",
     authorKey: "testimonial2Author",
     positionKey: "testimonial2Position",
-    avatar: "/placeholder-user.jpg"
+    avatar: "/images/placeholder-user.jpg"
   },
   {
     textKey: "testimonial3Text",
     authorKey: "testimonial3Author",
     positionKey: "testimonial3Position",
-    avatar: "/placeholder-user.jpg"
+    avatar: "/images/placeholder-user.jpg"
   }
 ];

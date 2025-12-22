@@ -80,10 +80,10 @@
     "sectionSubtitle": "A base do nosso portfólio demonstra quem realmente somos. Investimos em pessoas excepcionais e seguimos a visão de longo prazo.",
     "viewButton": "Ver todos os projetos",
     "items": [
-      {"id": 1, "title": "PÁGINA DE LANÇAMENTO 3D", "category": "ANIMAÇÃO 3D", "description": "Site minimalista para marca de bebidas low-carb com verificação de idade e sistema de pagamentos integrado.", "image": "/placeholder-opudz.png", "year": "2024", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
-      {"id": 2, "title": "E-COMMERCE DE SEGUIDORES", "category": "MARKETING", "description": "Plataforma completa para marketing de influência no Instagram, com sistema de pagamentos Stripe integrado e dashboard de métricas.", "image": "/luxury-fashion-ecommerce.png", "year": "2024", "clientName": "ImpulsioneGram", "tags": ["Marketing Digital", "Web App"]},
-      {"id": 3, "title": "SAAS DE PROTEÇÃO DE MARCAS", "category": "BRANDING", "description": "Site institucional para empresa especializada em registro e proteção de marcas, com sistema de consultoria online.", "image": "/modern-startup-hero.png", "year": "2023", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
-      {"id": 4, "title": "APP DE MARKETING DE INFLUÊNCIA", "category": "APP NATIVO", "description": "Plataforma para gerenciamento de campanhas com influenciadores, com IA para otimização e métricas de ROI em tempo real.", "image": "/placeholder-c7jvm.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]}
+      {"id": 1, "title": "PÁGINA DE LANÇAMENTO 3D", "category": "ANIMAÇÃO 3D", "description": "Site minimalista para marca de bebidas low-carb com verificação de idade e sistema de pagamentos integrado.", "image": "/images/works/enterprise-crm-dashboard.png", "year": "2024", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
+      {"id": 2, "title": "E-COMMERCE DE SEGUIDORES", "category": "MARKETING", "description": "Plataforma completa para marketing de influência no Instagram, com sistema de pagamentos Stripe integrado e dashboard de métricas.", "image": "/images/works/luxury-fashion-ecommerce.png", "year": "2024", "clientName": "ImpulsioneGram", "tags": ["Marketing Digital", "Web App"]},
+      {"id": 3, "title": "SAAS DE PROTEÇÃO DE MARCAS", "category": "BRANDING", "description": "Site institucional para empresa especializada em registro e proteção de marcas, com sistema de consultoria online.", "image": "/images/works/modern-startup-hero.png", "year": "2023", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
+      {"id": 4, "title": "APP DE MARKETING DE INFLUÊNCIA", "category": "APP NATIVO", "description": "Plataforma para gerenciamento de campanhas com influenciadores, com IA para otimização e métricas de ROI em tempo real.", "image": "/images/works/enterprise-crm-dashboard.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]}
     ]
   },
   "founder": {
@@ -104,9 +104,9 @@
       "titleLine2": "de Clientes",
       "subtitle": "Não confie só na nossa palavra. Veja o que nossos clientes dizem sobre trabalhar com a Kelme Studio.",
       "list": [
-        {"name": "Sarah Martinez", "role": "CEO, TechFlow Solutions", "content": "Diego e seu time transformaram toda nossa presença digital. As conversões aumentaram 280% em apenas 3 meses.", "rating": 5, "image": "/sarah-martinez-testimonial.png"},
-        {"name": "Michael Chen", "role": "Fundador, EcoVenture", "content": "Trabalhar com a Kelme Studio mudou o jogo. Eles criaram uma experiência completa de marca que ressoa com nosso público.", "rating": 5, "image": "/michael-chen-testimonial.png"},
-        {"name": "Alexandra Torres", "role": "Diretora de Marketing, FinanceHub", "content": "O ROI que vimos nas campanhas é incrível. A abordagem estratégica elevou nossa marca além das expectativas.", "rating": 5, "image": "/alexandra-torres-testimonial.png"}
+        {"name": "Sarah Martinez", "role": "CEO, TechFlow Solutions", "content": "Diego e seu time transformaram toda nossa presença digital. As conversões aumentaram 280% em apenas 3 meses.", "rating": 5, "image": "/images/sarah-martinez-testimonial.png"},
+        {"name": "Michael Chen", "role": "Fundador, EcoVenture", "content": "Trabalhar com a Kelme Studio mudou o jogo. Eles criaram uma experiência completa de marca que ressoa com nosso público.", "rating": 5, "image": "/images/michael-chen-testimonial.png"},
+        {"name": "Alexandra Torres", "role": "Diretora de Marketing, FinanceHub", "content": "O ROI que vimos nas campanhas é incrível. A abordagem estratégica elevou nossa marca além das expectativas.", "rating": 5, "image": "/images/alexandra-torres-testimonial.png"}
       ]
     },
     "awards": {

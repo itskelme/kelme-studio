@@ -90,7 +90,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           <div className="flex items-bottom space-x-0">
               <Link href="/" className={styles.logoContainer}>
                             <Image
-                              src="/kelme-icon.svg"
+                              src="/images/kelme-icon.svg"
                               alt="Eagle Icon"
                               width={32}
                               height={32}

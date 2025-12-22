@@ -7,7 +7,6 @@ import { LanguageSelector } from "@/components/language-selector";
 import { Link } from "@/i18n/navigation";
 import { NavItem, MegaDropdown } from "@/components/ui/mega-dropdown";
 import { useTranslations, useMessages } from "next-intl";
-import { getServiceIcon, getCategoryDefaultIcon } from "./icon-mapper";
 import { MobileMenu } from "./mobile-menu";
 import { useNavMenus } from "./use-nav-menus";
 import Image from "next/image";
@@ -88,7 +87,7 @@ export function Navbar() {
 						<div className="w-full lg:w-1/3 flex justify-start items-center">
 							<Link href="/" className={styles.logoContainer}>
 								<Image
-									src="/kelme-icon.svg"
+									src="/images/kelme-icon.svg"
 									alt="Eagle Icon"
 									width={32}
 									height={32}
@@ -96,7 +95,7 @@ export function Navbar() {
 									priority
 								/>
 								<div className={styles.logoText}>
-									KELME
+									KELME <span className="font-medium">STUDIO</span>
 								</div>  
 							</Link>
 						</div>

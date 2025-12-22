@@ -40,7 +40,7 @@ export async function generateMetadata({
       description: baseMetadata.description as string,
       images: [
         {
-          url: '/opengraph/kelme-contact-og-banner.png',
+          url: '/images/opengraph/kelme-contact-og-banner.png',
           width: 1200,
           height: 630,
           alt: 'Kelme Studio - Contato',
@@ -53,7 +53,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: baseMetadata.title as string,
       description: baseMetadata.description as string,
-      images: ['/opengraph/kelme-contact-og-banner.png'],
+      images: ['/images/opengraph/kelme-contact-og-banner.png'],
       creator: '@kelmestudio'
     }
   };

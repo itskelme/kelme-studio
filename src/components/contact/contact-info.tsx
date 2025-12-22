@@ -66,9 +66,9 @@ export function ContactInfo() {
       <div className="bg-dark-card p-6 md:p-8 rounded-xl border border-[#27D182]/20 mt-auto relative overflow-hidden group hover:shadow-[0_0_15px_rgba(39,209,130,0.2)] transition-shadow">
         
         <div className="flex items-center space-x-4 mb-6">
-          <div className="h-16 w-16 rounded-full overflow-hidden border-2 border-[#27D182]">
+          <div className="shrink-0 w-12 h-12 rounded-full overflow-hidden border-2 border-[#27D182]">
             <img 
-              src="/diego-kelme-portrait.png" 
+              src="/images/diego-kelme-portrait.png" 
               alt="Diego Kelme" 
               className="h-full w-full object-cover"
             />
@@ -148,7 +148,7 @@ type ContactMethodProps = {
 function ContactMethod({ icon, label, value, href, isLink = false }: ContactMethodProps) {
   return (
     <div className="flex items-start space-x-4 p-3 rounded-lg transition-all hover:bg-[#27D182]/5 group">
-      <div className="bg-[#27D182]/10 p-3 rounded-lg flex-shrink-0 group-hover:bg-[#27D182]/20 transition-colors">
+      <div className="bg-[#27D182]/10 p-3 rounded-lg shrink-0 group-hover:bg-[#27D182]/20 transition-colors">
         {icon}
       </div>
       <div>

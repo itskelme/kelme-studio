@@ -8,7 +8,7 @@ function BrandLogo({ logo, name, color }: { logo: string; name: string; color: s
   return (
     <div className="flex items-center justify-center w-[120px] h-[60px] group">
       <img
-        src={logo || "/placeholder.svg"}
+        src={logo || "/images/placeholder.svg"}
         alt={name}
         className="w-16 h-16 opacity-60 group-hover:opacity-100 transition-all duration-300 filter grayscale group-hover:grayscale-0"
         style={{
@@ -73,7 +73,7 @@ export function SocialProof() {
                 <div className="flex items-center gap-4">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden">
                     <Image
-                      src={testimonial.image || "/placeholder.svg"}
+                      src={testimonial.image || "/images/placeholder.svg"}
                       alt={testimonial.name}
                       fill
                       className="object-cover"
@@ -140,7 +140,7 @@ export function SocialProof() {
                   className="flex items-center gap-4 px-8 py-4 mx-4 bg-[#F7F7F7]/5 backdrop-blur-sm border border-[#F7F7F7]/10 rounded-xl hover:border-[#CB8D0F]/30 transition-all duration-300 group whitespace-nowrap min-w-fit"
                 >
                   <img
-                    src={partner.logo || "/placeholder.svg"}
+                    src={partner.logo || "/images/placeholder.svg"}
                     alt={partner.name}
                     className="w-8 h-8 opacity-60 group-hover:opacity-100 transition-all duration-300 filter grayscale group-hover:grayscale-0"
                     style={{

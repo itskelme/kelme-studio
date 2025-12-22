@@ -15,7 +15,7 @@ export function Founder() {
             <div className="relative">
               <div className="relative h-[600px] w-full rounded-2xl overflow-hidden">
                 <Image
-                  src="/diego-kelme-portrait.png"
+                  src="/images/diego-kelme-portrait.png"
                   alt="Diego Kelme"
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

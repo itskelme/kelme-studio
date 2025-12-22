@@ -53,8 +53,8 @@ export function Hero() {
 	return (
 		<section className="relative h-screen flex flex-col justify-center bg-black overflow-hidden">
 			{/* Brand Watermark */}
-			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold text-white/[0.02] pointer-events-none select-none z-0 tracking-tighter">
-				KELME.
+			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold text-white/2 pointer-events-none select-none z-0 tracking-tighter">
+				KELMESTUDIO
 			</div>
 
 			{/* Background Gradients */}
@@ -150,11 +150,11 @@ export function Hero() {
 						initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
 						animate={{ opacity: 1, scale: 1, rotate: 0 }}
 						transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-						className="relative z-10 w-full max-w-[400px] aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl bg-neutral-900"
+						className="relative h-full max-h-[500px] aspect-4/5 rounded-4xl overflow-hidden border border-white/20 shadow-2xl bg-neutral-900"
 					>
-						<div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-transparent z-10 pointer-events-none" />
+						<div className="absolute inset-0 bg-linear-to-br from-blue-500/30 to-transparent z-10 pointer-events-none" />
 						<img 
-							src="/diego-kelme-portrait.png" 
+							src="/images/diego-kelme-portrait.png" 
 							alt="Diego Kelme" 
 							className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000"
 						/>
