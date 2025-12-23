@@ -43,6 +43,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
+    "critters": "^0.0.25",
     "embla-carousel-react": "latest",
     "framer-motion": "latest",
     "geist": "^1.5.1",

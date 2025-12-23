@@ -80,10 +80,12 @@
     "sectionSubtitle": "A base do nosso portfólio demonstra quem realmente somos. Investimos em pessoas excepcionais e seguimos a visão de longo prazo.",
     "viewButton": "Ver todos os projetos",
     "items": [
-      {"id": 1, "title": "PÁGINA DE LANÇAMENTO 3D", "category": "ANIMAÇÃO 3D", "description": "Site minimalista para marca de bebidas low-carb com verificação de idade e sistema de pagamentos integrado.", "image": "/images/works/enterprise-crm-dashboard.png", "year": "2024", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
-      {"id": 2, "title": "E-COMMERCE DE SEGUIDORES", "category": "MARKETING", "description": "Plataforma completa para marketing de influência no Instagram, com sistema de pagamentos Stripe integrado e dashboard de métricas.", "image": "/images/works/luxury-fashion-ecommerce.png", "year": "2024", "clientName": "ImpulsioneGram", "tags": ["Marketing Digital", "Web App"]},
-      {"id": 3, "title": "SAAS DE PROTEÇÃO DE MARCAS", "category": "BRANDING", "description": "Site institucional para empresa especializada em registro e proteção de marcas, com sistema de consultoria online.", "image": "/images/works/modern-startup-hero.png", "year": "2023", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
-      {"id": 4, "title": "APP DE MARKETING DE INFLUÊNCIA", "category": "APP NATIVO", "description": "Plataforma para gerenciamento de campanhas com influenciadores, com IA para otimização e métricas de ROI em tempo real.", "image": "/images/works/enterprise-crm-dashboard.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]}
+      {"id": 1, "title": "Steez Drink", "category": "E-COMMERCE", "description": "Site minimalista para marca de bebidas low-carb com verificação de idade e sistema de pagamentos integrado.", "image": "/images/works/work_banner_steez-min.png", "year": "2024", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
+      {"id": 2, "title": "TurbinouInsta", "category": "MARKETING", "description": "Plataforma completa para marketing de influência no Instagram, com sistema de pagamentos e dashboard de métricas.", "image": "/images/works/work_banner_turbinouinsta-min.png", "year": "2024", "clientName": "TurbinouInsta", "tags": ["Marketing Digital", "Web App"]},
+      {"id": 3, "title": "PPPI - Registro de Marcas", "category": "BRANDING", "description": "Site institucional para empresa especializada em registro e proteção de marcas, com sistema de consultoria online.", "image": "/images/works/work_banner_pppi-min.png", "year": "2023", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
+      {"id": 4, "title": "Flikta", "category": "SAAS", "description": "Plataforma para gerenciamento de campanhas com influenciadores, com IA para otimização e métricas de ROI em tempo real.", "image": "/images/works/work_banner_flikta-min.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]},
+      {"id": 5, "title": "Ponte Américas", "category": "LANDING PAGE", "description": "Landing page moderna para empresa de logística e comércio internacional conectando as Américas.", "image": "/images/works/work_banner_ponteamericas-min.png", "year": "2024", "clientName": "Ponte Américas", "tags": ["Landing Page", "Next.js", "Corporativo"]},
+      {"id": 6, "title": "Pandami", "category": "IA SAAS", "description": "Plataforma de visagismo com IA que analisa características faciais para recomendar cortes de cabelo e tratamentos de beleza personalizados.", "image": "/images/works/work_banner_pandami-min.png", "year": "2024", "clientName": "Pandami", "tags": ["IA", "SaaS", "Beauty Tech"]}
     ]
   },
   "founder": {
@@ -146,7 +148,7 @@
     "exploreLinks": ["Home", "Serviços", "Portfólio", "Sobre"],
     "serviceLinks": ["Desenvolvimento", "Marketing", "Estratégia", "Edição de Vídeo"],
     "socialLinks": ["LinkedIn", "Instagram", "X", "YouTube"],
-    "copyright": "© 2024 KELME STUDIO. Todos os direitos reservados",
+    "copyright": "© 2026 KELME STUDIO. Todos os direitos reservados",
     "termsOfUse": "Termos de Uso",
     "privacyPolicy": "Política de Privacidade"
   },
