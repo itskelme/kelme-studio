@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslations, useMessages } from 'next-intl';
-import { BookOpen, PenTool } from "lucide-react";
-import { getServiceIcon, getCategoryDefaultIcon } from "./icon-mapper";
+import { getServiceIcon, getCategoryIcon, WORK_ICON, INSIGHTS_ICON } from "@/lib/constants/service-icons";
+import { getSocialIcon, getSocialUrl, getSocialDisplayName } from "@/lib/constants/social-media";
 
 // Types for menu items and sections
 export interface MenuItem {
@@ -23,73 +23,82 @@ export const useNavMenus = () => {
   const messages: any = useMessages();
   const menus = messages.navbar.menus;
 
-  // Process services sections with proper icons
+  // Process services sections with SSOT constants
   const servicesSections = [
     {
       title: menus.development.title,
-      items: menus.development.items.map((item: string) => ({
-        label: item,
-        icon: getServiceIcon(item, getCategoryDefaultIcon("development"))
-      }))
+      items: menus.development.items.map((item: string) => {
+        const IconComponent = getServiceIcon(item) || getCategoryIcon("development");
+        return {
+          label: item,
+          icon: <IconComponent className="h-5 w-5" />
+        };
+      })
     },
     {
       title: menus.marketing.title,
-      items: menus.marketing.items.map((item: string) => ({
-        label: item,
-        icon: getServiceIcon(item, getCategoryDefaultIcon("marketing"))
-      }))
+      items: menus.marketing.items.map((item: string) => {
+        const IconComponent = getServiceIcon(item) || getCategoryIcon("marketing");
+        return {
+          label: item,
+          icon: <IconComponent className="h-5 w-5" />
+        };
+      })
     },
     {
       title: menus.strategy.title,
-      items: menus.strategy.items.map((item: string) => ({
-        label: item,
-        icon: getServiceIcon(item, getCategoryDefaultIcon("strategy"))
-      }))
+      items: menus.strategy.items.map((item: string) => {
+        const IconComponent = getServiceIcon(item) || getCategoryIcon("strategy");
+        return {
+          label: item,
+          icon: <IconComponent className="h-5 w-5" />
+        };
+      })
     },
     {
       title: menus.video.title,
-      items: menus.video.items.map((item: string) => ({
-        label: item,
-        icon: getServiceIcon(item, getCategoryDefaultIcon("video"))
-      }))
+      items: menus.video.items.map((item: string) => {
+        const IconComponent = getServiceIcon(item) || getCategoryIcon("video");
+        return {
+          label: item,
+          icon: <IconComponent className="h-5 w-5" />
+        };
+      })
     }
   ];
 
-  // Work section with consistent icons
+  // Work section with SSOT icon
   const workSections = [
     {
       title: t("navbar.work"),
       items: menus.work.map((item: string) => ({
         label: item,
-        icon: <PenTool className="h-5 w-5" />
+        icon: <WORK_ICON className="h-5 w-5" />
       }))
     }
   ];
 
-  // Insights section with consistent icons
+  // Insights section with SSOT icon
   const insightsSections = [
     {
       title: t("navbar.insights"),
       items: menus.insights.map((item: string) => ({
         label: item,
-        icon: <BookOpen className="h-5 w-5" />
+        icon: <INSIGHTS_ICON className="h-5 w-5" />
       }))
     }
   ];
 
-  // Social media section with icons
+  // Social media section with SSOT constants
   const socialSections = [
     {
       title: messages.footer.socialTitle,
       items: messages.footer.socialLinks.map((name: string) => {
-        // Substituir "Twitter" por "X" para exibição mantendo compatibilidade com as traduções
-        const displayName = name === "Twitter" ? "X" : name;
-        const iconKey = name === "Twitter" ? "X" : name;
-        
+        const IconComponent = getSocialIcon(name);
         return {
-          label: displayName,
-          icon: `https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${iconKey.toLowerCase()}.svg`,
-          href: `https://${iconKey.toLowerCase()}.com/kelmeofc`
+          label: getSocialDisplayName(name),
+          icon: <IconComponent className="h-5 w-5" />,
+          href: getSocialUrl(name)
         };
       })
     }

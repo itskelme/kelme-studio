@@ -1,122 +1,50 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowUpRight, Zap, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui";
-import { TextRotator } from "@/components/ui/text-rotator";
-
-const MarqueeItem = ({ text }: { text: string }) => (
-  <div className="flex items-center">
-    <span className="mx-8 text-2xl md:text-4xl font-bold uppercase tracking-tighter text-white">
-      {text}
-    </span>
-    <span className="w-2 h-2 bg-blue-500 rounded-full opacity-50" />
-  </div>
-);
-
-const FloatingBadge = ({ 
-  children, 
-  className, 
-  delay = 0, 
-  yOffset = 20 
-}: { 
-  children: React.ReactNode; 
-  className?: string; 
-  delay?: number;
-  yOffset?: number;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ 
-      opacity: 1, 
-      y: [0, -yOffset, 0],
-    }}
-    transition={{ 
-      opacity: { duration: 0.8, delay },
-      y: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay
-      }
-    }}
-    className={`absolute z-20 backdrop-blur-xl bg-white/5 border border-white/10 p-4 rounded-2xl shadow-2xl ${className}`}
-  >
-    {children}
-  </motion.div>
-);
+import { Link } from "@/i18n/navigation";
+import ColorBends from "@/components/ui/color-bends";
 
 export function Hero() {
 	const t = useTranslations();
 
 	return (
-		<section className="relative h-screen flex flex-col justify-center bg-black overflow-hidden">
-			{/* Brand Watermark */}
-			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold text-white/2 pointer-events-none select-none z-0 tracking-tighter">
-				KELMESTUDIO
+		<section className="relative h-screen w-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+			{/* 3D Background - Layer 0 */}
+			<div className="absolute inset-0 w-screen h-screen">
+				<ColorBends
+					colors={["#ff0000", "#00ff00", "#0000ff"]}
+					rotation={0}
+					speed={0.2}
+					scale={1}
+					frequency={1}
+					warpStrength={1}
+					mouseInfluence={1}
+					parallax={0.5}
+					noise={0.1}
+				/>
 			</div>
 
-			{/* Background Gradients */}
-			<div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none" />
-			<div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
+			{/* Gradient Overlay - Layer 1 */}
+			<div className="absolute inset-0 z-1 bg-linear-to-t from-black via-transparent to-black/80 pointer-events-none" />
 
-			<div className="w-full max-w-[1216px] mx-auto px-6 md:px-0 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full pt-20 pb-24">
-				
-				{/* Left Side: Text Content */}
-				<div className="flex flex-col items-start">
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 1 }}
-						className="mb-6"
+			{/* Content - Layer 10 */}
+			<div className="relative z-10 container mx-auto px-6 flex flex-col items-center justify-center text-center h-full pointer-events-none">
+				<div className="flex flex-col items-center justify-center">
+					<motion.h1
+						className="font-oswald text-6xl md:text-9xl font-bold uppercase tracking-tighter leading-[0.9] mb-8 mix-blend-difference text-white"
+						initial={{ opacity: 0, scale: 0.9 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
 					>
-						<div className="flex items-center gap-3 px-3 py-1 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase text-white bg-white/5 backdrop-blur-sm">
-							<Zap className="w-3 h-3 text-blue-500 fill-current" />
-							Kelme Studio
-						</div>
-					</motion.div>
+						{t("hero.title.line1")}
+					</motion.h1>
 
-					<div className="overflow-hidden mb-1">
-						<motion.h1 
-							initial={{ y: 100 }}
-							animate={{ y: 0 }}
-							transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-							className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tighter text-white"
-						>
-							{t("hero.title.line1")}
-						</motion.h1>
-					</div>
-					<div className="overflow-hidden mb-8">
-						<motion.div 
-							initial={{ y: 100 }}
-							animate={{ y: 0 }}
-							transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-							className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tighter text-gradient-primary"
-						>
-							<TextRotator 
-								texts={[
-									t("hero.title.rotating.values.0"),
-									t("hero.title.rotating.values.1"),
-									t("hero.title.rotating.values.2"),
-									t("hero.title.rotating.values.3"),
-									t("hero.title.rotating.values.4"),
-									t("hero.title.rotating.values.5")
-								]}
-								typingSpeed={60}
-								deletingSpeed={40}
-								delayBetweenTexts={2.5}
-								cursorClassName="text-[#27D182]"
-								className="inline-block"
-							/>
-						</motion.div>
-					</div>
-
-					<motion.p 
+					<motion.p
+						className="max-w-md text-secondary text-sm md:text-base leading-relaxed mb-10 mix-blend-difference"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						transition={{ delay: 0.4, duration: 0.8 }}
-						className="text-lg md:text-xl text-neutral-400 max-w-lg mb-10 leading-relaxed"
+						transition={{ delay: 0.4 }}
 					>
 						{t("hero.subtitle")}
 					</motion.p>
@@ -125,88 +53,41 @@ export function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.6 }}
-						className="flex flex-col md:flex-row gap-6"
+						className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pointer-events-auto"
 					>
-						<Button size="default" className="group relative overflow-hidden">
-							<span className="relative z-10">{t("hero.buttons.talkToDiego").toUpperCase()}</span>
-							<ArrowUpRight className="ml-2 h-4 w-4 relative z-10" />
-							<div className="absolute inset-0 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-						</Button>
-						<Button variant="secondary" size="default">
-							{t("hero.buttons.viewWork").toUpperCase()}
-						</Button>
+						<Link
+							href="/contact"
+							className="group relative px-8 py-4 bg-white text-black text-sm uppercase tracking-widest font-bold overflow-hidden rounded-none hover:bg-gray-200 transition-all flex items-center justify-center gap-2"
+						>
+							<span>{t("hero.buttons.talkToDiego")}</span>
+							<svg
+								className="w-4 h-4 transition-transform group-hover:translate-x-1"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2}
+									d="M17 8l4 4m0 0l-4 4m4-4H3"
+								/>
+							</svg>
+						</Link>
+						<Link
+							href="/#work"
+							className="px-8 py-4 border border-white/20 bg-black/50 backdrop-blur-sm text-white text-sm uppercase tracking-widest font-bold hover:bg-white/10 transition-all rounded-none flex items-center justify-center"
+						>
+							{t("hero.buttons.viewWork")}
+						</Link>
 					</motion.div>
-				</div>
-
-				{/* Right Side: Visual Composition */}
-				<div className="hidden lg:flex relative justify-center items-center h-full max-h-[500px]">
-					{/* Decorative Logo Mark background */}
-					<div className="absolute inset-0 flex items-center justify-center opacity-10">
-						<div className="text-[200px] font-bold text-blue-500 leading-none">[⚡]</div>
-					</div>
-
-					{/* Main Visual Asset */}
-					<motion.div
-						initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-						animate={{ opacity: 1, scale: 1, rotate: 0 }}
-						transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-						className="relative h-full max-h-[500px] aspect-4/5 rounded-4xl overflow-hidden border border-white/20 shadow-2xl bg-neutral-900"
-					>
-						<div className="absolute inset-0 bg-linear-to-br from-blue-500/30 to-transparent z-10 pointer-events-none" />
-						<img 
-							src="/images/diego-kelme-portrait.png" 
-							alt="Diego Kelme" 
-							className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000"
-						/>
-					</motion.div>
-
-					{/* Floating Elements */}
-					<FloatingBadge className="top-0 -left-10" delay={0.2} yOffset={15}>
-						<div className="flex items-center gap-3">
-							<div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/50">
-								<Zap className="text-white w-5 h-5 fill-current" />
-							</div>
-							<div>
-								<p className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest leading-none mb-1">Performance</p>
-								<p className="text-xl font-bold text-white leading-none">+45.2%</p>
-							</div>
-						</div>
-					</FloatingBadge>
-
-					<FloatingBadge className="bottom-10 -right-4" delay={0.8} yOffset={25}>
-						<div className="flex items-center gap-3">
-							<div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
-								<TrendingUp className="text-blue-500 w-5 h-5" />
-							</div>
-							<div>
-								<p className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest leading-none mb-1">Impact</p>
-								<p className="text-xl font-bold text-white leading-none">Max ROI</p>
-							</div>
-						</div>
-					</FloatingBadge>
-					
-					<div className="absolute inset-0 border border-white/5 rounded-[3rem] pointer-events-none transform scale-105 rotate-3 z-0" />
 				</div>
 			</div>
 
-			{/* Bottom Marquee */}
-			<div className="absolute bottom-0 left-0 w-full z-20 border-t border-white/10 bg-black/50 backdrop-blur-sm">
-				<div className="flex overflow-hidden py-4 md:py-6">
-					<motion.div 
-						className="flex whitespace-nowrap"
-						animate={{ x: ["0%", "-50%"] }}
-						transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-					>
-						{[...Array(6)].map((_, i) => (
-							<div key={i} className="flex items-center">
-								<MarqueeItem text="Kelme" />
-								<MarqueeItem text="Design" />
-								<MarqueeItem text="Performance" />
-								<MarqueeItem text="Innovation" />
-							</div>
-						))}
-					</motion.div>
-				</div>
+			<div className="absolute bottom-10 right-10 hidden md:block z-10 mix-blend-difference pointer-events-none">
+				<p className="text-xs text-white uppercase tracking-widest rotate-90 origin-right">
+					{t("hero.scrollToExplore", { default: "Scroll to explore" })}
+				</p>
 			</div>
 		</section>
 	);

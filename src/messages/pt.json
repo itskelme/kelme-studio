@@ -22,66 +22,52 @@
   },
   "hero": {
     "title": {
-      "line1": "SUA MARCA MERECE",
-      "line2": "VOAR ALTO",
-      "rotating": {
-        "values": [
-          "VOAR ALTO",
-          "SER AUTORIDADE",
-          "TER IDENTIDADE",
-          "SER MEMORÁVEL",
-          "TRANSFORMAR IDEIAS",
-          "CRIAR CONEXÕES"
-        ]
-      }
+      "line1": "Kelme Studio"
     },
-    "subtitle": "Elevamos marcas ambiciosas além do horizonte, criando experiências digitais que se destacam da concorrência.",
-    "buttons": {"talkToDiego": "Falar com Diego", "viewWork": "Ver Projetos"}
+    "subtitle": "Criamos experiências digitais insanas para marcas ambiciosas. Sem enrolação, apenas design e engenharia de alta conversão.",
+    "buttons": {
+      "talkToDiego": "Iniciar Projeto",
+      "viewWork": "Ver Trabalhos"
+    },
+    "scrollToExplore": "Role para explorar"
   },
   "services": {
-    "sectionTitle": "Serviços",
-    "sectionSubtitle": "Apoiamos fundadores nos estágios iniciais e seguimos até que o mundo enxergue o que vemos.",
-    "highlights": {
-      "1": "Resultados mensuráveis",
-      "2": "Abordagem estratégica",
-      "3": "Equipe especializada",
-      "4": "Foco em crescimento"
-    },
-    "approachHighlight": "Nossa metodologia é adaptada para o seu negócio",
+    "sectionTitle": "Capacidades",
+    "sectionLabel": "O Que Fazemos",
+    "label": "O Que Fazemos",
     "list": [
       {
-        "number": "01",
+        "category": "UI/UX Design",
+        "description": "Interfaces que funcionam tão bem quanto parecem. Focamos em conversão e retenção através de padrões de design centrados no usuário.",
+        "items": ["Web Design", "Apps Mobile", "Design Systems"]
+      },
+      {
         "category": "Desenvolvimento",
-        "description": "Soluções sob medida que escalam com o crescimento e visão do seu negócio.",
-        "items": ["WordPress", "Shopify", "Landing Pages", "Micro-SaaS", "MVP"]
+        "description": "Implementação pixel-perfect usando stacks modernas. Código rápido, acessível e escalável que ranqueia.",
+        "items": ["React/Next.js", "Webflow", "Shopify"]
       },
       {
-        "number": "02",
-        "category": "Marketing",
-        "description": "Campanhas estratégicas que geram engajamento e resultados mensuráveis.",
-        "items": ["Meta Ads", "Google Ads", "TikTok Ads", "Social Media", "Email Marketing", "SEO"]
+        "category": "Branding",
+        "description": "Identidades visuais que grudam. Do design de logo a diretrizes completas de marca, criamos a face do seu negócio.",
+        "items": ["Logo", "Estratégia", "Direção de Arte"]
       },
       {
-        "number": "03",
-        "category": "Estratégia",
-        "description": "Posicionamento de marca e experiência que ressoam com sua audiência.",
-        "items": ["Branding", "Pesquisa UI/UX"]
-      },
-      {
-        "number": "04",
-        "category": "Edição de Vídeo",
-        "description": "Conteúdo em vídeo envolvente que converte espectadores em clientes.",
-        "items": ["VSL", "Conteúdo Criativo para Ads"]
+        "category": "Crescimento",
+        "description": "Estratégias de crescimento orientadas por design. Landing pages e criativos otimizados para alto ROAS.",
+        "items": ["CRO", "Criativos para Ads", "Analytics"]
       }
     ]
   },
   "work": {
     "sectionTitle": "Projetos em Destaque",
     "sectionSubtitle": "A base do nosso portfólio demonstra quem realmente somos. Investimos em pessoas excepcionais e seguimos a visão de longo prazo.",
-    "viewButton": "Ver todos os projetos",
+    "sectionLabel": "Trabalhos Selecionados",
+    "title": "Estudos de Caso.",
+    "viewButton": "Ver todos os trabalhos",
+    "viewAllProjects": "Ver Todos os Projetos",
     "items": [
       {"id": 1, "title": "Steez Drink", "category": "E-COMMERCE", "description": "Site minimalista para marca de bebidas low-carb com verificação de idade e sistema de pagamentos integrado.", "image": "/images/works/work_banner_steez-min.png", "year": "2024", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
-      {"id": 2, "title": "TurbinouInsta", "category": "MARKETING", "description": "Plataforma completa para marketing de influência no Instagram, com sistema de pagamentos e dashboard de métricas.", "image": "/images/works/work_banner_turbinouinsta-min.png", "year": "2024", "clientName": "TurbinouInsta", "tags": ["Marketing Digital", "Web App"]},
+      {"id": 2, "title": "TurbinouInsta", "category": "E-COMMERCE", "description": "Plataforma completa para marketing de influência no Instagram, com sistema de pagamentos e dashboard de métricas.", "image": "/images/works/work_banner_turbinouinsta-min.png", "year": "2024", "clientName": "TurbinouInsta", "tags": ["Marketing Digital", "Web App"]},
       {"id": 3, "title": "PPPI - Registro de Marcas", "category": "BRANDING", "description": "Site institucional para empresa especializada em registro e proteção de marcas, com sistema de consultoria online.", "image": "/images/works/work_banner_pppi-min.png", "year": "2023", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
       {"id": 4, "title": "Flikta", "category": "SAAS", "description": "Plataforma para gerenciamento de campanhas com influenciadores, com IA para otimização e métricas de ROI em tempo real.", "image": "/images/works/work_banner_flikta-min.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]},
       {"id": 5, "title": "Ponte Américas", "category": "LANDING PAGE", "description": "Landing page moderna para empresa de logística e comércio internacional conectando as Américas.", "image": "/images/works/work_banner_ponteamericas-min.png", "year": "2024", "clientName": "Ponte Américas", "tags": ["Landing Page", "Next.js", "Corporativo"]},
@@ -89,16 +75,18 @@
     ]
   },
   "founder": {
-    "firstName": "Diego",
-    "lastName": "Kelme",
-    "role": "Fundador & Diretor Criativo",
-    "quote": "Toda marca merece voar alto. Ajudo negócios a desbloquearem seu potencial e atingirem novos patamares por meio de experiências digitais estratégicas.",
-    "bio": "8+ anos transformando cenários digitais. De startups a empresas, combinando criatividade com estratégia orientada por dados para entregar resultados excepcionais.",
-    "stats": {
-      "projects": {"value": "50+", "label": "Projetos"},
-      "clients": {"value": "30+", "label": "Clientes"},
-      "growth": {"value": "340%", "label": "Crescimento Médio"}
-    }
+    "greeting": "Oi, eu sou",
+    "name": "Diego Kelme.",
+    "paragraphs": [
+      "Se você navegou pelas paisagens digitais de <span class=\"text-white font-medium\">Orlando</span>, <span class=\"text-white font-medium\">Porto</span>, ou <span class=\"text-white font-medium\">Florianópolis</span>, você provavelmente já viu meu trabalho... mesmo que não soubesse que era eu.",
+      "Eu sou o cara que grandes marcas chamam quando \"bom o suficiente\" para de converter.",
+      "Embora eu seja notavelmente conhecido como o <strong>Tech Lead</strong> que simplifica o complexo...",
+      "Eu também sou o líder de um <span class=\"text-white border-b border-white/30 pb-0.5\">esquadrão de elite completo</span>. Somos uma equipe de designers e desenvolvedores seniores que se movem mais rápido que agências dez vezes maiores."
+    ],
+    "quote": "Eu sei que isso parece ousado. Mas em um mundo de templates e ruído gerado por IA, autoridade é a única moeda que importa.",
+    "closingParagraph": "Minha verdadeira jornada começou com uma única obsessão: Como mesclamos código perfeito com design perfeito para construir não apenas sites, mas motores de receita?",
+    "ctaLabel": "Aqui está a resposta:",
+    "cta": "Veja Nossos Resultados"
   },
   "socialProof": {
     "testimonials": {
@@ -136,21 +124,28 @@
     }
   },
   "footer": {
-    "cta": {
-      "title": {"part1": "Pronto para fazer sua marca", "highlight": "voar alto", "part2": "?"},
-      "subtitle": "Vamos conversar sobre seu projeto e elevar sua presença digital a novos patamares.",
-      "button": "Falar com Diego"
-    },
-    "exploreTitle": "Explorar",
-    "servicesTitle": "Serviços",
+    "title": "Tem uma ideia?",
+    "titleHighlight": "Vamos construir.",
+    "subtitle": "Ajudamos marcas ambiciosas a definir seu futuro digital. Abertos para novas parcerias para Q4 2024.",
+    "emailUs": "Envie um Email",
+    "whatsapp": "WhatsApp",
+    "sitemap": "Mapa do Site",
+    "resources": "Recursos",
+    "socials": "Social",
     "socialTitle": "Social",
-    "brandDescription": "Elevando marcas com soluções digitais estratégicas e excelência criativa.",
-    "exploreLinks": ["Home", "Serviços", "Portfólio", "Sobre"],
-    "serviceLinks": ["Desenvolvimento", "Marketing", "Estratégia", "Edição de Vídeo"],
-    "socialLinks": ["LinkedIn", "Instagram", "X", "YouTube"],
-    "copyright": "© 2026 KELME STUDIO. Todos os direitos reservados",
-    "termsOfUse": "Termos de Uso",
-    "privacyPolicy": "Política de Privacidade"
+    "socialLinks": ["Instagram", "Twitter", "LinkedIn"],
+    "home": "Home",
+    "work": "Trabalhos",
+    "services": "Serviços",
+    "pricing": "Preços",
+    "insights": "Insights",
+    "careers": "Carreiras",
+    "brandAssets": "Brand Assets",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço",
+    "copyright": "Kelme Studio.",
+    "tagline": "Designed in the Dark.",
+    "newBadge": "NOVO"
   },
   "metadata": {
     "home": {
@@ -168,6 +163,10 @@
     "work": {
       "title": "Portfólio - Kelme Studio",
       "description": "Explore nosso portfólio de projetos digitais inovadores e veja como transformamos a presença online de nossos clientes."
+    },
+    "blog": {
+      "title": "Blog - Kelme Studio",
+      "description": "Insights, tendências e estratégias sobre design digital, desenvolvimento web e crescimento de negócios."
     }
   },
   "contact": {
@@ -209,6 +208,9 @@
     "whatsapp": "WhatsApp",
     "chatDirectly": "Falar diretamente",
     "chatOnWhatsApp": "Conversar pelo WhatsApp",
+    "city": "Florianópolis, SC",
+    "country": "Brasil",
+    "company": "Empresa / Organização",
     "clientTestimonials": "O que nossos clientes dizem",
     "testimonial1Text": "A Kelme Studio entregou um design excepcional que realmente capturou a essência da nossa marca. A equipe foi profissional do início ao fim e entendeu exatamente o que queríamos.",
     "testimonial1Author": "Marcos Silva",
@@ -237,5 +239,332 @@
     "description": "A página que você está procurando não existe ou foi movida. Vamos te colocar de volta no caminho certo.",
     "goHome": "Ir para Início",
     "goBack": "Voltar"
+  },
+  "servicesDetailed": {
+    "sectionLabel": "O Que Fazemos",
+    "title": "Capacidades.",
+    "uiux": {
+      "title": "Design UI/UX",
+      "description": "Interfaces que funcionam tão bem quanto parecem. Focamos em conversão e retenção através de padrões de design centrados no usuário.",
+      "tags": ["Web Design", "Apps Mobile", "Design Systems"]
+    },
+    "development": {
+      "title": "Desenvolvimento",
+      "description": "Implementação pixel-perfect usando stacks modernas. Código rápido, acessível e escalável que rankeia.",
+      "tags": ["React/Next.js", "Webflow", "Shopify"]
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Identidades visuais que grudam. Do design de logo às diretrizes completas de marca, criamos o rosto do seu negócio.",
+      "tags": ["Logo", "Estratégia", "Direção de Arte"]
+    },
+    "growth": {
+      "title": "Crescimento",
+      "description": "Estratégias de crescimento orientadas por design. Landing pages e criativos otimizados para alto ROAS.",
+      "tags": ["CRO", "Criativos para Ads", "Analytics"]
+    }
+  },
+  "pricing": {
+    "sectionLabel": "Planos & Preços",
+    "title": "Assinatura.",
+    "subtitle": "Sem contratos. Sem taxas ocultas. Pause ou cancele a qualquer momento. Apenas produção pura e de alta velocidade.",
+    "design": {
+      "name": "Design",
+      "price": "$2,995",
+      "period": "/mês",
+      "description": "Perfeito para startups que precisam de suporte contínuo de design sem overhead.",
+      "features": [
+        "Uma solicitação por vez",
+        "Entrega média em 48h",
+        "Revisões ilimitadas",
+        "Design UI/UX",
+        "Design Gráfico",
+        "Pause ou cancele a qualquer momento"
+      ]
+    },
+    "designDev": {
+      "name": "Design + Dev",
+      "price": "$4,995",
+      "period": "/mês",
+      "description": "Aceleração completa de produto digital. Design e desenvolvimento Webflow incluídos.",
+      "features": [
+        "Uma solicitação por vez",
+        "Entrega média em 48-72h",
+        "Revisões ilimitadas",
+        "UI/UX + Branding",
+        "Desenvolvimento Webflow",
+        "Suporte prioritário",
+        "Pause ou cancele a qualquer momento"
+      ],
+      "badge": "Mais Popular"
+    },
+    "getStarted": "Começar",
+    "customScope": "Precisa de um escopo personalizado?",
+    "bookCall": "Agendar uma ligação"
+  },
+  "faq": {
+    "sectionLabel": "Perguntas Comuns",
+    "title": "Detalhes & Logística.",
+    "cantFind": "Não encontrou o que procura?",
+    "emailUs": "Envie-nos um email diretamente.",
+    "questions": [
+      {
+        "question": "Por que assinatura mensal ao invés de baseado em projeto?",
+        "answer": "Trabalho baseado em projeto frequentemente penaliza a eficiência. Nosso modelo de assinatura alinha nossos incentivos com os seus: entregar trabalho de alta qualidade rapidamente. Elimina negociações de escopo e permite iterar continuamente no seu produto."
+      },
+      {
+        "question": "Qual é o tempo de entrega?",
+        "answer": "Em média, solicitações são entregues em 48-72 horas. Tarefas complexas como landing pages completas ou lógica complexa podem levar mais tempo, mas as dividimos em marcos entregáveis para que você veja progresso a cada poucos dias."
+      },
+      {
+        "question": "E se eu não gostar do design?",
+        "answer": "Iteramos até você ficar obcecado. Ponto final. Nossa assinatura inclui revisões ilimitadas. Não paramos até o trabalho ser de classe mundial."
+      },
+      {
+        "question": "Qual stack tecnológica vocês usam?",
+        "answer": "Especializamos na web moderna. Para sites de marketing, usamos Webflow ou Framer por velocidade e editabilidade. Para apps e plataformas complexas, construímos com React, Next.js e TypeScript adaptados às suas necessidades."
+      },
+      {
+        "question": "Há política de reembolso?",
+        "answer": "Devido à natureza de alta qualidade do trabalho, não emitimos reembolsos uma vez que o trabalho tenha começado. No entanto, você pode pausar ou cancelar sua assinatura a qualquer momento para evitar cobranças futuras."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "Prova Social",
+    "title": "Obsessão pelo Cliente.",
+    "subtitle": "Não apenas colecionamos logos. Colecionamos histórias de sucesso. Veja o que acontece quando você trabalha com os melhores.",
+    "items": [
+      {
+        "quote": "A Kelme Studio não apenas construiu um site; eles arquitetaram um flagship digital. Nossas taxas de conversão dobraram no primeiro mês após o lançamento. A autoridade que agora comandamos em nosso mercado é inegável.",
+        "author": "Alex Rivera",
+        "role": "CMO, Nebula Fintech",
+        "metric": "+200% Conversões"
+      },
+      {
+        "quote": "Trabalhei com as melhores agências de NYC e Londres. A equipe do Diego opera em uma frequência diferente. Mais rápido, mais afiado e obsessivamente detalhado. Eles entendem que design é uma função de receita.",
+        "author": "Sarah Jenkins",
+        "role": "Fundadora, Velvet Fashion",
+        "metric": "3x ROAS"
+      },
+      {
+        "quote": "O ROI foi imediato. Eles simplificaram nosso ecossistema complexo em uma jornada de usuário perfeita. Uma masterclass em execução que nos posicionou exatamente onde precisávamos estar: no topo.",
+        "author": "Marcus Chen",
+        "role": "Diretor, Quantum SaaS",
+        "metric": "Série B Garantida"
+      }
+    ]
+  },
+  "community": {
+    "badge": "Apenas com Convite",
+    "label": "Junte-se ao Movimento",
+    "title": "Veja-nos Construir Publicamente.",
+    "description": "Pare de adivinhar. Tenha acesso direto aos nossos SOPs internos, críticas de design e as estratégias exatas que usamos para escalar agências de 7 dígitos.",
+    "warning": "Aviso: Isso não é para observadores. Apenas construtores.",
+    "joinDiscord": "Entrar na Comunidade Discord",
+    "membersOnline": "Membros Online"
+  },
+  "footerV2": {
+    "title": "Tem uma ideia? Vamos construí-la.",
+    "subtitle": "Ajudamos marcas ambiciosas a definir seu futuro digital. Abertos para novas parcerias no Q4 2024.",
+    "emailUs": "Envie Email",
+    "whatsapp": "WhatsApp",
+    "sitemap": "Mapa do Site",
+    "resources": "Recursos",
+    "socials": "Redes Sociais",
+    "home": "Início",
+    "services": "Serviços",
+    "pricing": "Preços",
+    "insights": "Insights",
+    "careers": "Carreiras",
+    "brandAssets": "Assets da Marca",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço",
+    "copyright": "Kelme Studio.",
+    "tagline": "Projetado no Escuro.",
+    "newBadge": "NOVO"
+  },
+  "workPage": {
+    "label": "Nosso Portfólio",
+    "backgroundText": "Selecionados",
+    "title": "Arquitetura Digital.",
+    "subtitle": "Uma curadoria de nossos projetos mais ambiciosos. Construímos produtos digitais que se recusam a ser ignorados.",
+    "viewCaseStudy": "Ver Estudo de Caso",
+    "ctaTitle": "Pronto para construir algo Icônico?",
+    "startProject": "Iniciar Projeto",
+    "projects": [
+      {
+        "client": "Nebula Protocol",
+        "title": "Interface de Trading DeFi",
+        "category": "Fintech / Web3",
+        "year": "2024",
+        "description": "Redefinindo como usuários interagem com pools de liquidez descentralizados através de uma interface perfeita e de latência zero."
+      },
+      {
+        "client": "Velvet Maison",
+        "title": "Rebrand Global de E-Commerce",
+        "category": "Moda",
+        "year": "2023",
+        "description": "Uma loja flagship digital que mescla storytelling editorial com fluxos de checkout de alta conversão."
+      },
+      {
+        "client": "Hyperion",
+        "title": "Dashboard de Analytics com IA",
+        "category": "SaaS",
+        "year": "2024",
+        "description": "Visualizando conjuntos de dados complexos para modelos de IA empresariais. Nativo em modo escuro, obcecado por performance."
+      },
+      {
+        "client": "Off-White Architects",
+        "title": "Portfólio & Imersão",
+        "category": "Arquitetura",
+        "year": "2023",
+        "description": "Brutalismo minimalista. Deixamos as estruturas falarem por si mesmas com uma presença digital silenciosa e pesada."
+      },
+      {
+        "client": "Kinetix",
+        "title": "Ecossistema de App Fitness",
+        "category": "App Mobile",
+        "year": "2024",
+        "description": "Rastreamento de fitness gamificado com visualizações de bio-feedback em tempo real."
+      },
+      {
+        "client": "Carbon",
+        "title": "Relatório de Sustentabilidade",
+        "category": "Corporativo",
+        "year": "2023",
+        "description": "Experiência WebGL interativa mostrando iniciativas globais de redução de pegada de carbono."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Vamos Construir o Futuro.",
+    "subtitle": "Estamos aceitando novas parcerias para o Q4 2024. Conte-nos sobre sua visão e diremos como executá-la.",
+    "email": "Email",
+    "office": "Escritório",
+    "officeAddress": "1200 Brickell Ave, Suite 1950 Miami, FL 33131",
+    "yourName": "Seu Nome",
+    "emailAddress": "Endereço de Email",
+    "company": "Empresa / Organização",
+    "projectBudget": "Orçamento do Projeto (USD)",
+    "tellUsAbout": "Conte-nos sobre o projeto",
+    "attachFile": "Anexar Arquivo",
+    "sendRequest": "Enviar Solicitação",
+    "requestReceived": "Solicitação Recebida",
+    "receivedMessage": "Recebemos seu briefing. Um estrategista revisará seus requisitos e entrará em contato dentro de 24 horas para agendar uma chamada de descoberta.",
+    "sendAnotherRequest": "Enviar outra solicitação",
+    "budgetOptions": ["< $5k", "$5k - $10k", "$10k - $20k", "$20k+"]
+  },
+  "about": {
+    "hook": {
+      "title": "Eu não vendo sites bonitos.",
+      "subtitle": "As pessoas não compram de mim porque eu sei programar. Elas compram de mim porque eu engenheiro funis de vendas que dobram a realidade.",
+      "text1": "Se você está procurando um \"sim senhor\" para construir um template, feche esta aba.",
+      "text2": "Meus clientes fazem parceria comigo porque sabem uma coisa: Eu dobro a receita.",
+      "text3": "Entrego produtos digitais tão dopaminérgicos, com copy tão visceral e design tão agressivo, que não apenas atrai leads—os fascina. Converte violentamente. De nutracêuticos complexos a aplicações SaaS de alta carga, construo motores de escalabilidade."
+    },
+    "philosophy": {
+      "label": "A Filosofia",
+      "title": "Código é Barato. Psicologia é Cara.",
+      "text1": "A maioria das agências foca na ferramenta. Eu foco na mente.",
+      "text2": "Cada pixel que coloco e cada linha de código que escrevo serve a um propósito singular: Escalar a Oferta.",
+      "text3": "Opero na interseção entre precisão de engenharia padrão IEEE e emoção humana bruta. Seja um funil de alto ticket ou um app mobile, o objetivo é desencadear uma resposta biológica no usuário. Não queremos que eles apenas naveguem; queremos que sintam uma compulsão para agir."
+    },
+    "ventures": {
+      "label": "Pele no Jogo",
+      "title": "Não apenas construo para clientes. Construo negócios.",
+      "zarpy": {
+        "name": "Zarpy",
+        "role": "Sócio & Tech Lead",
+        "description": "Revolucionando logística e mobilidade. Não apenas movemos coisas; engenhamos o fluxo do comércio."
+      },
+      "pppi": {
+        "name": "PPPI",
+        "role": "Parceiro Estratégico",
+        "description": "Soluções industriais de alto nível. Engenharia complexa encontra eficiência digital."
+      },
+      "pandami": {
+        "name": "Pandami",
+        "role": "Co-Fundador",
+        "description": "Um ecossistema digital construído para escala. De MVP à dominância de mercado."
+      }
+    },
+    "origin": {
+      "title": "Origem & Fundações",
+      "fromAcre": {
+        "title": "Do Acre para Floripa",
+        "description": "Nascido no Acre, forjado em resiliência. Me mudei para Florianópolis, a Ilha do Silício do Brasil, para mergulhar no coração da tecnologia. Esta jornada da Amazônia profunda para uma capital tech define minha abordagem: fundamentado, resiliente, mas implacavelmente futurista."
+      },
+      "ieee": {
+        "title": "Padrões IEEE",
+        "description": "Apoio e adiro aos padrões IEEE (Institute of Electrical and Electronics Engineers). Meu trabalho não é apenas \"criativo\"; é engenhado. É construído sobre protocolos que garantem estabilidade, segurança e escalabilidade."
+      },
+      "pillars": {
+        "title": "Os Pilares Invisíveis",
+        "description": "Minha liderança é silenciosamente guiada pelos princípios da Ordem DeMolay—lealdade, camaradagem e fidelidade. Espiritualmente, encontro equilíbrio no Espiritismo, que mantém meu ego sob controle e minha empatia pelo usuário final alta. Construo para pessoas, não apenas para métricas."
+      }
+    },
+    "cta": {
+      "title": "Pronto para Dominar?",
+      "button": "Iniciar o Projeto"
+    }
+  },
+    "blog": {
+      "label": "O Arquivo",
+      "title": "Transmissões.",
+      "endOfTransmission": "Fim da transmissão"
+    },
+    "careers": {
+      "label": "Aquisição de Talentos",
+      "title": "Junte-se ao Esquadrão de Elite.",
+      "subtitle": "Não contratamos funcionários. Recrutamos obcecados. Se você acredita que \"bom o suficiente\" é um insulto, e quer construir experiências digitais que definem a década, você pertence aqui.",
+      "openPositions": "Posições Abertas",
+      "dontSeeRole": "Não vê sua função?",
+      "talentBank": "Estamos sempre procurando talentos excepcionais. Preencha o formulário de candidatura para entrar em nosso Banco de Talentos.",
+      "application": "Candidatura",
+      "fullName": "Nome Completo",
+      "emailAddress": "Endereço de Email",
+      "whatsapp": "WhatsApp",
+      "areaOfExpertise": "Área de Especialização",
+      "selectOption": "Selecione uma opção...",
+      "design": "Design (UI/UX/Brand)",
+      "development": "Desenvolvimento (Frontend/Backend)",
+      "strategy": "Estratégia & Crescimento",
+      "management": "Gestão de Projetos",
+      "other": "Outro",
+      "linkedinUrl": "URL do LinkedIn",
+      "portfolioUrl": "URL do Portfólio",
+      "salaryExpectations": "Expectativas Salariais (Mensal/Por Hora)",
+      "attachCV": "Anexar CV / Currículo",
+      "uploadText": "Clique para fazer upload ou arraste e solte",
+      "fileFormat": "PDF, DOCX (Máx 5MB)",
+      "submitApplication": "Enviar Candidatura",
+      "applicationReceived": "Candidatura Recebida",
+      "receivedMessage": "Seu perfil foi adicionado ao nosso banco de dados de talentos. Se suas habilidades corresponderem às nossas obsessões atuais, entraremos em contato.",
+      "submitAnother": "Enviar outra",
+      "remote": "Remoto",
+      "fullTime": "Tempo integral",
+      "contract": "Contrato",
+      "hybrid": "Híbrido"
+    },
+    "contactV2": {
+      "title": "Vamos Construir o Futuro.",
+      "subtitle": "Estamos aceitando novas parcerias para o Q4 2024. Conte-nos sobre sua visão e diremos como executá-la.",
+      "email": "Email",
+      "office": "Escritório",
+      "officeAddress": "1200 Brickell Ave, Suite 1950 Miami, FL 33131",
+      "yourName": "Seu Nome",
+      "emailAddress": "Endereço de Email",
+      "company": "Empresa / Organização",
+      "projectBudget": "Orçamento do Projeto (USD)",
+      "tellUsAbout": "Conte-nos sobre o projeto",
+      "attachFile": "Anexar Arquivo",
+      "sendRequest": "Enviar Solicitação",
+      "requestReceived": "Solicitação Recebida",
+      "receivedMessage": "Recebemos seu briefing. Um estrategista revisará seus requisitos e entrará em contato dentro de 24 horas para agendar uma chamada de descoberta."
+    }
   }
 }

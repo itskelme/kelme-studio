@@ -1,18 +1,17 @@
 "use client"
 
 import React from "react"
-import { Code, Megaphone, Palette, Video, ArrowUpRight, ChevronRight } from "lucide-react"
+import { RiLayoutMasonryLine, RiCodeSSlashLine, RiPenNibLine, RiRocket2Line } from "@remixicon/react"
 import { useMessages, useTranslations } from 'next-intl'
+import { motion } from "framer-motion"
 
-// Mapeia ícones por possíveis categorias (EN/PT)
 const iconMap: Record<string, React.ReactElement> = {
-  Development: <Code className="w-7 h-7" />,
-  Marketing: <Megaphone className="w-7 h-7" />,
-  Strategy: <Palette className="w-7 h-7" />,
-  "Video Editing": <Video className="w-7 h-7" />,
-  Desenvolvimento: <Code className="w-7 h-7" />,
-  "Edição de Vídeo": <Video className="w-7 h-7" />,
-  Estratégia: <Palette className="w-7 h-7" />,
+  "UI/UX Design": <RiLayoutMasonryLine className="w-6 h-6" />,
+  Development: <RiCodeSSlashLine className="w-6 h-6" />,
+  Desenvolvimento: <RiCodeSSlashLine className="w-6 h-6" />,
+  Branding: <RiPenNibLine className="w-6 h-6" />,
+  Growth: <RiRocket2Line className="w-6 h-6" />,
+  Crescimento: <RiRocket2Line className="w-6 h-6" />,
 }
 
 export function Services() {
@@ -21,83 +20,46 @@ export function Services() {
   const services: { number: string; category: string; description: string; items: string[] }[] = messages.services.list
 
   return (
-    <section className="py-28 px-6 lg:px-12 bg-[#0F0E0D]" id="services">
-      <div className="max-w-7xl mx-auto">
-        {/* Seção de Introdução */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
-          <div>
-            <h2 className="section-title text-[#F7F7F7] mb-5">
-              {messages.services.sectionTitle} & abordagem
-            </h2>
-            <p className="text-lg text-[#F7F7F7]/70 font-satoshi leading-relaxed">
-              {messages.services.sectionSubtitle}
-            </p>
-          </div>
-          <div className="relative h-full flex items-center justify-center">
-            <div className="absolute w-72 h-72 bg-[#CB8D0F]/10 rounded-full opacity-30 filter blur-xl"></div>
-            <div className="relative">
-              <div className="p-6 backdrop-blur-sm bg-[#0F0E0D]/30 border border-[#CB8D0F]/20 rounded-xl">
-                <div className="grid grid-cols-2 gap-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="flex items-center p-3 bg-[#0F0E0D]/70 rounded-lg border border-[#CB8D0F]/10">
-                      <div className="w-2 h-2 rounded-full bg-[#CB8D0F] mr-2"></div>
-                      <p className="text-[#F7F7F7]/80 text-sm font-medium">
-                        {t(`services.highlights.${i}`)}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 text-[#F7F7F7]/60 text-sm text-center">
-                  {t('services.approachHighlight')}
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="services" className="py-32 border-b border-white/10 bg-black relative">
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px] pointer-events-none" />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="mb-20">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-4">
+            {t("services.label", { default: "What We Do" })}
+          </h2>
+          <h3 className="font-oswald text-5xl md:text-7xl font-bold uppercase leading-none">
+            {messages.services.sectionTitle}<span className="text-secondary">.</span>
+          </h3>
         </div>
 
-        {/* Categoria Principal */}
-        {services.map((service, serviceIndex) => (
-          <div key={service.category} className="mb-24 last:mb-0">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-16 w-16 relative flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full bg-[#CB8D0F]/20 opacity-60"></div>
-                <div className="relative text-[#CB8D0F]">
-                  {iconMap[service.category] || <Code className="w-7 h-7" />}
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10 border border-white/10">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-black p-12 group hover:bg-surface transition-colors duration-500"
+            >
+              <div className="mb-6 text-white/50 group-hover:text-white transition-colors">
+                {iconMap[service.category] || <RiCodeSSlashLine className="w-6 h-6" />}
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-[#F7F7F7]">
-                  {service.category}
-                </h3>
-                <p className="text-[#F7F7F7]/70 mt-1">
-                  {service.description}
-                </p>
-              </div>
-            </div>
-            
-            {/* Lista de itens em formato de grade */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 pl-4 md:pl-20">
-              {service.items.map((item, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#CB8D0F]"></div>
-                  <span className="text-[#F7F7F7]/90">
-                    {item}
+              <h4 className="text-2xl font-oswald uppercase font-bold mb-4">{service.category}</h4>
+              <p className="text-secondary mb-8 text-sm leading-relaxed max-w-sm">
+                {service.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {service.items.slice(0, 3).map((tag) => (
+                  <span key={tag} className="text-xs border border-white/10 px-2 py-1 uppercase tracking-wider text-secondary rounded-none">
+                    {tag}
                   </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        {/* CTA */}
-        <div className="flex justify-center mt-16">
-          <a 
-            href="#contact" 
-            className="bg-[#CB8D0F] text-[#0F0E0D] font-medium py-3 px-8 rounded-full transition-all duration-300 hover:bg-[#CB8D0F]/90 hover:shadow-lg flex items-center gap-2"
-          >
-            {messages.navbar.letsTalk}
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

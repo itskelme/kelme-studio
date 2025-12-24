@@ -1,14 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
 import { AppLocale, routing } from "@/i18n/routing";
-import { ContactSection } from "@/components/contact/contact-section";
-import { MainLayout } from "@/components/layouts/main-layout";
+import { ContactV2 } from "@/components/contact/contact-v2";
 import { Metadata } from "next";
-import { FAQSchema } from "@/components/schema";
 import { generatePageMetadata } from "@/lib/metadata";
-import { getFAQItems } from "@/lib/faq-utils";
-
-// Obter itens de FAQ a partir do utilitário
-const faqItems = getFAQItems(5);
 
 // Permite SSG para cada locale
 export function generateStaticParams() {
@@ -67,12 +61,5 @@ export default async function ContactPage({
   const { locale } = await params;
   setRequestLocale(locale);
   
-  return (
-    <>
-      <FAQSchema items={faqItems} />
-      <MainLayout>
-        <ContactSection />
-      </MainLayout>
-    </>
-  );
+  return <ContactV2 />;
 }

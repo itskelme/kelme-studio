@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import '@/app/globals.css';
-import { Manrope, Space_Mono } from 'next/font/google';
-import Script from 'next/script';
+import { Manrope, Oswald } from 'next/font/google';
+
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
@@ -9,6 +9,8 @@ import { AppLocale, locales } from '@/i18n/routing';
 import { generatePageMetadata } from '@/lib/metadata';
 import { GridOverlay } from '@/components/ui/grid-overlay';
 import { CustomCursor } from '@/components/ui/custom-cursor';
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -17,10 +19,10 @@ const manrope = Manrope({
   weight: ['400','500','600','700','800']
 });
 
-const spaceMono = Space_Mono({
+const oswald = Oswald({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-mono',
+  variable: '--font-oswald',
   weight: ['400', '700']
 });
 
@@ -51,11 +53,15 @@ export default async function RootLayout({
   const messages = await getMessages();
   
   return (
-    <html lang={locale} className={`${manrope.variable} ${spaceMono.variable} antialiased scroll-smooth`}>
+    <html lang={locale} className={`${manrope.variable} ${oswald.variable} antialiased scroll-smooth`}>
       <body className="font-sans bg-black text-gray-100 overflow-x-hidden">
         <CustomCursor />
         <GridOverlay />
-        <NextIntlClientProvider locale={locale} messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

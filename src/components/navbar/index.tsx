@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { RiMenu3Line, RiCloseLine } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { LanguageSelector } from "@/components/language-selector";
 import { Link } from "@/i18n/navigation";
-import { NavItem, MegaDropdown } from "@/components/ui/mega-dropdown";
+import { NavItem, MegaDropdown } from "@/components/navbar/mega-dropdown";
 import { useTranslations, useMessages } from "next-intl";
 import { MobileMenu } from "./mobile-menu";
 import { useNavMenus } from "./use-nav-menus";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 /**
  * Navbar principal do site
@@ -59,50 +59,39 @@ export function Navbar() {
 		return () => document.removeEventListener("click", handleClickOutside);
 	}, [activeDropdown]);
 
-	// Define classes baseadas no estado de scroll
-	const containerClass = isScrolled
-		? "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#0F0E0D]/80 backdrop-blur-md border-b border-[#27D182]/20"
-		: "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent border-b border-transparent";
+	// Define classes baseadas no estado de scroll com v2 styling
+	const containerClass = `fixed top-0 left-0 right-0 z-50 px-6 bg-black/50 transition-all duration-300  text-white ${isScrolled ? "py-4" : "py-6"}`;
 
-	// Estilos embutidos
+	// Estilos embutidos com v2 design
 	const styles = {
-		innerWrapper: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full",
-		flexContainer: "flex items-center justify-between h-20 w-full",
-		logoContainer: "flex items-center space-x-1",
-		logoImage: "h-8 w-8",
-		logoText:
-			"font-bold text-lg text-[#F7F7F7] font-satoshi uppercase tracking-wider",
-		logoAccent: "font-light text-[#27D182]",
-		mobileMenuBtn:
-			"lg:hidden text-[#F7F7F7] hover:text-[#27D182] transition-colors ml-4",
+		innerWrapper: "max-w-7xl mx-auto w-full",
+		flexContainer: "flex items-center justify-between w-full",
+		logoText: "text-2xl font-oswald font-bold tracking-tighter uppercase",
+		logoAccent: "opacity-50",
+		mobileMenuBtn: "lg:hidden z-50 transition-colors ml-4",
 		mobileMenuIcon: "h-6 w-6",
 	};
 
 	return (
 		<>
-			<nav className={`${containerClass} navbar-main`}>
+			<motion.nav 
+				className={`${containerClass} navbar-main`}
+				initial={{ y: -100 }}
+				animate={{ y: 0 }}
+				transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+			>
 				<div className={styles.innerWrapper}>
 					<div className={styles.flexContainer}>
 						{/* Divisão 1: Logo (1/3) */}
 						<div className="w-full lg:w-1/3 flex justify-start items-center">
-							<Link href="/" className={styles.logoContainer}>
-								<Image
-									src="/images/kelme-icon.svg"
-									alt="Eagle Icon"
-									width={32}
-									height={32}
-									className={styles.logoImage}
-									priority
-								/>
-								<div className={styles.logoText}>
-									KELME <span className="font-medium">STUDIO</span>
-								</div>  
+							<Link href="/" className={styles.logoText}>
+								Kelme<span className={styles.logoAccent}>.Studio</span>
 							</Link>
 						</div>
 
 						{/* Divisão 2: Menu Central (1/3) */}
 						<div className="hidden lg:flex w-1/3 justify-center items-center">
-							<div className="flex items-center space-x-6 xl:space-x-8">
+							<div className="flex items-center gap-8">
 								{/* Services NavItem */}
 								<div onClick={(e) => handleItemClick(e, "services")}>
 									<NavItem
@@ -134,10 +123,14 @@ export function Navbar() {
 
 						{/* Divisão 3: Botões e Controles (1/3) */}
 						<div className="w-full lg:w-1/3 flex justify-end items-center">
-							<div className="hidden lg:flex items-center space-x-4">
+							<div className="hidden lg:flex items-center gap-4">
 								<LanguageSelector />
 								<Link href="/contact">
-									<Button size="default">
+									<Button 
+										size="default"
+										variant="outline"
+										className="border-white text-white hover:bg-white hover:text-black transition-colors rounded-none uppercase tracking-widest"
+									>
 										{t("navbar.letsTalk").toUpperCase()}
 									</Button>
 								</Link>
@@ -147,7 +140,11 @@ export function Navbar() {
 								className={styles.mobileMenuBtn}
 								aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
 							>
-								<Menu className={styles.mobileMenuIcon} />
+								{mobileMenuOpen ? (
+									<RiCloseLine className={styles.mobileMenuIcon} />
+								) : (
+									<RiMenu3Line className={styles.mobileMenuIcon} />
+								)}
 							</button>
 						</div>
 					</div>
@@ -167,7 +164,7 @@ export function Navbar() {
 					sections={[...insightsSections, ...socialSections]}
 					onClose={() => setActiveDropdown(null)}
 				/>
-			</nav>
+			</motion.nav>
 
 			{/* Mobile Menu Component */}
 			<MobileMenu

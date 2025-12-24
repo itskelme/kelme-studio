@@ -68,7 +68,7 @@ export function ContactInfo() {
         <div className="flex items-center space-x-4 mb-6">
           <div className="shrink-0 w-12 h-12 rounded-full overflow-hidden border-2 border-[#27D182]">
             <img 
-              src="/images/diego-kelme-portrait.png" 
+              src="/images/diego-kelme-portrait.jpg" 
               alt="Diego Kelme" 
               className="h-full w-full object-cover"
             />

@@ -4,7 +4,22 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { Check, AlertCircle } from "lucide-react";
-import { formStyles } from "@/lib/styles";
+
+/**
+ * Estilos do formulário
+ */
+const formStyles = {
+  container: "bg-[#1A1918] border-2 rounded-none p-8 md:p-10",
+  borderStates: {
+    idle: "border-[#27D182]/30",
+    success: "border-[#27D182]",
+    error: "border-red-500"
+  },
+  label: "block text-sm font-medium mb-2 text-[#F7F7F7]",
+  input: "w-full px-4 py-3 bg-[#0F0E0D] border border-[#27D182]/20 text-[#F7F7F7] placeholder-[#D7D7D7]/40 focus:outline-none focus:border-[#27D182] transition-colors rounded-none",
+  select: "w-full px-4 py-3 bg-[#0F0E0D] border border-[#27D182]/20 text-[#F7F7F7] focus:outline-none focus:border-[#27D182] transition-colors appearance-none rounded-none cursor-pointer",
+  checkbox: "w-5 h-5 border-2 border-[#27D182]/30 bg-[#0F0E0D] checked:bg-[#27D182] checked:border-[#27D182] focus:ring-2 focus:ring-[#27D182]/50 transition-all cursor-pointer rounded-none"
+};
 
 /**
  * Lista de chaves para benefícios do formulário

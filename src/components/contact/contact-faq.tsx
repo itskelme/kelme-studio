@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { FAQItem } from "../ui/faq-schema";
-import { getFAQItems } from "@/lib/faq-utils";
+import { getFAQItems } from "@/lib/utils/faq-utils";
 
 /**
  * Dados de FAQ obtidos a partir do utilitário central

@@ -1,11 +1,14 @@
-import { Navbar } from '@/components/navbar/index';
 import { Hero } from '@/components/hero';
+import { Marquee } from '@/components/marquee';
 import { Services } from '@/components/services';
 import { Work } from '@/components/work';
 import { Founder } from '@/components/founder';
 import { SocialProof } from '@/components/social-proof';
+import { Testimonials } from '@/components/testimonials';
+import { Pricing } from '@/components/pricing';
+import { FAQ } from '@/components/faq';
+import { CommunityLeadMagnet } from '@/components/community-lead-magnet';
 import { CtaCard } from '@/components/cta-card';
-import { Footer } from '@/components/footer';
 import { AppLocale, routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
@@ -40,17 +43,16 @@ export default async function HomeLocalePage({ params }:{ params: Promise<{ loca
   return (
     <>
       <OrganizationSchema />
-      
-      <main className="min-h-screen bg-black relative">
-        <Navbar />
-        <Hero />
-        <Services />
-        <Work />
-        <Founder />
-        <SocialProof />
-        <CtaCard />
-        <Footer />
-      </main>
+      <Hero />
+      <Marquee />
+      <Services />
+      <Work />
+      <Founder />
+      <Testimonials />
+      <Pricing />
+      <FAQ />
+      <CommunityLeadMagnet />
+      <CtaCard />
     </>
   );
 }

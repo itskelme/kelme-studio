@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui";
 import ReactCountryFlag from "react-country-flag";
-import { ChevronDown } from "lucide-react";
+import { RiArrowDownSLine } from "@remixicon/react";
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 
@@ -25,13 +25,13 @@ export function LanguageSelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="secondary" size="sm" className="flex items-center gap-2 min-w-[120px]">
-          <ReactCountryFlag countryCode={current.country} svg style={{ width: 20, height: 20, borderRadius: '50%', objectFit: 'cover' }} />
-          <span className="font-bold text-base text-[#F7F7F7]">{current.code.toUpperCase()}</span>
-          <ChevronDown className="h-4 w-4 text-[#27D182]" />
+        <Button variant="ghost" size="sm" className="flex items-center gap-2 px-3 py-2 hover:bg-white/10 transition-colors rounded-none border border-white/20 mix-blend-difference">
+          <ReactCountryFlag countryCode={current.country} svg className="rounded-full" style={{ width: 16, height: 16, objectFit: 'cover' }} />
+          <span className="font-bold text-xs uppercase tracking-widest text-white">{current.code}</span>
+          <RiArrowDownSLine className="h-4 w-4 text-white" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[140px] p-1">
+      <DropdownMenuContent align="end" className="min-w-[160px] p-2 bg-black border border-white/20 rounded-none">
         {languages.map(lang => {
           if (lang.code === locale) return null; // não mostrar o já selecionado
           return (
@@ -53,10 +53,10 @@ export function LanguageSelector() {
                   ? `/${lang.code}` 
                   : `/${lang.code}${pathname}`;
               }}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg font-satoshi text-base hover:bg-[#CB8D0F]/10 focus:bg-[#CB8D0F]/10 cursor-pointer"
+              className="flex items-center gap-3 px-4 py-3 rounded-none font-bold text-sm uppercase tracking-wider text-white hover:bg-white/10 focus:bg-white/10 cursor-pointer transition-colors"
             >
               <>
-                <ReactCountryFlag countryCode={lang.country} svg style={{ width: 20, height: 20, borderRadius: '50%', objectFit: 'cover' }} />
+                <ReactCountryFlag countryCode={lang.country} svg className="rounded-full" style={{ width: 20, height: 20, objectFit: 'cover' }} />
                 <span>{lang.label}</span>
               </>
             </DropdownMenuItem>

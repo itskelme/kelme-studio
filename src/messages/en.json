@@ -28,140 +28,440 @@
   },
   "hero": {
     "title": {
-      "line1": "YOUR BRAND DESERVES TO",
-      "line2": "FLY HIGH",
-      "rotating": {
-        "values": [
-          "FLY HIGH",
-          "BE AN AUTHORITY",
-          "HAVE IDENTITY",
-          "BE MEMORABLE",
-          "TRANSFORM IDEAS",
-          "CREATE CONNECTIONS"
-        ]
-      }
+      "line1": "Kelme Studio"
     },
-    "subtitle": "We elevate ambitious brands beyond the horizon, crafting digital experiences that soar above the competition.",
-    "buttons": {"talkToDiego": "Talk to Diego", "viewWork": "View Work"}
+    "subtitle": "We craft insane digital experiences for ambitious brands. No fluff, just high-converting design and engineering.",
+    "buttons": {
+      "talkToDiego": "Start Project",
+      "viewWork": "View Work"
+    },
+    "scrollToExplore": "Scroll to explore"
   },
   "services": {
-    "sectionTitle": "Services",
-    "sectionSubtitle": "We partner with founders in the early stages - and back them until the world sees what we see.",
-    "highlights": {
-      "1": "Measurable results",
-      "2": "Strategic approach",
-      "3": "Specialized team",
-      "4": "Growth-focused"
-    },
-    "approachHighlight": "Our methodology adapts to your business",
+    "sectionTitle": "Capabilities",
+    "sectionLabel": "What We Do",
+    "label": "What We Do",
     "list": [
       {
-        "number": "01",
+        "category": "UI/UX Design",
+        "description": "Interfaces that behave as good as they look. We focus on conversion and retention through user-centric design patterns.",
+        "items": ["Web Design", "Mobile Apps", "Design Systems"]
+      },
+      {
         "category": "Development",
-        "description": "Custom solutions that scale with your business growth and vision.",
-        "items": ["WordPress", "Shopify", "Landing Pages", "Micro-SaaS", "MVP"]
+        "description": "Pixel-perfect implementation using modern stacks. Fast, accessible, and scalable code that ranks.",
+        "items": ["React/Next.js", "Webflow", "Shopify"]
       },
       {
-        "number": "02",
-        "category": "Marketing",
-        "description": "Strategic campaigns that drive engagement and measurable results.",
-        "items": ["Meta Ads", "Google Ads", "TikTok Ads", "Social Media", "Email Marketing", "SEO"]
+        "category": "Branding",
+        "description": "Visual identities that stick. From logo design to full brand guidelines, we create the face of your business.",
+        "items": ["Logo", "Strategy", "Art Direction"]
       },
       {
-        "number": "03",
-        "category": "Strategy",
-        "description": "Brand positioning and user experience that resonates with your audience.",
-        "items": ["Branding", "UI/UX Research"]
-      },
-      {
-        "number": "04",
-        "category": "Video Editing",
-        "description": "Compelling video content that converts viewers into customers.",
-        "items": ["VSL", "Creative Content for Ads"]
+        "category": "Growth",
+        "description": "Design-driven growth strategies. Landing pages and creatives optimized for high ROAS.",
+        "items": ["CRO", "Ad Creatives", "Analytics"]
       }
     ]
   },
   "work": {
     "sectionTitle": "Featured Projects",
     "sectionSubtitle": "The foundation of our portfolio demonstrates who we truly are. We invest into exceptional people and follow the long-term vision.",
+    "sectionLabel": "Selected Work",
+    "title": "Case Studies.",
     "viewButton": "View all works",
+    "viewAllProjects": "View All Projects",
     "items": [
       {"id": 1, "title": "Steez Drink", "category": "E-COMMERCE", "description": "Minimalist website for a low-carb beverage brand with age verification and integrated payment system.", "image": "/images/works/work_banner_steez-min.png", "year": "2024", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
-      {"id": 2, "title": "TurbinouInsta", "category": "MARKETING", "description": "Complete platform for Instagram influence marketing, with payment system and metrics dashboard.", "image": "/images/works/work_banner_turbinouinsta-min.png", "year": "2024", "clientName": "TurbinouInsta", "tags": ["Digital Marketing", "Web App"]},
+      {"id": 2, "title": "TurbinouInsta", "category": "E-COMMERCE", "description": "Complete platform for Instagram influence marketing, with payment system and metrics dashboard.", "image": "/images/works/work_banner_turbinouinsta-min.png", "year": "2024", "clientName": "TurbinouInsta", "tags": ["Digital Marketing", "Web App"]},
       {"id": 3, "title": "PPPI - Trademark Registration", "category": "BRANDING", "description": "Institutional website for a company specialized in trademark registration and protection, with online consultation system.", "image": "/images/works/work_banner_pppi-min.png", "year": "2023", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
       {"id": 4, "title": "Flikta", "category": "SAAS", "description": "Platform for managing campaigns with influencers, with AI optimization and real-time ROI metrics.", "image": "/images/works/work_banner_flikta-min.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]},
       {"id": 5, "title": "Ponte Américas", "category": "LANDING PAGE", "description": "Modern landing page for a logistics and international trade company connecting the Americas.", "image": "/images/works/work_banner_ponteamericas-min.png", "year": "2024", "clientName": "Ponte Américas", "tags": ["Landing Page", "Next.js", "Corporate"]},
       {"id": 6, "title": "Pandami", "category": "AI SAAS", "description": "AI-powered visagism platform that analyzes facial features to recommend personalized hairstyles and beauty treatments.", "image": "/images/works/work_banner_pandami-min.png", "year": "2024", "clientName": "Pandami", "tags": ["AI", "SaaS", "Beauty Tech"]}
     ]
   },
-  "founder": {
-    "firstName": "Diego",
-    "lastName": "Kelme",
-    "role": "Founder & Creative Director",
-    "quote": "Every brand deserves to fly high. I help businesses unlock their potential and reach new heights through strategic digital experiences.",
-    "bio": "8+ years transforming digital landscapes. From startups to enterprises, combining creativity with data-driven strategy to deliver exceptional results.",
-    "stats": {
-      "projects": {"value": "50+", "label": "Projects"},
-      "clients": {"value": "30+", "label": "Clients"},
-      "growth": {"value": "340%", "label": "Avg Growth"}
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved. Let's get you back on track.",
+    "goHome": "Go Home",
+    "goBack": "Go Back"
+  },
+  "servicesDetailed": {
+    "sectionLabel": "What We Do",
+    "title": "Capabilities.",
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "Interfaces that behave as good as they look. We focus on conversion and retention through user-centric design patterns.",
+      "tags": ["Web Design", "Mobile Apps", "Design Systems"]
+    },
+    "development": {
+      "title": "Development",
+      "description": "Pixel-perfect implementation using modern stacks. Fast, accessible, and scalable code that ranks.",
+      "tags": ["React/Next.js", "Webflow", "Shopify"]
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Visual identities that stick. From logo design to full brand guidelines, we create the face of your business.",
+      "tags": ["Logo", "Strategy", "Art Direction"]
+    },
+    "growth": {
+      "title": "Growth",
+      "description": "Design-driven growth strategies. Landing pages and creatives optimized for high ROAS.",
+      "tags": ["CRO", "Ad Creatives", "Analytics"]
     }
   },
-  "socialProof": {
-    "testimonials": {
-      "titleLine1": "Client",
-      "titleLine2": "Testimonials",
-      "subtitle": "Don't just take our word for it. Here's what our clients say about working with Kelme Studio.",
-      "list": [
-        {"name": "Sarah Martinez", "role": "CEO, TechFlow Solutions", "content": "Diego and his team transformed our entire digital presence. Our conversion rates increased by 280% in just 3 months. The attention to detail and strategic thinking is unmatched.", "rating": 5, "image": "/images/sarah-martinez-testimonial.png"},
-        {"name": "Michael Chen", "role": "Founder, EcoVenture", "content": "Working with Kelme Studio was a game-changer. They didn't just build us a website - they crafted a complete brand experience that resonates with our audience.", "rating": 5, "image": "/images/michael-chen-testimonial.png"},
-        {"name": "Alexandra Torres", "role": "Marketing Director, FinanceHub", "content": "The ROI we've seen from our campaigns is incredible. Diego's strategic approach to digital marketing has elevated our brand beyond our expectations.", "rating": 5, "image": "/images/alexandra-torres-testimonial.png"}
+  "pricing": {
+    "sectionLabel": "Plans & Pricing",
+    "title": "Membership.",
+    "subtitle": "No contracts. No hidden fees. Pause or cancel anytime. Just pure, high-velocity output.",
+    "design": {
+      "name": "Design",
+      "price": "$2,995",
+      "period": "/mo",
+      "description": "Perfect for startups needing ongoing design support without the overhead.",
+      "features": [
+        "One request at a time",
+        "Average 48h delivery",
+        "Unlimited revisions",
+        "UI/UX Design",
+        "Graphic Design",
+        "Pause or cancel anytime"
       ]
     },
-    "awards": {
-      "titleLine1": "You Deserve",
-      "titleLine2": "The Best",
-      "subtitle": "Recognition from industry leaders validates our commitment to excellence.",
-      "list": [
-        {"title": "Best Digital Agency", "year": "2024", "organization": "Marketing Excellence Awards", "iconKey": "trophy"},
-        {"title": "Innovation In Design", "year": "2023", "organization": "Web Design Awards", "iconKey": "star"},
-        {"title": "Client Satisfaction", "year": "2023", "organization": "Agency Awards", "iconKey": "users"}
-      ]
+    "designDev": {
+      "name": "Design + Dev",
+      "price": "$4,995",
+      "period": "/mo",
+      "description": "Complete digital product acceleration. Design and Webflow development included.",
+      "features": [
+        "One request at a time",
+        "Average 48-72h delivery",
+        "Unlimited revisions",
+        "UI/UX + Branding",
+        "Webflow Development",
+        "Priority support",
+        "Pause or cancel anytime"
+      ],
+      "badge": "Most Popular"
     },
-    "partners": {
-      "titleLine1": "Who We've",
-      "titleLine2": "Partnered With",
-      "subtitle": "Trusted by industry giants and innovative startups alike.",
-      "list": [
-        {"name": "Microsoft", "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoft.svg", "color": "#5E5E5E"},
-        {"name": "Google", "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg", "color": "#4285F4"},
-        {"name": "NVIDIA", "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nvidia.svg", "color": "#76B900"},
-        {"name": "Meta", "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg", "color": "#0866FF"},
-        {"name": "Adobe", "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/adobe.svg", "color": "#FF0000"},
-        {"name": "Shopify", "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg", "color": "#7AB55C"}
-      ]
-    }
+    "getStarted": "Get Started",
+    "customScope": "Need a custom scope?",
+    "bookCall": "Book a call"
+  },
+  "faq": {
+    "sectionLabel": "Common Questions",
+    "title": "Details & Logistics.",
+    "cantFind": "Can't find what you're looking for?",
+    "emailUs": "Email us directly.",
+    "questions": [
+      {
+        "question": "Why a monthly subscription instead of project-based?",
+        "answer": "Project-based work often punishes efficiency. Our subscription model aligns our incentives with yours: delivering high-quality work fast. It eliminates scope creep negotiations and allows us to iterate continuously on your product."
+      },
+      {
+        "question": "How fast is the turnaround time?",
+        "answer": "On average, requests are delivered in 48-72 hours. Complex tasks like full landing pages or complex logic might take longer, but we break them down into deliverable milestones so you see progress every few days."
+      },
+      {
+        "question": "What if I don't like the design?",
+        "answer": "We iterate until you are obsessed. Period. Our subscription includes unlimited revisions. We don't stop until the work is world-class."
+      },
+      {
+        "question": "What tech stack do you use?",
+        "answer": "We specialize in the modern web. For marketing sites, we use Webflow or Framer for speed and editability. For apps and complex platforms, we build with React, Next.js, and TypeScript tailored to your needs."
+      },
+      {
+        "question": "Is there a refund policy?",
+        "answer": "Due to the high-quality nature of the work, we do not issue refunds once work has commenced. However, you can pause or cancel your subscription at any time to avoid future charges."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "Social Proof",
+    "title": "Client Obsession.",
+    "subtitle": "We don't just collect logos. We collect success stories. Here is what happens when you work with the best.",
+    "items": [
+      {
+        "quote": "Kelme Studio didn't just build a website; they architected a digital flagship. Our conversion rates doubled within the first month of launch. The authority we now command in our market is undeniable.",
+        "author": "Alex Rivera",
+        "role": "CMO, Nebula Fintech",
+        "metric": "+200% Conversions"
+      },
+      {
+        "quote": "I've worked with top agencies in NYC and London. Diego's team operates at a different frequency. Faster, sharper, and obsessively detailed. They understand that design is a revenue function.",
+        "author": "Sarah Jenkins",
+        "role": "Founder, Velvet Fashion",
+        "metric": "3x ROAS"
+      },
+      {
+        "quote": "The ROI was immediate. They simplified our complex ecosystem into a seamless user journey. A masterclass in execution that positioned us exactly where we needed to be: at the top.",
+        "author": "Marcus Chen",
+        "role": "Director, Quantum SaaS",
+        "metric": "Series B Secured"
+      }
+    ]
+  },
+  "community": {
+    "badge": "Invite Only",
+    "label": "Join the Movement",
+    "title": "Watch Us Build In Public.",
+    "description": "Stop guessing. Get direct access to our internal SOPs, design critiques, and the exact strategies we use to scale 7-figure agencies.",
+    "warning": "Warning: This is not for lurkers. Builders only.",
+    "joinDiscord": "Join Discord Community",
+    "membersOnline": "Members Online"
   },
   "footer": {
-    "cta": {
-      "title": {"part1": "Ready to make your brand", "highlight": "fly high", "part2": "?"},
-      "subtitle": "Let's discuss your project and elevate your digital presence to new heights.",
-      "button": "Talk to Diego"
-    },
-    "exploreTitle": "Explore",
-    "servicesTitle": "Services",
+    "title": "Have an idea?",
+    "titleHighlight": "Let's build it.",
+    "subtitle": "We help ambitious brands define their digital future. Open for new partnerships for Q4 2024.",
+    "emailUs": "Email Us",
+    "whatsapp": "WhatsApp",
+    "sitemap": "Sitemap",
+    "resources": "Resources",
+    "socials": "Socials",
     "socialTitle": "Social",
-    "brandDescription": "Elevating brands through strategic digital solutions and creative excellence.",
-    "exploreLinks": ["Home", "Services", "Work", "About"],
-    "serviceLinks": ["Development", "Marketing", "Strategy", "Video Editing"],
-    "socialLinks": ["LinkedIn", "Instagram", "X", "YouTube"],
-    "copyright": "© 2026 KELME STUDIO. All Rights Reserved",
-    "termsOfUse": "Terms of Use",
-    "privacyPolicy": "Privacy Policy"
+    "socialLinks": ["Instagram", "Twitter", "LinkedIn"],
+    "home": "Home",
+    "work": "Work",
+    "services": "Services",
+    "pricing": "Pricing",
+    "insights": "Insights",
+    "careers": "Careers",
+    "brandAssets": "Brand Assets",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "Kelme Studio.",
+    "tagline": "Designed in the Dark.",
+    "newBadge": "NEW"
+  },
+  "blog": {
+    "label": "The Archive",
+    "title": "Transmissions.",
+    "endOfTransmission": "End of transmission"
+  },
+  "careers": {
+    "label": "Talent Acquisition",
+    "title": "Join the Elite Squad.",
+    "subtitle": "We don't hire employees. We recruit obsessives. If you believe \"good enough\" is an insult, and you want to build digital experiences that define the decade, you belong here.",
+    "openPositions": "Open Positions",
+    "dontSeeRole": "Don't see your role?",
+    "talentBank": "We are always looking for exceptional talent. Fill out the application form to enter our Talent Bank.",
+    "application": "Application",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "whatsapp": "WhatsApp",
+    "areaOfExpertise": "Area of Expertise",
+    "selectOption": "Select Option...",
+    "design": "Design (UI/UX/Brand)",
+    "development": "Development (Frontend/Backend)",
+    "strategy": "Strategy & Growth",
+    "management": "Project Management",
+    "other": "Other",
+    "linkedinUrl": "LinkedIn URL",
+    "portfolioUrl": "Portfolio URL",
+    "salaryExpectations": "Salary Expectations (Monthly/Hourly)",
+    "attachCV": "Attach CV / Resume",
+    "uploadText": "Click to upload or drag and drop",
+    "fileFormat": "PDF, DOCX (Max 5MB)",
+    "submitApplication": "Submit Application",
+    "applicationReceived": "Application Received",
+    "receivedMessage": "Your profile has been added to our talent database. If your skills match our current obsessions, we will be in touch.",
+    "submitAnother": "Submit another",
+    "remote": "Remote",
+    "fullTime": "Full-time",
+    "contract": "Contract",
+    "hybrid": "Hybrid"
+  },
+  "workPage": {
+    "label": "Our Portfolio",
+    "backgroundText": "Selected",
+    "title": "Digital Architecture.",
+    "subtitle": "A curation of our most ambitious projects. We build digital products that refuse to be ignored.",
+    "viewCaseStudy": "View Case Study",
+    "ctaTitle": "Ready to build something Iconic?",
+    "startProject": "Start Project",
+    "projects": [
+      {
+        "client": "Nebula Protocol",
+        "title": "DeFi Trading Interface",
+        "category": "Fintech / Web3",
+        "year": "2024",
+        "description": "Redefining how users interact with decentralized liquidity pools through a seamless, zero-latency interface."
+      },
+      {
+        "client": "Velvet Maison",
+        "title": "Global E-Commerce Rebrand",
+        "category": "Fashion",
+        "year": "2023",
+        "description": "A digital flagship store that merges editorial storytelling with high-conversion checkout flows."
+      },
+      {
+        "client": "Hyperion",
+        "title": "AI Analytics Dashboard",
+        "category": "SaaS",
+        "year": "2024",
+        "description": "Visualizing complex datasets for enterprise AI models. Dark mode native, performance obsessed."
+      },
+      {
+        "client": "Off-White Architects",
+        "title": "Portfolio & Immersion",
+        "category": "Architecture",
+        "year": "2023",
+        "description": "Minimalist brutalism. We let the structures speak for themselves with a silent, heavy digital presence."
+      },
+      {
+        "client": "Kinetix",
+        "title": "Fitness App Ecosystem",
+        "category": "Mobile App",
+        "year": "2024",
+        "description": "Gamified fitness tracking with real-time bio-feedback visualizations."
+      },
+      {
+        "client": "Carbon",
+        "title": "Sustainability Report",
+        "category": "Corporate",
+        "year": "2023",
+        "description": "Interactive WebGL experience showcasing global carbon footprint reduction initiatives."
+      }
+    ]
+  },
+  "contact": {
+    "formTitle": "Let's Talk",
+    "formSubtitle": "Tell us about your project and how we can help transform your vision into reality.",
+    "getInTouch": "Get In Touch",
+    "responseTime": "We'll respond within 24 hours",
+    "ndaAvailable": "We sign NDAs if requested",
+    "dedicatedTeam": "Access to dedicated specialists",
+    "directContact": "Direct Contact",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your business email",
+    "phone": "Phone",
+    "phonePlaceholder": "Ex: +1 555 123-4567",
+    "budget": "What is your budget?",
+    "selectBudget": "Select your budget",
+    "aboutProject": "About the project",
+    "aboutProjectPlaceholder": "Tell us about your project with as much detail as possible",
+    "signNDA": "I would like to sign an NDA",
+    "privacyNotice": "By submitting the form, I agree to the ",
+    "privacyPolicy": "Privacy Policy",
+    "sendMessage": "SEND MESSAGE",
+    "sending": "SENDING...",
+    "successTitle": "Message sent!",
+    "successMessage": "Thank you! We received your message and will get back to you soon.",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "Oops! Something went wrong while submitting the form. Please try again.",
+    "sendAnother": "Send another message",
+    "tryAgain": "Try again",
+    "scheduleCall": "Schedule a call",
+    "bookAMeeting": "Book a meeting",
+    "ceoPitch": "Have questions or curious about future possibilities? Feel free to reach out to me directly.",
+    "connectLinkedin": "Connect on LinkedIn",
+    "ourOffices": "Our Office",
+    "officesDescription": "We serve clients throughout Brazil from our base in Florianópolis.",
+    "florianopolis": "Florianópolis",
+    "whatsapp": "WhatsApp",
+    "chatDirectly": "Chat directly",
+    "chatOnWhatsApp": "Chat on WhatsApp",
+    "city": "Florianópolis, SC",
+    "country": "Brazil",
+    "company": "Company / Organization",
+    "clientTestimonials": "What our clients say",
+    "testimonial1Text": "Kelme Studio delivered exceptional design that truly captured the essence of our brand. The team was professional from start to finish and understood exactly what we wanted.",
+    "testimonial1Author": "Mark Silva",
+    "testimonial1Position": "CEO, Tech Solutions",
+    "testimonial2Text": "Working with the Kelme team was an incredible experience. They not only met the deadline but exceeded our expectations with creative ideas and innovative solutions.",
+    "testimonial2Author": "Ana Rodriguez",
+    "testimonial2Position": "Marketing Director, Startup XYZ",
+    "testimonial3Text": "The dedication and attention to detail from the Kelme Studio team was impressive. They transformed our vision into reality and created a website that truly represents our brand.",
+    "testimonial3Author": "Carlos Mendes",
+    "testimonial3Position": "Founder, Design Agency",
+    "faqTitle": "Frequently Asked Questions",
+    "faqDescription": "Answers to the most common questions about our services and work process.",
+    "faq1Question": "What services does Kelme Studio offer?",
+    "faq1Answer": "We offer a complete range of digital services, including website and app development, UI/UX design, branding, digital marketing, and content strategy. Our goal is to create digital solutions that help drive your business.",
+    "faq2Question": "How does the work process work?",
+    "faq2Answer": "Our process begins with an initial consultation to understand your needs. Then we develop a customized strategic plan, followed by design, development, testing, and launch phases. We maintain clear and transparent communication throughout the project.",
+    "faq3Question": "How long does it take to complete a project?",
+    "faq3Answer": "Completion time varies according to the complexity and scope of the project. A simple website can take a few weeks, while more complex projects can take several months. We provide a detailed time estimate after our initial consultation.",
+    "faq4Question": "How is the project cost determined?",
+    "faq4Answer": "The cost is based on the complexity, scope, and timeline of the project. Factors such as number of pages, custom features, exclusive design, and system integrations affect the price. We offer a transparent and detailed budget after our initial consultation.",
+    "faq5Question": "Do you offer support after launch?",
+    "faq5Answer": "Yes, we offer ongoing support and maintenance packages after launch. This includes security updates, bug fixes, minor improvements, and performance monitoring to ensure your project continues to function perfectly."
+  },
+  "about": {
+    "hook": {
+      "title": "I don't sell pretty websites.",
+      "subtitle": "People don't buy from me because I know code. They buy from me because I engineer <span class=\"text-white font-bold border-b border-[#C0392B]\">reality-bending sales funnels</span>.",
+      "text1": "If you are looking for a \"yes man\" to build a template, close this tab.",
+      "text2": "My clients partner with me because they know one thing: <strong>I double revenue.</strong>",
+      "text3": "I deliver digital products so dopaminergic, with copy so visceral and design so aggressive, that it doesn't just attract leads—it fascinates them. It converts violently. From complex nutraceuticals to high-load SaaS applications, I build engines for scalability."
+    },
+    "philosophy": {
+      "label": "The Philosophy",
+      "title": "Code is Cheap.\nPsychology is Expensive.",
+      "text1": "Most agencies focus on the tool. I focus on the mind.",
+      "text2": "Every pixel I place and every line of code I write serves a singular purpose: <strong>Scaling the Offer.</strong>",
+      "text3": "I operate at the intersection of IEEE-standard engineering precision and raw human emotion. Whether it's a high-ticket funnel or a mobile app, the goal is to trigger a biological response in the user. We don't want them to just browse; we want them to feel a compulsion to act."
+    },
+    "ventures": {
+      "label": "Skin in the Game",
+      "title": "I don't just build for clients.\nI build businesses.",
+      "zarpy": {
+        "name": "Zarpy",
+        "role": "Partner & Tech Lead",
+        "description": "Revolutionizing logistics and mobility. We don't just move things; we engineer the flow of commerce."
+      },
+      "pppi": {
+        "name": "PPPI",
+        "role": "Strategic Partner",
+        "description": "High-level industrial solutions. Complex engineering meets digital efficiency."
+      },
+      "pandami": {
+        "name": "Pandami",
+        "role": "Co-Founder",
+        "description": "A digital ecosystem built for scale. From MVP to market dominance."
+      }
+    },
+    "origin": {
+      "title": "Origin & Foundations",
+      "fromAcre": {
+        "title": "From Acre to Floripa",
+        "description": "Born in Acre, forged in resilience. I moved to Florianópolis, Brazil's Silicon Island, to immerse myself in the heart of technology. This journey from the deep Amazon to a tech capital defines my approach: grounded, resilient, yet relentlessly futuristic."
+      },
+      "ieee": {
+        "title": "IEEE Standards",
+        "description": "I support and adhere to IEEE (Institute of Electrical and Electronics Engineers) standards. My work isn't just \"creative\"; it's engineered. It's built on protocols that ensure stability, security, and scalability."
+      },
+      "pillars": {
+        "title": "The Unseen Pillars",
+        "description": "My leadership is quietly guided by the principles of the Order of DeMolay—loyalty, comradeship, and fidelity. Spiritually, I find balance in Spiritism, which keeps my ego in check and my empathy for the end-user high. I build for people, not just for metrics."
+      }
+    },
+    "cta": {
+      "title": "Ready to Dominate?",
+      "button": "Start The Project"
+    }
+  },
+  "founder": {
+    "greeting": "Hi, I'm",
+    "name": "Diego Kelme.",
+    "paragraphs": [
+      "If you've navigated the digital landscapes of <span class=\"text-white font-medium\">Orlando</span>, <span class=\"text-white font-medium\">Porto</span>, or <span class=\"text-white font-medium\">Florianópolis</span>, you've likely seen my work... even if you didn't know it was me.",
+      "I'm the guy big brands call when \"good enough\" stops converting.",
+      "While I'm notably known as the <strong>Tech Lead</strong> who simplifies the complex...",
+      "I'm also the leader of a <span class=\"text-white border-b border-white/30 pb-0.5\">complete elite squad</span>. We are a team of senior designers and developers who move faster than agencies ten times our size."
+    ],
+    "quote": "I know that sounds bold. But in a world of templates and AI-generated noise, authority is the only currency that matters.",
+    "closingParagraph": "My real journey began with a single obsession: How do we merge perfect code with perfect design to build not just websites, but revenue engines?",
+    "ctaLabel": "Here is the answer:",
+    "cta": "See Our Results"
   },
   "metadata": {
     "home": {
-      "title": "Kelme Studio - Digital Agency & Creative Studio",
-      "description": "We elevate ambitious brands beyond the horizon, creating digital experiences that stand out from the competition."
+      "title": "Kelme Studio - Digital Experiences That Convert",
+      "description": "We craft insane digital experiences for ambitious brands. No fluff, just high-converting design and engineering."
     },
     "contact": {
       "title": "Contact - Kelme Studio",
@@ -174,74 +474,10 @@
     "work": {
       "title": "Portfolio - Kelme Studio",
       "description": "Explore our portfolio of innovative digital projects and see how we transform our clients' online presence."
+    },
+    "blog": {
+      "title": "Blog - Kelme Studio",
+      "description": "Insights, trends and strategies about digital design, web development and business growth."
     }
-  },
-  "contact": {
-    "formTitle": "Fly high",
-    "formSubtitle": "Tell us about your project and how we can help transform your vision into reality.",
-    "getInTouch": "Get in Touch",
-    "responseTime": "We will respond within 24 hours",
-    "ndaAvailable": "We'll sign an NDA if requested",
-    "dedicatedTeam": "Access to dedicated specialists",
-    "directContact": "Direct Contact",
-    "fullName": "Full name",
-    "fullNamePlaceholder": "Enter your full name",
-    "email": "Email",
-    "emailPlaceholder": "Enter your business email",
-    "phone": "Phone",
-    "phonePlaceholder": "E.g., +55 11 99999-9999",
-    "budget": "What is your budget?",
-    "selectBudget": "Select your budget",
-    "aboutProject": "About your project",
-    "aboutProjectPlaceholder": "Tell us about your project in as much detail as possible",
-    "signNDA": "I would like to sign an NDA",
-    "privacyNotice": "By submitting this form, I agree to the ",
-    "privacyPolicy": "Privacy Policy",
-    "sendMessage": "SEND MESSAGE",
-    "sending": "SENDING...",
-    "successTitle": "Message sent!",
-    "successMessage": "Thank you! We've received your message and will get back to you soon.",
-    "errorTitle": "Something went wrong",
-    "errorMessage": "Oops! Something went wrong while submitting the form. Please try again.",
-    "sendAnother": "Send another message",
-    "tryAgain": "Try again",
-    "scheduleCall": "Schedule a call",
-    "bookAMeeting": "Book a meeting",
-    "ceoPitch": "Have more questions or just curious about future possibilities? Feel free to connect with me directly.",
-    "connectLinkedin": "Connect on LinkedIn",
-    "ourOffices": "Our Office",
-    "officesDescription": "We serve clients from all over Brazil from our base in Florianópolis.",
-    "florianopolis": "Florianópolis",
-    "whatsapp": "WhatsApp",
-    "chatDirectly": "Chat directly",
-    "chatOnWhatsApp": "Chat on WhatsApp",
-    "clientTestimonials": "What our clients say",
-    "testimonial1Text": "Kelme Studio delivered an exceptional design that truly captured the essence of our brand. The team was professional from start to finish and understood exactly what we wanted.",
-    "testimonial1Author": "Marcus Smith",
-    "testimonial1Position": "CEO, Tech Solutions",
-    "testimonial2Text": "Working with the Kelme team was an incredible experience. They not only met the deadline but exceeded our expectations with creative ideas and innovative solutions.",
-    "testimonial2Author": "Anna Rodriguez",
-    "testimonial2Position": "Marketing Director, Startup XYZ",
-    "testimonial3Text": "The dedication and attention to detail from the Kelme Studio team was impressive. They transformed our vision into reality and created a website that truly represents our brand.",
-    "testimonial3Author": "Charles Mendez",
-    "testimonial3Position": "Founder, Design Agency",
-    "faqTitle": "Frequently Asked Questions",
-    "faqDescription": "Answers to the most common questions about our services and work process.",
-    "faq1Question": "What services does Kelme Studio offer?",
-    "faq1Answer": "We offer a full range of digital services, including website and app development, UI/UX design, branding, digital marketing, and content strategy. Our goal is to create digital solutions that help drive your business forward.",
-    "faq2Question": "How does the work process function?",
-    "faq2Answer": "Our process begins with an initial consultation to understand your needs. We then develop a customized strategic plan, followed by phases of design, development, testing, and launch. We maintain clear and transparent communication throughout the project.",
-    "faq3Question": "How long does it take to complete a project?",
-    "faq3Answer": "Completion time varies according to the complexity and scope of the project. A simple website can take a few weeks, while more complex projects may take several months. We provide a detailed time estimate after our initial consultation.",
-    "faq4Question": "How is project cost determined?",
-    "faq4Answer": "Cost is based on the complexity, scope, and timeline of the project. Factors such as number of pages, custom features, exclusive design, and system integrations affect the price. We offer a transparent and detailed quote after our initial consultation.",
-    "faq5Question": "Do you offer support after launch?",
-    "faq5Answer": "Yes, we offer ongoing support and maintenance packages after launch. This includes security updates, bug fixes, minor improvements, and performance monitoring to ensure your project continues to run smoothly."
-  },
-  "notFound": {
-    "title": "Page Not Found",
-    "description": "The page you're looking for doesn't exist or has been moved. Let's get you back on track.",
-    "goHome": "Go Home",
-    "goBack": "Go Back"
   }
 }

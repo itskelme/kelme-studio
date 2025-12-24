@@ -8,7 +8,7 @@ export * from './container';
 export * from './dropdown-menu';
 export * from './gradient-button';
 export * from './button';
-export * from './mega-dropdown';
+export * from '../navbar/mega-dropdown';
 export * from './typewriter';
 export * from './text-rotator';
 export * from './grid-overlay';
