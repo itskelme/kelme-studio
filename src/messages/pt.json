@@ -167,6 +167,10 @@
     "blog": {
       "title": "Blog - Kelme Studio",
       "description": "Insights, tendências e estratégias sobre design digital, desenvolvimento web e crescimento de negócios."
+    },
+    "careers": {
+      "title": "Carreiras - Kelme Studio",
+      "description": "Junte-se ao nosso time de elite. Estamos sempre procurando talentos excepcionais para construir experiências digitais que definem a década."
     }
   },
   "contact": {

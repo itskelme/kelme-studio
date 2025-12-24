@@ -478,6 +478,43 @@
     "blog": {
       "title": "Blog - Kelme Studio",
       "description": "Insights, trends and strategies about digital design, web development and business growth."
+    },
+    "careers": {
+      "title": "Careers - Kelme Studio",
+      "description": "Join our elite squad. We're always looking for exceptional talent to build digital experiences that define the decade."
     }
+  },
+  "careers": {
+    "label": "Talent Acquisition",
+    "title": "Join the Elite Squad.",
+    "subtitle": "We don't hire employees. We recruit obsessives. If you believe \"good enough\" is an insult, and you want to build digital experiences that define the decade, you belong here.",
+    "openPositions": "Open Positions",
+    "dontSeeRole": "Don't see your role?",
+    "talentBank": "We are always looking for exceptional talent. Fill out the application form to enter our Talent Bank.",
+    "application": "Application",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "whatsapp": "WhatsApp",
+    "areaOfExpertise": "Area of Expertise",
+    "selectOption": "Select Option...",
+    "design": "Design (UI/UX/Brand)",
+    "development": "Development (Frontend/Backend)",
+    "strategy": "Strategy & Growth",
+    "management": "Project Management",
+    "other": "Other",
+    "linkedinUrl": "LinkedIn URL",
+    "portfolioUrl": "Portfolio URL",
+    "salaryExpectations": "Salary Expectations (Monthly/Hourly)",
+    "attachCV": "Attach CV / Resume",
+    "uploadText": "Click to upload or drag and drop",
+    "fileFormat": "PDF, DOCX (Max 5MB)",
+    "submitApplication": "Submit Application",
+    "applicationReceived": "Application Received",
+    "receivedMessage": "Your profile has been added to our talent database. If your skills match our current obsessions, we will be in touch.",
+    "submitAnother": "Submit another",
+    "remote": "Remote",
+    "fullTime": "Full-time",
+    "contract": "Contract",
+    "hybrid": "Hybrid"
   }
 }
