@@ -1,18 +1,16 @@
-import { Hero } from '@/components/hero';
-import { Marquee } from '@/components/marquee';
-import { Services } from '@/components/services';
-import { Work } from '@/components/work';
-import { Founder } from '@/components/founder';
-import { SocialProof } from '@/components/social-proof';
-import { Testimonials } from '@/components/testimonials';
-import { Pricing } from '@/components/pricing';
-import { FAQ } from '@/components/faq';
-import { CommunityLeadMagnet } from '@/components/community-lead-magnet';
-import { CtaCard } from '@/components/cta-card';
+import { Hero } from '@/presentation/components/organisms/home/hero';
+import { Marquee } from '@/presentation/components/molecules/common/marquee';
+import { Services } from '@/presentation/components/organisms/home/services';
+import { Work } from '@/presentation/components/organisms/home/work';
+import { Founder } from '@/presentation/components/organisms/home/founder';
+import { Testimonials } from '@/presentation/components/organisms/home/testimonials';
+import { Pricing } from '@/presentation/components/organisms/home/pricing';
+import { FAQ } from '@/presentation/components/organisms/home/faq';
+import { CommunityLeadMagnet } from '@/presentation/components/organisms/home/community-lead-magnet';
 import { AppLocale, routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
-import { OrganizationSchema } from '@/components/schema';
+import { OrganizationSchema } from '@/presentation/components/molecules/seo/schema';
 import { generatePageMetadata } from '@/lib/metadata';
 
 // Permite SSG para cada locale
@@ -52,7 +50,6 @@ export default async function HomeLocalePage({ params }:{ params: Promise<{ loca
       <Pricing />
       <FAQ />
       <CommunityLeadMagnet />
-      <CtaCard />
     </>
   );
 }
