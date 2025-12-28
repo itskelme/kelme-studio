@@ -4,9 +4,9 @@ import { Services } from '@/presentation/components/organisms/home/services';
 import { Work } from '@/presentation/components/organisms/home/work';
 import { Founder } from '@/presentation/components/organisms/home/founder';
 import { Testimonials } from '@/presentation/components/organisms/home/testimonials';
-import { Pricing } from '@/presentation/components/organisms/home/pricing';
 import { FAQ } from '@/presentation/components/organisms/home/faq';
 import { CommunityLeadMagnet } from '@/presentation/components/organisms/home/community-lead-magnet';
+import { Roadmap } from '@/presentation/components/organisms/home/roadmap';
 import { AppLocale, routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
@@ -44,10 +44,10 @@ export default async function HomeLocalePage({ params }:{ params: Promise<{ loca
       <Hero />
       <Marquee />
       <Services />
+      <Roadmap />
       <Work />
       <Founder />
       <Testimonials />
-      <Pricing />
       <FAQ />
       <CommunityLeadMagnet />
     </>

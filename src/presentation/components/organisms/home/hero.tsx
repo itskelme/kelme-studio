@@ -1,12 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useMessages } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import ColorBends from "@/presentation/components/atoms/color-bends";
+import { Typewriter } from "@/presentation/components/atoms/typewriter";
 
 export function Hero() {
 	const t = useTranslations();
+	const messages: any = useMessages();
 
 	return (
 		<section className="relative h-screen w-screen flex flex-col items-center justify-center overflow-hidden bg-black">
@@ -26,7 +28,7 @@ export function Hero() {
 			</div>
 
 			{/* Gradient Overlay - Layer 1 */}
-			<div className="absolute inset-0 z-1 bg-linear-to-t from-black via-transparent to-black/80 pointer-events-none" />
+
 
 			{/* Content - Layer 10 */}
 			<div className="relative z-10 container mx-auto px-6 flex flex-col items-center justify-center text-center h-full pointer-events-none">
@@ -37,7 +39,13 @@ export function Hero() {
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
 					>
-						{t("hero.title.line1")}
+						{t("hero.title.line1")}<br />
+						<div className="block mt-2 min-h-[1.2em]">
+							<Typewriter 
+								words={messages.hero.title.typewriter_options} 
+								className="typewriter-glow font-bold"
+							/>
+						</div>
 					</motion.h1>
 
 					<motion.p
@@ -89,6 +97,39 @@ export function Hero() {
 					{t("hero.scrollToExplore", { default: "Scroll to explore" })}
 				</p>
 			</div>
+
+			<style jsx global>{`
+				.stroke-text {
+				  -webkit-text-stroke: 2px #fff;
+				  color: transparent;
+				}
+				
+				.typewriter-glow {
+				  background: linear-gradient(
+					to right, 
+					rgba(255, 255, 255, 0.1) 20%, 
+					#ffffff 50%, 
+					rgba(255, 255, 255, 0.1) 80%
+				  );
+				  background-size: 200% auto;
+				  background-clip: text;
+				  -webkit-background-clip: text;
+				  -webkit-text-fill-color: transparent;
+				  text-fill-color: transparent;
+				  
+				  /* Fancy Glow Effect */
+				  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))
+						  drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+				  
+				  animation: shine 4s linear infinite;
+				}
+
+				@keyframes shine {
+				  to {
+					background-position: 200% center;
+				  }
+				}
+			`}</style>
 		</section>
 	);
 }

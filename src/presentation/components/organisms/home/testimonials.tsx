@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { RiDoubleQuotesL, RiStarFill } from "@remixicon/react"
 import { useMessages } from "next-intl"
+import { Link } from "@/i18n/navigation"
 
 export function Testimonials() {
   const messages: any = useMessages()
@@ -93,6 +94,18 @@ export function Testimonials() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors"
+          >
+           {messages.hero.buttons?.talkToDiego || "Start Project"}
+           <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+           </svg>
+          </Link>
         </div>
       </div>
     </section>

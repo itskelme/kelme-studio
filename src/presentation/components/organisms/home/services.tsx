@@ -3,6 +3,7 @@
 import React from "react"
 import { RiLayoutMasonryLine, RiCodeSSlashLine, RiPenNibLine, RiRocket2Line } from "@remixicon/react"
 import { useMessages, useTranslations } from 'next-intl'
+import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 
 const iconMap: Record<string, React.ReactElement> = {
@@ -22,7 +23,7 @@ export function Services() {
   return (
     <section id="services" className="py-32 border-b border-white/10 bg-black relative">
       {/* Background Grid */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px] pointer-events-none" />
+
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-20">
@@ -60,6 +61,15 @@ export function Services() {
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-16 text-center">
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors"
+          >
+           {t("hero.buttons.talkToDiego")}
+           <RiRocket2Line className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

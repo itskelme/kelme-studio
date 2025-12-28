@@ -78,12 +78,20 @@ export function Founder() {
 
               <div className="pt-8">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">{f.ctaLabel || "Here is the answer:"}</p>
-                <Link 
-                  href="/#work" 
-                  className="inline-block bg-[#C0392B] text-white px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-red-700 transition-colors rounded-none"
-                >
-                  {f.cta || "See Our Results"}
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    href="/#work" 
+                    className="inline-block border border-[#C0392B] text-[#C0392B] px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-[#C0392B] hover:text-white transition-colors rounded-none text-center"
+                  >
+                    {f.cta || "See Our Results"}
+                  </Link>
+                  <Link 
+                    href="/contact" 
+                    className="inline-block bg-[#C0392B] text-white px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-red-700 transition-colors rounded-none text-center"
+                  >
+                    {messages.hero.buttons?.talkToDiego || "Start Project"}
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>

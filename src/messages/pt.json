@@ -22,9 +22,16 @@
   },
   "hero": {
     "title": {
-      "line1": "Kelme Studio"
+      "line1": "Geramos Leads para",
+      "typewriter_options": [
+        "Advocacia",
+        "Negócios Digitais",
+        "Profissionais de Saúde",
+        "Pequenas Marcas",
+        "Imobiliárias"
+      ]
     },
-    "subtitle": "Criamos experiências digitais insanas para marcas ambiciosas. Sem enrolação, apenas design e engenharia de alta conversão.",
+    "subtitle": "Não vendemos apenas sites. Construímos ecossistemas digitais que atraem, qualificam e convertem leads de alto valor para o seu negócio.",
     "buttons": {
       "talkToDiego": "Iniciar Projeto",
       "viewWork": "Ver Trabalhos"
@@ -32,29 +39,29 @@
     "scrollToExplore": "Role para explorar"
   },
   "services": {
-    "sectionTitle": "Capacidades",
+    "sectionTitle": "Nossa Expertise",
     "sectionLabel": "O Que Fazemos",
     "label": "O Que Fazemos",
     "list": [
       {
-        "category": "UI/UX Design",
-        "description": "Interfaces que funcionam tão bem quanto parecem. Focamos em conversão e retenção através de padrões de design centrados no usuário.",
-        "items": ["Web Design", "Apps Mobile", "Design Systems"]
+        "category": "Geração de Leads",
+        "description": "Sistemas completos de atração de clientes. De anúncios pagos a funis de venda, garantimos um fluxo constante de oportunidades.",
+        "items": ["Google Ads", "Meta Ads", "Funis de Venda"]
       },
       {
-        "category": "Desenvolvimento",
-        "description": "Implementação pixel-perfect usando stacks modernas. Código rápido, acessível e escalável que ranqueia.",
-        "items": ["React/Next.js", "Webflow", "Shopify"]
+        "category": "Web Design de Alta Conversão",
+        "description": "Sites projetados para vender. Transformamos visitantes em clientes com layouts estratégicos e copy persuasiva.",
+        "items": ["Landing Pages", "Sites Institucionais", "CRO"]
       },
       {
-        "category": "Branding",
-        "description": "Identidades visuais que grudam. Do design de logo a diretrizes completas de marca, criamos a face do seu negócio.",
-        "items": ["Logo", "Estratégia", "Direção de Arte"]
+        "category": "SEO & Autoridade",
+        "description": "Domine as buscas do Google. Posicionamos sua marca como líder do mercado para atrair tráfego orgânico qualificado.",
+        "items": ["SEO Técnico", "Marketing de Conteúdo", "Google Meu Negócio"]
       },
       {
-        "category": "Crescimento",
-        "description": "Estratégias de crescimento orientadas por design. Landing pages e criativos otimizados para alto ROAS.",
-        "items": ["CRO", "Criativos para Ads", "Analytics"]
+        "category": "Automação & CRM",
+        "description": "Não perca nenhum lead. Implementamos automações que nutrem seus contatos e aumentam a eficiência comercial.",
+        "items": ["CRM Setup", "Email Marketing", "Chatbots"]
       }
     ]
   },
@@ -173,6 +180,39 @@
       "description": "Junte-se ao nosso time de elite. Estamos sempre procurando talentos excepcionais para construir experiências digitais que definem a década."
     }
   },
+  "roadmap": {
+    "sectionLabel": "Workflow Insany",
+    "title": "Processo de trabalho",
+    "subtitle": "insano para resultados excepcionais.",
+    "description": "Conheça o processo aplicado em mais de 200 projetos",
+    "marquee": ["ÚNICOS", "DIGITAIS", "CRIATIVOS"],
+    "steps": [
+      {
+        "id": "01",
+        "title": "UX Design",
+        "subtitle": "Definição do escopo do projeto.",
+        "description": "Na Insany, adotamos uma abordagem prática para garantir experiências excepcionais aos usuários em nossos projetos. Começamos com um planejamento detalhado e pesquisas para entender as necessidades dos usuários. Criamos estruturas de informação intuitivas e cuidamos da escolha das palavras para transmitir informações de forma clara e eficaz. Realizamos análises rigorosas e testes extensivos para garantir uma experiência de usuário excepcional."
+      },
+      {
+        "id": "02",
+        "title": "UI Design",
+        "subtitle": "Etapa de criação do projeto",
+        "description": "Adotamos um processo completo e eficiente para garantir resultados excepcionais em UI Design. Começamos com uma imersão no projeto para entender as necessidades do cliente, do público-alvo e dos objetivos. Criamos moodboards inspiradores e utilizamos wireframes detalhados para esboçar a estrutura e o layout da interface. Desenvolvemos protótipos interativos para testar e validar o design antes da implementação final, refinando a experiência do usuário. Por fim, preparamos um handoff completo para fornecer todas as especificações necessárias aos desenvolvedores."
+      },
+      {
+        "id": "03",
+        "title": "Código",
+        "subtitle": "Código semântico e otimizado para web",
+        "description": "Na Insany, nosso fluxo de desenvolvimento é sólido e estruturado para garantir o sucesso de nossos projetos. Começamos definindo uma estrutura sólida, incluindo requisitos claros e arquitetura de informações. Desenvolvemos uma arquitetura Front-End robusta, garantindo uma base sólida para o design da interface do usuário. Utilizamos tecnologias modernas para codificar de forma eficiente, focando na qualidade, desempenho e compatibilidade. Realizamos testes rigorosos para garantir a qualidade do projeto. Após revisões detalhadas, preparamos o lançamento. Nosso fluxo de desenvolvimento visa resultados consistentes e insanos em cada projeto entregue."
+      }
+    ],
+    "peopleUserCentered": {
+      "line1": "PEOPLE",
+      "line2": "USER",
+      "line3": "CENTERED",
+      "description": "Pensamos na experiência de ponta a ponta, integrando marca e serviço digital. Construímos soluções para alcançar o potencial máximo do seu negócio, impactando as métricas que importam."
+    }
+  },
   "contact": {
     "formTitle": "Voe alto",
     "formSubtitle": "Conte-nos sobre seu projeto e como podemos ajudar a transformar sua visão em realidade.",
@@ -180,6 +220,14 @@
     "responseTime": "Responderemos em até 24 horas",
     "ndaAvailable": "Assinamos NDA se solicitado",
     "dedicatedTeam": "Acesso a especialistas dedicados",
+    "errors": {
+      "nameRequired": "Nome é obrigatório",
+      "contactRequired": "Contato é obrigatório",
+      "messageRequired": "Mensagem deve ter pelo menos 10 caracteres",
+      "invalidEmail": "E-mail inválido",
+      "invalidPhone": "Número de telefone inválido para o país selecionado"
+    },
+    "contactMethod": "Como prefere falar?",
     "directContact": "Contato Direto",
     "fullName": "Nome completo",
     "fullNamePlaceholder": "Digite seu nome completo",
@@ -244,68 +292,31 @@
     "goHome": "Ir para Início",
     "goBack": "Voltar"
   },
-  "servicesDetailed": {
+    "servicesDetailed": {
     "sectionLabel": "O Que Fazemos",
-    "title": "Capacidades.",
+    "title": "Nossa Expertise.",
     "uiux": {
-      "title": "Design UI/UX",
-      "description": "Interfaces que funcionam tão bem quanto parecem. Focamos em conversão e retenção através de padrões de design centrados no usuário.",
-      "tags": ["Web Design", "Apps Mobile", "Design Systems"]
+      "title": "Geração de Leads",
+      "description": "Sistemas completos de atração de clientes. Garantimos fluxo constante de oportunidades.",
+      "tags": ["Ads", "Funis", "Social"]
     },
     "development": {
-      "title": "Desenvolvimento",
-      "description": "Implementação pixel-perfect usando stacks modernas. Código rápido, acessível e escalável que rankeia.",
-      "tags": ["React/Next.js", "Webflow", "Shopify"]
+      "title": "Sites de Alta Conversão",
+      "description": "Desenvolvimento focado em transformar visitantes em clientes pagantes.",
+      "tags": ["Landing Pages", "Institucional", "Velocidade"]
     },
     "branding": {
-      "title": "Branding",
-      "description": "Identidades visuais que grudam. Do design de logo às diretrizes completas de marca, criamos o rosto do seu negócio.",
-      "tags": ["Logo", "Estratégia", "Direção de Arte"]
+      "title": "SEO & Autoridade",
+      "description": "Posicionamento estratégico para que seu negócio seja encontrado por quem precisa.",
+      "tags": ["Google", "Conteúdo", "Local"]
     },
     "growth": {
-      "title": "Crescimento",
-      "description": "Estratégias de crescimento orientadas por design. Landing pages e criativos otimizados para alto ROAS.",
-      "tags": ["CRO", "Criativos para Ads", "Analytics"]
+      "title": "Automação",
+      "description": "Processos automáticos para nutrir leads e fechar mais vendas.",
+      "tags": ["CRM", "Email", "Chat"]
     }
   },
-  "pricing": {
-    "sectionLabel": "Planos & Preços",
-    "title": "Assinatura.",
-    "subtitle": "Sem contratos. Sem taxas ocultas. Pause ou cancele a qualquer momento. Apenas produção pura e de alta velocidade.",
-    "design": {
-      "name": "Design",
-      "price": "$2,995",
-      "period": "/mês",
-      "description": "Perfeito para startups que precisam de suporte contínuo de design sem overhead.",
-      "features": [
-        "Uma solicitação por vez",
-        "Entrega média em 48h",
-        "Revisões ilimitadas",
-        "Design UI/UX",
-        "Design Gráfico",
-        "Pause ou cancele a qualquer momento"
-      ]
-    },
-    "designDev": {
-      "name": "Design + Dev",
-      "price": "$4,995",
-      "period": "/mês",
-      "description": "Aceleração completa de produto digital. Design e desenvolvimento Webflow incluídos.",
-      "features": [
-        "Uma solicitação por vez",
-        "Entrega média em 48-72h",
-        "Revisões ilimitadas",
-        "UI/UX + Branding",
-        "Desenvolvimento Webflow",
-        "Suporte prioritário",
-        "Pause ou cancele a qualquer momento"
-      ],
-      "badge": "Mais Popular"
-    },
-    "getStarted": "Começar",
-    "customScope": "Precisa de um escopo personalizado?",
-    "bookCall": "Agendar uma ligação"
-  },
+
   "faq": {
     "sectionLabel": "Perguntas Comuns",
     "title": "Detalhes & Logística.",
@@ -571,4 +582,4 @@
       "receivedMessage": "Recebemos seu briefing. Um estrategista revisará seus requisitos e entrará em contato dentro de 24 horas para agendar uma chamada de descoberta."
     }
   }
-}
+

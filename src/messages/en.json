@@ -28,9 +28,16 @@
   },
   "hero": {
     "title": {
-      "line1": "Kelme Studio"
+      "line1": "We Generate Leads for",
+      "typewriter_options": [
+        "Law Firms",
+        "Digital Businesses",
+        "Health Professionals",
+        "Small Brands",
+        "Real Estate Firms"
+      ]
     },
-    "subtitle": "We craft insane digital experiences for ambitious brands. No fluff, just high-converting design and engineering.",
+    "subtitle": "We don’t just build websites. We build digital ecosystems that attract, qualify, and convert high-value leads for your business.",
     "buttons": {
       "talkToDiego": "Start Project",
       "viewWork": "View Work"
@@ -38,29 +45,29 @@
     "scrollToExplore": "Scroll to explore"
   },
   "services": {
-    "sectionTitle": "Capabilities",
+    "sectionTitle": "Our Expertise",
     "sectionLabel": "What We Do",
     "label": "What We Do",
     "list": [
       {
-        "category": "UI/UX Design",
-        "description": "Interfaces that behave as good as they look. We focus on conversion and retention through user-centric design patterns.",
-        "items": ["Web Design", "Mobile Apps", "Design Systems"]
+        "category": "Lead Generation",
+        "description": "Complete client acquisition systems. From paid ads to sales funnels, we ensure a steady flow of opportunities.",
+        "items": ["Google Ads", "Meta Ads", "Sales Funnels"]
       },
       {
-        "category": "Development",
-        "description": "Pixel-perfect implementation using modern stacks. Fast, accessible, and scalable code that ranks.",
-        "items": ["React/Next.js", "Webflow", "Shopify"]
+        "category": "High-Converting Web Design",
+        "description": "Websites designed to sell. We transform visitors into clients with strategic layouts and persuasive copy.",
+        "items": ["Landing Pages", "Institutional Sites", "CRO"]
       },
       {
-        "category": "Branding",
-        "description": "Visual identities that stick. From logo design to full brand guidelines, we create the face of your business.",
-        "items": ["Logo", "Strategy", "Art Direction"]
+        "category": "SEO & Authority",
+        "description": "Dominate Google searches. We position your brand as the market leader to attract qualified organic traffic.",
+        "items": ["Technical SEO", "Content Marketing", "Google Business Profile"]
       },
       {
-        "category": "Growth",
-        "description": "Design-driven growth strategies. Landing pages and creatives optimized for high ROAS.",
-        "items": ["CRO", "Ad Creatives", "Analytics"]
+        "category": "Automation & CRM",
+        "description": "Never lose a lead. We implement automations that nurture your contacts and increase sales efficiency.",
+        "items": ["CRM Setup", "Email Marketing", "Chatbots"]
       }
     ]
   },
@@ -88,66 +95,29 @@
   },
   "servicesDetailed": {
     "sectionLabel": "What We Do",
-    "title": "Capabilities.",
+    "title": "Our Expertise.",
     "uiux": {
-      "title": "UI/UX Design",
-      "description": "Interfaces that behave as good as they look. We focus on conversion and retention through user-centric design patterns.",
-      "tags": ["Web Design", "Mobile Apps", "Design Systems"]
+      "title": "Lead Generation",
+      "description": "Complete client acquisition systems. We ensure a steady flow of opportunities.",
+      "tags": ["Ads", "Funnels", "Social"]
     },
     "development": {
-      "title": "Development",
-      "description": "Pixel-perfect implementation using modern stacks. Fast, accessible, and scalable code that ranks.",
-      "tags": ["React/Next.js", "Webflow", "Shopify"]
+      "title": "High-Converting Sites",
+      "description": "Development focused on turning visitors into paying clients.",
+      "tags": ["Landing Pages", "Institutional", "Speed"]
     },
     "branding": {
-      "title": "Branding",
-      "description": "Visual identities that stick. From logo design to full brand guidelines, we create the face of your business.",
-      "tags": ["Logo", "Strategy", "Art Direction"]
+      "title": "SEO & Authority",
+      "description": "Strategic positioning so your business is found by those who need it.",
+      "tags": ["Google", "Content", "Local"]
     },
     "growth": {
-      "title": "Growth",
-      "description": "Design-driven growth strategies. Landing pages and creatives optimized for high ROAS.",
-      "tags": ["CRO", "Ad Creatives", "Analytics"]
+      "title": "Automation",
+      "description": "Automatic processes to nurture leads and close more sales.",
+      "tags": ["CRM", "Email", "Chat"]
     }
   },
-  "pricing": {
-    "sectionLabel": "Plans & Pricing",
-    "title": "Membership.",
-    "subtitle": "No contracts. No hidden fees. Pause or cancel anytime. Just pure, high-velocity output.",
-    "design": {
-      "name": "Design",
-      "price": "$2,995",
-      "period": "/mo",
-      "description": "Perfect for startups needing ongoing design support without the overhead.",
-      "features": [
-        "One request at a time",
-        "Average 48h delivery",
-        "Unlimited revisions",
-        "UI/UX Design",
-        "Graphic Design",
-        "Pause or cancel anytime"
-      ]
-    },
-    "designDev": {
-      "name": "Design + Dev",
-      "price": "$4,995",
-      "period": "/mo",
-      "description": "Complete digital product acceleration. Design and Webflow development included.",
-      "features": [
-        "One request at a time",
-        "Average 48-72h delivery",
-        "Unlimited revisions",
-        "UI/UX + Branding",
-        "Webflow Development",
-        "Priority support",
-        "Pause or cancel anytime"
-      ],
-      "badge": "Most Popular"
-    },
-    "getStarted": "Get Started",
-    "customScope": "Need a custom scope?",
-    "bookCall": "Book a call"
-  },
+
   "faq": {
     "sectionLabel": "Common Questions",
     "title": "Details & Logistics.",
@@ -325,6 +295,39 @@
       }
     ]
   },
+  "roadmap": {
+    "sectionLabel": "Workflow Insany",
+    "title": "Work Process",
+    "subtitle": "insane for exceptional results.",
+    "description": "Discover the process applied in over 200 projects",
+    "marquee": ["UNIQUE", "DIGITAL", "CREATIVE"],
+    "steps": [
+      {
+        "id": "01",
+        "title": "UX Design",
+        "subtitle": "Project scope definition.",
+        "description": "At Insany, we adopt a practical approach to ensure exceptional user experiences in our projects. We start with detailed planning and research to understand user needs. We create intuitive information structures and carefully choose words to transmit information clearly and effectively. We conduct rigorous analysis and extensive testing to ensure an exceptional user experience."
+      },
+      {
+        "id": "02",
+        "title": "UI Design",
+        "subtitle": "Project creation stage",
+        "description": "We adopt a complete and efficient process to ensure exceptional results in UI Design. We start with project immersion to understand client needs, target audience, and goals. We create inspiring moodboards and use detailed wireframes to sketch the interface structure and layout. We develop interactive prototypes to test and validate the design before final implementation, refining the user experience. Finally, we prepare a complete handoff to provide all necessary specifications to developers."
+      },
+      {
+        "id": "03",
+        "title": "Code",
+        "subtitle": "Semantic and optimized web code",
+        "description": "At Insany, our development flow is solid and structured to ensure our projects' success. We start by defining a solid structure, including clear requirements and information architecture. We develop a robust Front-End architecture, ensuring a solid foundation for the user interface design. We use modern technologies to code efficiently, focusing on quality, performance, and compatibility. We conduct rigorous tests to ensure project quality. After detailed reviews, we prepare for launch. Our development flow aims for consistent and insane results in every project delivered."
+      }
+    ],
+    "peopleUserCentered": {
+      "line1": "PEOPLE",
+      "line2": "USER",
+      "line3": "CENTERED",
+      "description": "We think about the end-to-end experience, integrating brand and digital service. We build solutions to reach your business's maximum potential, impacting the metrics that matter."
+    }
+  },
   "contact": {
     "formTitle": "Let's Talk",
     "formSubtitle": "Tell us about your project and how we can help transform your vision into reality.",
@@ -332,6 +335,14 @@
     "responseTime": "We'll respond within 24 hours",
     "ndaAvailable": "We sign NDAs if requested",
     "dedicatedTeam": "Access to dedicated specialists",
+    "errors": {
+      "nameRequired": "Name is required",
+      "contactRequired": "Contact is required",
+      "messageRequired": "Message must be at least 10 characters",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid phone number for the selected country"
+    },
+    "contactMethod": "How do you prefer to talk?",
     "directContact": "Direct Contact",
     "fullName": "Full Name",
     "fullNamePlaceholder": "Enter your full name",
@@ -483,38 +494,6 @@
       "title": "Careers - Kelme Studio",
       "description": "Join our elite squad. We're always looking for exceptional talent to build digital experiences that define the decade."
     }
-  },
-  "careers": {
-    "label": "Talent Acquisition",
-    "title": "Join the Elite Squad.",
-    "subtitle": "We don't hire employees. We recruit obsessives. If you believe \"good enough\" is an insult, and you want to build digital experiences that define the decade, you belong here.",
-    "openPositions": "Open Positions",
-    "dontSeeRole": "Don't see your role?",
-    "talentBank": "We are always looking for exceptional talent. Fill out the application form to enter our Talent Bank.",
-    "application": "Application",
-    "fullName": "Full Name",
-    "emailAddress": "Email Address",
-    "whatsapp": "WhatsApp",
-    "areaOfExpertise": "Area of Expertise",
-    "selectOption": "Select Option...",
-    "design": "Design (UI/UX/Brand)",
-    "development": "Development (Frontend/Backend)",
-    "strategy": "Strategy & Growth",
-    "management": "Project Management",
-    "other": "Other",
-    "linkedinUrl": "LinkedIn URL",
-    "portfolioUrl": "Portfolio URL",
-    "salaryExpectations": "Salary Expectations (Monthly/Hourly)",
-    "attachCV": "Attach CV / Resume",
-    "uploadText": "Click to upload or drag and drop",
-    "fileFormat": "PDF, DOCX (Max 5MB)",
-    "submitApplication": "Submit Application",
-    "applicationReceived": "Application Received",
-    "receivedMessage": "Your profile has been added to our talent database. If your skills match our current obsessions, we will be in touch.",
-    "submitAnother": "Submit another",
-    "remote": "Remote",
-    "fullTime": "Full-time",
-    "contract": "Contract",
-    "hybrid": "Hybrid"
   }
+
 }
