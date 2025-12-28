@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Home, Zap } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui";
+import { Button } from "@/presentation/components/atoms/ui";
 
 export default function LocaleNotFound() {
   const t = useTranslations("notFound");

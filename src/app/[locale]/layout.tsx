@@ -7,8 +7,8 @@ import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { AppLocale, locales } from '@/i18n/routing';
 import { generatePageMetadata } from '@/lib/metadata';
-import { GridOverlay } from '@/presentation/components/atoms/ui/grid-overlay';
-import { CustomCursor } from '@/presentation/components/atoms/ui/custom-cursor';
+import { GridOverlay } from '@/presentation/components/atoms/grid-overlay';
+import { CustomCursor } from '@/presentation/components/atoms/custom-cursor';
 import { Navbar } from '@/presentation/components/organisms/layout/navbar';
 import { Footer } from '@/presentation/components/organisms/layout/footer';
 

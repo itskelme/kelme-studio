@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { GradientButton } from "@/components/ui/gradient-button";
+import { GradientButton } from "@/presentation/components/atoms/ui/gradient-button";
 import { Check, AlertCircle } from "lucide-react";
 
 /**

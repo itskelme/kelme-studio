@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
-import ColorBends from "@/components/ui/color-bends";
+import ColorBends from "@/presentation/components/atoms/color-bends";
 
 export function Hero() {
 	const t = useTranslations();

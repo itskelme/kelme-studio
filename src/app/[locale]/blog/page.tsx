@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { AppLocale, routing } from "@/i18n/routing";
-import { BlogV2 } from "@/components/blog/blog-page";
+import { BlogV2 } from "@/presentation/components/organisms/blog/blog-page";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 

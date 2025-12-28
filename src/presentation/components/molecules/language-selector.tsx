@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/presentation/components/atoms/dropdown-menu";
+import { Button } from "@/presentation/components/atoms/ui/button";
 import ReactCountryFlag from "react-country-flag";
 import { RiArrowDownSLine } from "@remixicon/react";
 import { useLocale } from 'next-intl';

@@ -1,13 +1,11 @@
 "use client";
 
-// Importação direta do arquivo DarkVeil
-import DarkVeil from "@/components/blocks/Backgrounds/DarkVeil/DarkVeil";
 import { ContactForm } from "./contact-form";
 import { ContactInfo } from "./contact-info";
 import { ContactOffices } from "./contact-offices";
 import { ContactTestimonials } from "./contact-testimonials";
 import { ContactFAQ } from "./contact-faq";
-import { Container } from "@/components/ui/container";
+import { Container } from "@/presentation/components/atoms/ui/container";
 import { useTranslations } from "next-intl";
 
 /**

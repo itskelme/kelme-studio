@@ -15,7 +15,7 @@ export function AboutPhilosophy() {
           <img 
             src="/images/about/diego-kelme-portrait-2.jpg" 
             alt="Diego Kelme" 
-            className="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-12 left-12">

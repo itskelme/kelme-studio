@@ -148,7 +148,7 @@ export function BlogV2() {
                 <img
                   src={featuredPost.image}
                   alt={featuredPost.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute top-4 left-4 bg-[#C0392B] text-white text-xs font-bold uppercase px-3 py-1 tracking-widest">
                   Featured
@@ -198,7 +198,7 @@ export function BlogV2() {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
               </div>

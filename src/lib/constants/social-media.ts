@@ -43,14 +43,14 @@ export const SOCIAL_MEDIA_PLATFORMS: Record<SocialPlatformKey, SocialMediaPlatfo
     displayName: 'Instagram',
     icon: RiInstagramLine,
     baseUrl: 'https://instagram.com',
-    username: 'itskelme'
+    username: 'itskelme_'
   },
   LinkedIn: {
     name: 'LinkedIn',
     displayName: 'LinkedIn',
     icon: RiLinkedinBoxLine,
     baseUrl: 'https://linkedin.com/in',
-    username: 'itskelme'
+    username: 'kelme'
   },
   Twitter: {
     name: 'Twitter',

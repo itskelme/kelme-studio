@@ -56,7 +56,7 @@ src/
 │
 ├── lib/
 │ ├── utils.ts # cn() helper
-│ └── constants/
+│ └── constants/ # Act as SSOT files, centralizing global constants
 │
 ├── server/
 │ ├── actions/

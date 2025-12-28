@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MenuSection } from "./use-nav-menus";
 import { Link } from '@/i18n/navigation';
 import { RiArrowDownSLine, RiArrowUpSLine, RiBookOpenLine } from "@remixicon/react";
-import { LanguageSelector } from "@/presentation/components/molecules/common/language-selector";
+import { LanguageSelector } from "@/presentation/components/molecules/language-selector";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface MobileMenuProps {

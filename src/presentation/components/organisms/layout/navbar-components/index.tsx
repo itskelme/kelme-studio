@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "@remixicon/react";
 import { Button } from "@/presentation/components/atoms/ui/button";
-import { LanguageSelector } from "@/presentation/components/molecules/common/language-selector";
+import { LanguageSelector } from "@/presentation/components/molecules/language-selector";
 import { Link } from "@/i18n/navigation";
 import { NavItem, MegaDropdown } from "@/presentation/components/organisms/layout/navbar-components/mega-dropdown";
 import { useTranslations, useMessages } from "next-intl";
 import { MobileMenu } from "./mobile-menu";
 import { useNavMenus } from "./use-nav-menus";
 import { motion } from "framer-motion";
+import { NAV_ITEMS } from "@/lib/constants";
 
 /**
  * Navbar principal do site
@@ -93,28 +94,31 @@ export function Navbar() {
 						<div className="hidden lg:flex w-1/3 justify-center items-center">
 							<div className="flex items-center gap-8">
 								{/* Services NavItem */}
-								<div onClick={(e) => handleItemClick(e, "services")}>
+								<div onClick={(e) => handleItemClick(e, NAV_ITEMS.services.key)}>
 									<NavItem
 										label={t("navbar.services").toUpperCase()}
-										isActive={activeDropdown === "services"}
+										isActive={activeDropdown === NAV_ITEMS.services.key}
 										sections={servicesSections}
 									/>
 								</div>
 
-								{/* Work NavItem - Simple link like About */}
+								{/* Work NavItem */}
 								<NavItem 
 									label={t("navbar.work").toUpperCase()} 
-									href="/work" 
+									href={NAV_ITEMS.work.href} 
 								/>
 
 								{/* About NavItem */}
-								<NavItem label={t("navbar.about").toUpperCase()} href="#about" />
+								<NavItem 
+									label={t("navbar.about").toUpperCase()} 
+									href={NAV_ITEMS.about.href} 
+								/>
 
 								{/* Insights NavItem */}
-								<div onClick={(e) => handleItemClick(e, "insights")}>
+								<div onClick={(e) => handleItemClick(e, NAV_ITEMS.insights.key)}>
 									<NavItem
 										label={t("navbar.insights").toUpperCase()}
-										isActive={activeDropdown === "insights"}
+										isActive={activeDropdown === NAV_ITEMS.insights.key}
 										sections={insightsSections}
 									/>
 								</div>
@@ -125,7 +129,7 @@ export function Navbar() {
 						<div className="w-full lg:w-1/3 flex justify-end items-center">
 							<div className="hidden lg:flex items-center gap-4">
 								<LanguageSelector />
-								<Link href="/contact">
+								<Link href={NAV_ITEMS.contact.href}>
 									<Button 
 										size="default"
 										variant="outline"
@@ -152,15 +156,13 @@ export function Navbar() {
 
 				{/* Mega Dropdowns */}
 				<MegaDropdown
-					isOpen={activeDropdown === "services"}
+					isOpen={activeDropdown === NAV_ITEMS.services.key}
 					sections={servicesSections}
 					onClose={() => setActiveDropdown(null)}
 				/>
 
-				{/* Work dropdown removed - it's now a simple link */}
-
 				<MegaDropdown
-					isOpen={activeDropdown === "insights"}
+					isOpen={activeDropdown === NAV_ITEMS.insights.key}
 					sections={[...insightsSections, ...socialSections]}
 					onClose={() => setActiveDropdown(null)}
 				/>

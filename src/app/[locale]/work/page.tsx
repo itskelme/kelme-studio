@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@/components/ui/container";
+import { Container } from "@/presentation/components/atoms/ui/container";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";

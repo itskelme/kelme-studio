@@ -1,8 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
 import { AppLocale, routing } from "@/i18n/routing";
-import { CareersHero } from "@/components/careers/careers-hero";
-import { CareersPositions } from "@/components/careers/careers-positions";
-import { CareersForm } from "@/components/careers/careers-form";
+import { CareersHero } from "@/presentation/components/organisms/careers/careers-hero";
+import { CareersPositions } from "@/presentation/components/organisms/careers/careers-positions";
+import { CareersForm } from "@/presentation/components/organisms/careers/careers-form";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 

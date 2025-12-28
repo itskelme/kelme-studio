@@ -1,4 +1,4 @@
-import { FAQItem } from "@/components/ui/faq-schema";
+import { FAQItem } from "@/presentation/components/atoms/ui/faq-schema";
 
 /**
  * Número máximo de FAQs suportadas no sistema de tradução

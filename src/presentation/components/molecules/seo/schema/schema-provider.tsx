@@ -1,6 +1,6 @@
 "use client";
 
-import { FAQItem } from "@/components/ui/faq-schema";
+import { FAQItem } from "@/presentation/components/atoms/ui/faq-schema";
 import { useTranslations } from "next-intl";
 import Script from "next/script";
 

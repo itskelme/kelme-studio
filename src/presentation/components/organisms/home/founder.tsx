@@ -39,7 +39,7 @@ export function Founder() {
                 src="/images/about/diego-kelme-portrait.jpg"
                 alt="Diego Kelme" 
                 fill
-                className="object-cover grayscale contrast-110 group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover contrast-100 group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-60" />
             </div>

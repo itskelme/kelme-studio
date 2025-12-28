@@ -3,7 +3,7 @@
 
 "use client";
 
-import { OrganizationSchema as NewOrgSchema } from "@/components/schema";
+import { OrganizationSchema as NewOrgSchema } from "@/presentation/components/molecules/seo/schema";
 
 /**
  * Componente cliente para renderizar o schema JSON-LD da Organização

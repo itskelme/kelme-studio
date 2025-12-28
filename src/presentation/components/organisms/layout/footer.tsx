@@ -3,13 +3,9 @@
 import { useMessages } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { motion } from "framer-motion"
-import { RiInstagramLine, RiTwitterXLine, RiMailLine, RiWhatsappLine, RiLinkedinBoxFill } from "@remixicon/react";
-
-const socialIconMap: Record<string, { icon: any; url: string }> = {
-  Instagram: { icon: RiInstagramLine, url: "https://instagram.com/itskelme_" },
-  LinkedIn: { icon: RiLinkedinBoxFill, url: "https://linkedin.com/in/kelme" },
-  X: { icon: RiTwitterXLine, url: "https://x.com/itskelme" },
-};
+import { RiMailLine, RiWhatsappLine } from "@remixicon/react";
+import { getSocialIcon, getSocialUrl } from '@/lib/constants/social-media';
+import { CONTACT_EMAIL, CONTACT_PHONE, getEmailHref } from '@/lib/constants/contact';
 
 export function Footer() {
   const messages: any = useMessages()
@@ -69,7 +65,7 @@ export function Footer() {
 							className="flex flex-col gap-4 max-w-xs"
 						>
 							<a
-								href="mailto:hello@kelme.studio"
+								href={getEmailHref()}
 								className="group flex items-center justify-between border border-white/20 px-6 py-4 hover:bg-white hover:text-black transition-all duration-300"
 							>
 								<span className="text-sm uppercase tracking-widest font-bold">
@@ -78,7 +74,7 @@ export function Footer() {
 								<RiMailLine className="w-5 h-5" />
 							</a>
 							<a
-								href="https://wa.me/1234567890"
+								href={CONTACT_PHONE.brazil.whatsappUrl}
 								target="_blank"
 								rel="noreferrer"
 								className="group flex items-center justify-between border border-white/20 px-6 py-4 bg-white/5 hover:bg-[#25D366] hover:border-[#25D366] hover:text-black transition-all duration-300"
@@ -185,28 +181,26 @@ export function Footer() {
 							</h4>
 							<ul className="space-y-4 text-secondary text-sm uppercase tracking-wider">
 								{(f.socialLinks || ["Instagram", "X", "LinkedIn"]).map(
-									(name: string, i: number) => {
-										const displayName = name === "Twitter" ? "X" : name;
-										const mapKey = name === "Twitter" ? "X" : name;
-										const socialInfo = socialIconMap[mapKey];
+								(name: string, i: number) => {
+									const SocialIcon = getSocialIcon(name);
+									const socialUrl = getSocialUrl(name);
+									const displayName = name === "Twitter" ? "X" : name;
 
-										return (
-											<li key={i}>
-												<a
-													href={socialInfo?.url || "#"}
-													target="_blank"
-													rel="noreferrer"
-													className="hover:text-white transition-colors flex items-center gap-2 w-max"
-												>
-													{socialInfo?.icon && (
-														<socialInfo.icon className="w-4 h-4" />
-													)}
-													{displayName}
-												</a>
-											</li>
-										);
-									}
-								)}
+									return (
+										<li key={i}>
+											<a
+												href={socialUrl}
+												target="_blank"
+												rel="noreferrer"
+												className="hover:text-white transition-colors flex items-center gap-2 w-max"
+											>
+												<SocialIcon className="w-4 h-4" />
+												{displayName}
+											</a>
+										</li>
+									);
+								}
+							)}
 							</ul>
 						</motion.div>
 					</div>

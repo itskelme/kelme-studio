@@ -1,10 +1,10 @@
 import { setRequestLocale } from "next-intl/server";
 import { AppLocale, routing } from "@/i18n/routing";
-import { AboutHero } from "@/components/about/about-hero";
-import { AboutPhilosophy } from "@/components/about/about-philosophy";
-import { AboutVentures } from "@/components/about/about-ventures";
-import { AboutOrigin } from "@/components/about/about-origin";
-import { AboutCTA } from "@/components/about/about-cta";
+import { AboutHero } from "@/presentation/components/organisms/about/about-hero";
+import { AboutPhilosophy } from "@/presentation/components/organisms/about/about-philosophy";
+import { AboutVentures } from "@/presentation/components/organisms/about/about-ventures";
+import { AboutOrigin } from "@/presentation/components/organisms/about/about-origin";
+import { AboutCTA } from "@/presentation/components/organisms/about/about-cta";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 

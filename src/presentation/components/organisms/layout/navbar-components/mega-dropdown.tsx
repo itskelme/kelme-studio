@@ -40,9 +40,15 @@ const MenuItem: React.FC<MenuItemProps> = ({ icon, label, href = "#", className 
   )
 }
 
+interface MenuItem {
+  label: string
+  icon?: string | React.ReactNode
+  href?: string
+}
+
 interface MenuSection {
   title: string
-  items: string[] | { label: string, icon?: string | React.ReactNode }[]
+  items: MenuItem[]
 }
 
 interface MegaDropdownProps {
@@ -67,14 +73,14 @@ export const MegaDropdown: React.FC<MegaDropdownProps> = ({ isOpen, sections, on
                 {section.title}
               </h3>
               <div className="space-y-1">
-                {Array.isArray(section.items) && section.items.map((item, idx) => {
-                  // Handle both string items and object items
-                  if (typeof item === 'string') {
-                    return <MenuItem key={idx} label={item} />
-                  } else {
-                    return <MenuItem key={idx} label={item.label} icon={item.icon} />
-                  }
-                })}
+                {section.items.map((item, idx) => (
+                  <MenuItem 
+                    key={idx} 
+                    label={item.label} 
+                    icon={item.icon}
+                    href={item.href}
+                  />
+                ))}
               </div>
             </div>
           ))}

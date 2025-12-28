@@ -61,7 +61,7 @@ export function Work() {
                   src={project.image || "/images/placeholder.svg"} 
                   alt={project.title}
                   fill
-                  className="object-cover grayscale contrast-125"
+                  className="object-cover"
                 />
               </div>
               
@@ -79,7 +79,7 @@ export function Work() {
                       src={project.image || "/images/placeholder.svg"} 
                       alt={project.title}
                       fill
-                      className="object-cover grayscale contrast-125"
+                      className="object-cover"
                     />
                   </motion.div>
                 )}

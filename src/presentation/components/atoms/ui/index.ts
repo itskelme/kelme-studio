@@ -5,15 +5,10 @@
 
 // Exportação de componentes de UI básicos
 export * from './container';
-export * from './dropdown-menu';
+export * from '../dropdown-menu';
 export * from './gradient-button';
 export * from './button';
-export * from '../navbar/mega-dropdown';
 export * from './typewriter';
 export * from './text-rotator';
-export * from './grid-overlay';
-export * from './custom-cursor';
+export * from '../custom-cursor';
 
-// Tipos
-export type { FAQItem } from './faq-schema';
-export type { CursorVariant } from './custom-cursor';
