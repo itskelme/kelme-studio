@@ -7,6 +7,7 @@ export interface WorkProject {
   image: string;
   description: string;
   tags: string[];
+  slug: string;
 }
 
 export interface WorkPageProps {

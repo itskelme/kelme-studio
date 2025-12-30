@@ -34,6 +34,7 @@ export default async function WorkPage({
   
   const projects: WorkProject[] = (t.raw('items') as any[]).map((item) => ({
     id: item.id,
+    slug: item.slug,
     title: item.title,
     client: item.clientName || item.title,
     category: item.category,

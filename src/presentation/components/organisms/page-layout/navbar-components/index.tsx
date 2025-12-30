@@ -5,7 +5,7 @@ import { RiMenu3Line, RiCloseLine } from "@remixicon/react";
 import { Button } from "@/presentation/components/atoms/ui/button";
 import { LanguageSelector } from "@/presentation/components/molecules/language-selector";
 import { Link } from "@/i18n/navigation";
-import { NavItem, MegaDropdown } from "@/presentation/components/organisms/layout/navbar-components/mega-dropdown";
+import { NavItem, MegaDropdown } from "@/presentation/components/organisms/page-layout/navbar-components/mega-dropdown";
 import { useTranslations, useMessages } from "next-intl";
 import { MobileMenu } from "./mobile-menu";
 import { useNavMenus } from "./use-nav-menus";

@@ -36,55 +36,60 @@ export function Work() {
 
         <div className="flex flex-col">
           {portfolioItems.map((project) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="group border-t border-white/10 py-8 md:py-12 relative cursor-pointer"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
+            <Link 
+              key={project.id} 
+              href={`/work/${project.slug}`}
+              className="block"
             >
-              <div className="flex flex-col md:flex-row justify-between items-baseline relative z-10 md:mix-blend-difference">
-                <h3 className="mb-2 md:mb-0 md:group-hover:translate-x-4 transition-transform duration-500">
-                  {project.title}
-                </h3>
-                <div className="flex gap-8 text-sm md:text-base uppercase tracking-wider text-secondary md:group-hover:text-white transition-colors">
-                  <span>{project.category}</span>
-                  <span>{project.year || "2024"}</span>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="group border-t border-white/10 py-8 md:py-12 relative cursor-pointer"
+                onMouseEnter={() => setHoveredProject(project.id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className="flex flex-col md:flex-row justify-between items-baseline relative z-10 md:mix-blend-difference">
+                  <h3 className="mb-2 md:mb-0 md:group-hover:translate-x-4 transition-transform duration-500">
+                    {project.title}
+                  </h3>
+                  <div className="flex gap-8 text-sm md:text-base uppercase tracking-wider text-secondary md:group-hover:text-white transition-colors">
+                    <span>{project.category}</span>
+                    <span>{project.year || "2024"}</span>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Mobile: Always show image */}
-              <div className="md:hidden mt-6 relative w-full h-[200px] overflow-hidden rounded-none">
-                <Image 
-                  src={project.image || "/images/placeholder.svg"} 
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              
-              {/* Desktop: Hover image */}
-              <AnimatePresence>
-                {hoveredProject === project.id && (
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.95, rotate: -2 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, rotate: 2 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] z-0 pointer-events-none hidden md:block"
-                  >
-                    <Image 
-                      src={project.image || "/images/placeholder.svg"} 
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+                
+                {/* Mobile: Always show image */}
+                <div className="md:hidden mt-6 relative w-full h-[200px] overflow-hidden rounded-none">
+                  <Image 
+                    src={project.image || "/images/placeholder.svg"} 
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Desktop: Hover image */}
+                <AnimatePresence>
+                  {hoveredProject === project.id && (
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.95, rotate: -2 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      exit={{ opacity: 0, scale: 0.95, rotate: 2 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] z-0 pointer-events-none hidden md:block"
+                    >
+                      <Image 
+                        src={project.image || "/images/placeholder.svg"} 
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </Link>
           ))}
           <div className="border-t border-white/10" />
         </div>

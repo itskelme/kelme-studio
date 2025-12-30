@@ -1,7 +1,7 @@
 "use client";
 
-import { Navbar } from "@/presentation/components/organisms/layout/navbar";
-import { Footer } from "@/presentation/components/organisms/layout/footer";
+import { Navbar } from "@/presentation/components/organisms/page-layout/navbar";
+import { Footer } from "@/presentation/components/organisms/page-layout/footer";
 import { ReactNode } from "react";
 
 interface MainLayoutProps {
