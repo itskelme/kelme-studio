@@ -7,6 +7,6 @@
   "formatter": "prettier",
   "configFiles": {},
   "paths": {
-    "*": "./components/blocks/"
+    "*": "./presentation/components/atoms/blocks/"
   }
 }

@@ -1,16 +1,15 @@
 import React from "react";
-import { Container } from "@/presentation/components/atoms/ui/container";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { AppLocale, routing } from '@/i18n/routing';
+import { WorkPageView } from "@/presentation/pages/work";
+import type { WorkProject } from "@/presentation/pages/work";
 
-// Permite SSG para cada locale
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
 }
 
-// Gera metadados da página com base no locale
 export async function generateMetadata({
   params
 }: {
@@ -33,26 +32,26 @@ export default async function WorkPage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'work' });
   
+  const projects: WorkProject[] = (t.raw('items') as any[]).map((item) => ({
+    id: item.id,
+    title: item.title,
+    client: item.clientName || item.title,
+    category: item.category,
+    year: item.year,
+    image: item.image,
+    description: item.description,
+    tags: item.tags || []
+  }));
+
+  const messages = {
+    sectionTitle: t('sectionTitle'),
+    sectionSubtitle: t('sectionSubtitle'),
+    sectionLabel: t('sectionLabel')
+  };
+  
   return (
     <main>
-      <Container className="py-24">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            {t("sectionTitle")}
-          </h1>
-          <p className="text-xl text-gray-200 mb-12">
-            {t("sectionSubtitle")}
-          </p>
-        </div>
-
-        {/* Conteúdo do portfolio irá aqui */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Aqui será implementado o grid de projetos do portfolio */}
-          <div className="h-64 bg-gradient-to-br from-blue-600 to-green-400 rounded-lg"></div>
-          <div className="h-64 bg-gradient-to-br from-blue-600 to-green-400 rounded-lg"></div>
-          <div className="h-64 bg-gradient-to-br from-blue-600 to-green-400 rounded-lg"></div>
-        </div>
-      </Container>
+      <WorkPageView projects={projects} messages={messages} />
     </main>
   );
 }

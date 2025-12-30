@@ -16,8 +16,7 @@ export function Testimonials() {
 
   return (
     <section className="py-32 border-b border-white/10 overflow-hidden relative">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C0392B] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+  
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20">

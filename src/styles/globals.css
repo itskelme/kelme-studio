@@ -455,3 +455,43 @@
     width: 100%;
   }
 }
+
+/* Cursor pointer for interactive elements */
+@layer base {
+  a,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"],
+  textarea,
+  select,
+  label[for],
+  svg[role="button"],
+  [role="button"],
+  [onclick],
+  [data-clickable],
+  [tabindex]:not([tabindex="-1"]) {
+    cursor: pointer;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  textarea {
+    cursor: text;
+  }
+
+  input[disabled],
+  button[disabled],
+  select[disabled],
+  textarea[disabled],
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
