@@ -19,7 +19,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${work.title} | Kelme Studio`,
+    title: `${work.title} | Zarp Studio`,
     description: work.description,
   }
 }

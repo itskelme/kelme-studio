@@ -290,7 +290,7 @@ As the project grows, follow these practices to ensure scalability and maintaina
 
 ### Section Guidelines
 
-- **Home Page**: Focus on communicating Kelme's vision and differentiators
+- **Home Page**: Focus on communicating Zarp's vision and differentiators
 - **About Us**: Storytelling about agency history and values
 - **Services**: Highlight benefits before technical features
 - **Portfolio**: Results-oriented narrative for each case study
@@ -386,4 +386,4 @@ As the project grows, follow these practices to ensure scalability and maintaina
 4. **Composition over Inheritance**: Prefer component composition over inheritance
 5. **Immutability**: Treat data as immutable to avoid side effects
 
-This guide serves as a reference for maintaining code consistency and quality in the Kelme Studio project. The practices and patterns described here should be followed by all team members to ensure efficient and sustainable development.
+This guide serves as a reference for maintaining code consistency and quality in the Zarp Studio project. The practices and patterns described here should be followed by all team members to ensure efficient and sustainable development.

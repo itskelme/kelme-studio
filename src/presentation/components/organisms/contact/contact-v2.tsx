@@ -119,8 +119,8 @@ export function ContactV2() {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-2">Email</h4>
-                      <a href="mailto:hello@kelme.studio" className="text-secondary hover:text-white transition-colors">
-                        hello@kelme.studio
+                      <a href="mailto:hello@zarp.studio" className="text-secondary hover:text-white transition-colors">
+                        hello@zarp.studio
                       </a>
                     </div>
                   </div>

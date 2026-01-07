@@ -75,7 +75,7 @@ export function ContactInfo() {
           </div>
           <div>
             <h3 className="font-bold font-satoshi text-[#F7F7F7]">Diego Kelme</h3>
-            <p className="text-sm text-[#27D182]">Founder @ Kelme Studio</p>
+            <p className="text-sm text-[#27D182]">Founder @ Zarp Studio</p>
           </div>
         </div>
         

@@ -99,10 +99,10 @@
     "testimonials": {
       "titleLine1": "Depoimentos",
       "titleLine2": "de Clientes",
-      "subtitle": "Não confie só na nossa palavra. Veja o que nossos clientes dizem sobre trabalhar com a Kelme Studio.",
+      "subtitle": "Não confie só na nossa palavra. Veja o que nossos clientes dizem sobre trabalhar com a Zarp Studio.",
       "list": [
         {"name": "Sarah Martinez", "role": "CEO, TechFlow Solutions", "content": "Diego e seu time transformaram toda nossa presença digital. As conversões aumentaram 280% em apenas 3 meses.", "rating": 5, "image": "/images/sarah-martinez-testimonial.png"},
-        {"name": "Michael Chen", "role": "Fundador, EcoVenture", "content": "Trabalhar com a Kelme Studio mudou o jogo. Eles criaram uma experiência completa de marca que ressoa com nosso público.", "rating": 5, "image": "/images/michael-chen-testimonial.png"},
+        {"name": "Michael Chen", "role": "Fundador, EcoVenture", "content": "Trabalhar com a Zarp Studio mudou o jogo. Eles criaram uma experiência completa de marca que ressoa com nosso público.", "rating": 5, "image": "/images/michael-chen-testimonial.png"},
         {"name": "Alexandra Torres", "role": "Diretora de Marketing, FinanceHub", "content": "O ROI que vimos nas campanhas é incrível. A abordagem estratégica elevou nossa marca além das expectativas.", "rating": 5, "image": "/images/alexandra-torres-testimonial.png"}
       ]
     },
@@ -150,33 +150,33 @@
     "brandAssets": "Brand Assets",
     "privacyPolicy": "Política de Privacidade",
     "termsOfService": "Termos de Serviço",
-    "copyright": "Kelme Studio.",
+    "copyright": "Zarp Studio.",
     "tagline": "Designed in the Dark.",
     "newBadge": "NOVO"
   },
   "metadata": {
     "home": {
-      "title": "Kelme Studio - Agência Digital & Estúdio Criativo",
+      "title": "Zarp Studio - Agência Digital & Estúdio Criativo",
       "description": "Elevamos marcas ambiciosas além do horizonte, criando experiências digitais que se destacam da concorrência."
     },
     "contact": {
-      "title": "Contato - Kelme Studio",
-      "description": "Entre em contato com a Kelme Studio para transformar sua presença digital. Estamos prontos para transformar sua visão em realidade."
+      "title": "Contato - Zarp Studio",
+      "description": "Entre em contato com a Zarp Studio para transformar sua presença digital. Estamos prontos para transformar sua visão em realidade."
     },
     "about": {
-      "title": "Sobre - Kelme Studio",
-      "description": "Conheça a Kelme Studio, uma agência digital e estúdio criativo especializado em elevar sua marca com soluções digitais estratégicas."
+      "title": "Sobre - Zarp Studio",
+      "description": "Conheça a Zarp Studio, uma agência digital e estúdio criativo especializado em elevar sua marca com soluções digitais estratégicas."
     },
     "work": {
-      "title": "Portfólio - Kelme Studio",
+      "title": "Portfólio - Zarp Studio",
       "description": "Explore nosso portfólio de projetos digitais inovadores e veja como transformamos a presença online de nossos clientes."
     },
     "blog": {
-      "title": "Blog - Kelme Studio",
+      "title": "Blog - Zarp Studio",
       "description": "Insights, tendências e estratégias sobre design digital, desenvolvimento web e crescimento de negócios."
     },
     "careers": {
-      "title": "Carreiras - Kelme Studio",
+      "title": "Carreiras - Zarp Studio",
       "description": "Junte-se ao nosso time de elite. Estamos sempre procurando talentos excepcionais para construir experiências digitais que definem a década."
     }
   },
@@ -264,18 +264,18 @@
     "country": "Brasil",
     "company": "Empresa / Organização",
     "clientTestimonials": "O que nossos clientes dizem",
-    "testimonial1Text": "A Kelme Studio entregou um design excepcional que realmente capturou a essência da nossa marca. A equipe foi profissional do início ao fim e entendeu exatamente o que queríamos.",
+    "testimonial1Text": "A Zarp Studio entregou um design excepcional que realmente capturou a essência da nossa marca. A equipe foi profissional do início ao fim e entendeu exatamente o que queríamos.",
     "testimonial1Author": "Marcos Silva",
     "testimonial1Position": "CEO, Tech Solutions",
-    "testimonial2Text": "Trabalhar com a equipe da Kelme foi uma experiência incrível. Eles não apenas cumpriram o prazo, mas também superaram nossas expectativas com ideias criativas e soluções inovadoras.",
+    "testimonial2Text": "Trabalhar com a equipe da Zarp foi uma experiência incrível. Eles não apenas cumpriram o prazo, mas também superaram nossas expectativas com ideias criativas e soluções inovadoras.",
     "testimonial2Author": "Ana Rodrigues",
     "testimonial2Position": "Diretora de Marketing, Startup XYZ",
-    "testimonial3Text": "A dedicação e atenção aos detalhes da equipe da Kelme Studio foi impressionante. Eles transformaram nossa visão em realidade e criaram um site que realmente representa nossa marca.",
+    "testimonial3Text": "A dedicação e atenção aos detalhes da equipe da Zarp Studio foi impressionante. Eles transformaram nossa visão em realidade e criaram um site que realmente representa nossa marca.",
     "testimonial3Author": "Carlos Mendes",
     "testimonial3Position": "Fundador, Design Agency",
     "faqTitle": "Perguntas Frequentes",
     "faqDescription": "Respostas para as dúvidas mais comuns sobre nossos serviços e processo de trabalho.",
-    "faq1Question": "Quais serviços a Kelme Studio oferece?",
+    "faq1Question": "Quais serviços a Zarp Studio oferece?",
     "faq1Answer": "Oferecemos uma gama completa de serviços digitais, incluindo desenvolvimento de sites e aplicativos, design de UI/UX, branding, marketing digital e estratégia de conteúdo. Nosso objetivo é criar soluções digitais que ajudem a impulsionar seu negócio.",
     "faq2Question": "Como funciona o processo de trabalho?",
     "faq2Answer": "Nosso processo começa com uma consulta inicial para entender suas necessidades. Em seguida, desenvolvemos um plano estratégico personalizado, seguido por fases de design, desenvolvimento, testes e lançamento. Mantemos uma comunicação clara e transparente durante todo o projeto.",
@@ -351,7 +351,7 @@
     "subtitle": "Não apenas colecionamos logos. Colecionamos histórias de sucesso. Veja o que acontece quando você trabalha com os melhores.",
     "items": [
       {
-        "quote": "A Kelme Studio não apenas construiu um site; eles arquitetaram um flagship digital. Nossas taxas de conversão dobraram no primeiro mês após o lançamento. A autoridade que agora comandamos em nosso mercado é inegável.",
+        "quote": "A Zarp Studio não apenas construiu um site; eles arquitetaram um flagship digital. Nossas taxas de conversão dobraram no primeiro mês após o lançamento. A autoridade que agora comandamos em nosso mercado é inegável.",
         "author": "Alex Rivera",
         "role": "CMO, Nebula Fintech",
         "metric": "+200% Conversões"
@@ -398,7 +398,7 @@
     "linkedin": "LinkedIn",
     "privacyPolicy": "Política de Privacidade",
     "termsOfService": "Termos de Serviço",
-    "copyright": "Kelme Studio.",
+    "copyright": "Zarp Studio.",
     "tagline": "Projetado no Escuro.",
     "newBadge": "NOVO"
   },

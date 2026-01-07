@@ -87,7 +87,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           {/* Cabeçalho com logo e controles */}
           <div className="flex justify-between items-center p-6 border-b border-white/10">
             <Link href="/" className="text-2xl font-oswald font-bold tracking-tighter uppercase text-white" onClick={onClose}>
-              Kelme<span className="opacity-50">.Studio</span>
+              Zarp<span className="opacity-50">.Studio</span>
             </Link>
             <div className="flex items-center gap-4">
               <LanguageSelector />
@@ -243,7 +243,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                         return (
                           <li key={i}>
                             <a 
-                              href={`https://${iconName}.com/kelmeofc`}
+                              href={`https://${iconName}.com/zarpstudio`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center space-x-2 text-white/80 hover:text-white text-sm py-1 transition-colors"

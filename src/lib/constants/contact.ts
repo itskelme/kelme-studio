@@ -7,7 +7,7 @@
  * Email addresses
  */
 export const CONTACT_EMAIL = {
-  primary: 'hello@kelme.studio',
+  primary: 'hello@zarp.studio',
   alternative: 'contato@kelmestudio.com',
 } as const;
 
@@ -28,8 +28,8 @@ export const CONTACT_PHONE = {
 export const COMMUNITY_PLATFORMS = {
   discord: {
     name: 'Discord',
-    url: 'https://discord.gg/kelme-studio',
-    inviteUrl: 'https://discord.gg/kelme-studio',
+    url: 'https://discord.gg/zarp-studio',
+    inviteUrl: 'https://discord.gg/zarp-studio',
   },
 } as const;
 

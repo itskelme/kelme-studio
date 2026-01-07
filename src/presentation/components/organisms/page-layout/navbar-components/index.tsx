@@ -86,7 +86,7 @@ export function Navbar() {
 						{/* Divisão 1: Logo (1/3) */}
 						<div className="w-full lg:w-1/3 flex justify-start items-center">
 							<Link href="/" className={styles.logoText}>
-								Kelme<span className={styles.logoAccent}>.Studio</span>
+								Zarp<span className={styles.logoAccent}>.Studio</span>
 							</Link>
 						</div>
 

@@ -34,10 +34,10 @@ export async function generateMetadata({
       description: baseMetadata.description as string,
       images: [
         {
-          url: '/images/opengraph/kelme-contact-og-banner.png',
+          url: '/images/opengraph/zarp-contact-og-banner.png',
           width: 1200,
           height: 630,
-          alt: 'Kelme Studio - Contato',
+          alt: 'Zarp Studio - Contato',
         }
       ],
       locale: locale,
@@ -47,8 +47,8 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: baseMetadata.title as string,
       description: baseMetadata.description as string,
-      images: ['/images/opengraph/kelme-contact-og-banner.png'],
-      creator: '@kelmestudio'
+      images: ['/images/opengraph/zarp-contact-og-banner.png'],
+      creator: '@zarpstudio'
     }
   };
 }

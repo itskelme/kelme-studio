@@ -58,12 +58,12 @@ export function SchemaProvider({
   if (type === "Organization" && organizationData) {
     schema = {
       ...schema,
-      "name": organizationData.name || "Kelme Studio",
-      "url": organizationData.url || "https://kelme.studio/",
-      "logo": organizationData.logoUrl || "https://kelme.studio/images/kelme-logo.svg",
+      "name": organizationData.name || "Zarp Studio",
+      "url": organizationData.url || "https://zarp.studio/",
+      "logo": organizationData.logoUrl || "https://zarp.studio/images/zarp-logo.svg",
       "sameAs": organizationData.sameAs || [
-        "https://www.linkedin.com/company/kelme-studio/",
-        "https://www.instagram.com/kelmestudio/"
+        "https://www.linkedin.com/company/zarp-studio/",
+        "https://www.instagram.com/zarpstudio/"
       ]
     };
   } else if (type === "FAQPage" && faqData) {

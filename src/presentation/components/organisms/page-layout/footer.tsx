@@ -221,7 +221,7 @@ export function Footer() {
 						transition={{ duration: 1.2, delay: 0.3 }}
 						className="text-[10vw] font-oswald font-bold uppercase text-center tracking-tighter select-none w-full"
 					>
-						Kelme Studio
+						Zarp Studio
 					</motion.h1>
 				</motion.div>
 
@@ -239,7 +239,7 @@ export function Footer() {
 						</Link>
 					</div>
 					<div className="flex gap-1">
-						<span>© 2026 DIEGO KELME. All rights reserved.</span>{" "}
+						<span>© 2026 ZARP STUDIO. All rights reserved.</span>{" "}
 						<span className="text-white">Designed in the Dark.</span>
 					</div>
 				</div>

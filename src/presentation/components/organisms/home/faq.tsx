@@ -80,7 +80,7 @@ export function FAQ() {
             <p className="text-secondary text-sm">
               {faq.cantFind}{" "}
               <a 
-                href="mailto:hello@kelme.studio" 
+                href="mailto:hello@zarp.studio" 
                 className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-all"
               >
                 {faq.emailUs}
