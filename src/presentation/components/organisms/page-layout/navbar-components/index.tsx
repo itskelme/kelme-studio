@@ -11,7 +11,8 @@ import { MobileMenu } from "./mobile-menu";
 import { useNavMenus } from "./use-nav-menus";
 import { motion } from "framer-motion";
 import { NAV_ITEMS } from "@/lib/constants";
-
+import Image from "next/image";
+ 
 /**
  * Navbar principal do site
  * Versão simplificada e otimizada
@@ -86,7 +87,7 @@ export function Navbar() {
 						{/* Divisão 1: Logo (1/3) */}
 						<div className="w-full lg:w-1/3 flex justify-start items-center">
 							<Link href="/" className={styles.logoText}>
-								Zarp<span className={styles.logoAccent}>.Studio</span>
+								<Image src="/images/zarp-logomark-h.svg" alt="Zarp Studio Trademark" width={128} height={128} className="w-32" />
 							</Link>
 						</div>
 

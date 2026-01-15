@@ -1,6 +1,6 @@
 {
-  "name": "kelemestudio",
-  "version": "1.2.1",
+  "name": "frontend_pages_zarpstudio",
+  "version": "1.2.2",
   "private": true,
   "scripts": {
     "build": "next build",
