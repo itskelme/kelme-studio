@@ -84,15 +84,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           transition={{ duration: 0.3 }}
           className="fixed inset-0 bg-black z-40 flex flex-col"
         >
-          {/* Cabeçalho com logo e controles */}
-          <div className="flex justify-between items-center p-6 border-b border-white/10">
-            <Link href="/" className="text-2xl font-oswald font-bold tracking-tighter uppercase text-white" onClick={onClose}>
-              Zarp<span className="opacity-50">.Studio</span>
-            </Link>
-            <div className="flex items-center gap-4">
-              <LanguageSelector />
-            </div>
-          </div>
+         
           
           {/* Área de conteúdo rolável */}
           <div className="flex-1 overflow-y-auto p-6 flex flex-col justify-center">

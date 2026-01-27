@@ -1,17 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useMessages } from "next-intl"
+import Image from "next/image"
+import { BRAND_LOGOS } from "@/lib/constants/brands"
 
 export function Marquee() {
-  const messages: any = useMessages()
-  const brands = messages?.socialProof?.partners?.list || []
-
-  // Fallback brands if none in messages
-  const displayBrands = brands.length > 0 
-    ? brands.map((b: any) => b.name)
-    : ["NEXTFLIX", "VERCEL", "ACME CORP", "STARK", "WAYNE ENT", "CYBERDYNE", "UMBRELLA", "MASSIVE", "Hooli", "PIED PIPER", "E CORP"]
-
   return (
     <div className="w-full py-12 border-b border-white/10 bg-black overflow-hidden flex relative z-10">
       <motion.div
@@ -23,11 +16,17 @@ export function Marquee() {
           duration: 30,
         }}
       >
-        {[...displayBrands, ...displayBrands, ...displayBrands].map((brand: string, index: number) => (
-          <div key={index} className="mx-8 flex items-center justify-center">
-            <span className="text-2xl md:text-4xl font-display font-bold text-white/20 uppercase tracking-tighter hover:text-white transition-colors duration-500 cursor-default">
-              {brand}
-            </span>
+        {[...BRAND_LOGOS, ...BRAND_LOGOS, ...BRAND_LOGOS].map((brand, index) => (
+          <div key={`${brand.name}-${index}`} className="mx-8 flex items-center justify-center">
+            <div className="relative w-32 h-12 md:w-42 md:h-16 opacity-40 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
+              <Image
+                src={brand.path}
+                alt={brand.alt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 128px, 256px"
+              />
+            </div>
           </div>
         ))}
       </motion.div>

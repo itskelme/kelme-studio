@@ -31,7 +31,7 @@
         "Imobiliárias"
       ]
     },
-    "subtitle": "Não vendemos apenas sites. Construímos ecossistemas digitais que atraem, qualificam e convertem leads de alto valor para o seu negócio.",
+    "subtitle": "Não vendemos sites bonitos. Construímos sistemas completos de geração de leads que colocam seu negócio na frente de quem realmente importa: seus clientes ideais.",
     "buttons": {
       "talkToDiego": "Iniciar Projeto",
       "viewWork": "Ver Trabalhos"
@@ -82,34 +82,34 @@
     ]
   },
   "founder": {
-    "greeting": "Oi, eu sou",
-    "name": "Diego Kelme.",
+    "greeting": "Conheça a",
+    "name": "Zarp Studio.",
     "paragraphs": [
-      "Se você navegou pelas paisagens digitais de <span class=\"text-white font-medium\">Orlando</span>, <span class=\"text-white font-medium\">Porto</span>, ou <span class=\"text-white font-medium\">Florianópolis</span>, você provavelmente já viu meu trabalho... mesmo que não soubesse que era eu.",
-      "Eu sou o cara que grandes marcas chamam quando \"bom o suficiente\" para de converter.",
-      "Embora eu seja notavelmente conhecido como o <strong>Tech Lead</strong> que simplifica o complexo...",
-      "Eu também sou o líder de um <span class=\"text-white border-b border-white/30 pb-0.5\">esquadrão de elite completo</span>. Somos uma equipe de designers e desenvolvedores seniores que se movem mais rápido que agências dez vezes maiores."
+      "A Zarp Studio nasceu depois de anos trabalhando em empresas multinacionais, como <span class=\"text-white font-medium\">Google</span> e <span class=\"text-white font-medium\">RDStation</span>, vivenciando marketing de perto, mergulhando em tecnologia, posicionamento e crescimento digital em diferentes mercados, uma coisa ficou clara...",
+      "A maioria das agências vende um site e desaparece. <strong>Nós não somos a maioria das agências.</strong>",
+      "Somos o time que coloca sua empresa na <span class=\"text-white border-b border-white/30 pb-0.5\">primeira página do Google</span>, direciona leads qualificados para sua porta, e constrói o funil completo que transforma visitantes em compradores.",
+      "Design bonito? Claro. Mas apenas se fizer seu telefone tocar e sua conta bancária crescer."
     ],
-    "quote": "Eu sei que isso parece ousado. Mas em um mundo de templates e ruído gerado por IA, autoridade é a única moeda que importa.",
-    "closingParagraph": "Minha verdadeira jornada começou com uma única obsessão: Como mesclamos código perfeito com design perfeito para construir não apenas sites, mas motores de receita?",
-    "ctaLabel": "Aqui está a resposta:",
+    "quote": "Deixando claro: Não vendemos sites bonitos, geramos leads para o seu negócio. Essa é nossa missão.",
+    "closingParagraph": "",
+    "ctaLabel": "Veja como fazemos isso:",
     "cta": "Veja Nossos Resultados"
   },
   "socialProof": {
     "testimonials": {
       "titleLine1": "Depoimentos",
       "titleLine2": "de Clientes",
-      "subtitle": "Não confie só na nossa palavra. Veja o que nossos clientes dizem sobre trabalhar com a Zarp Studio.",
+      "subtitle": "Resultados reais de quem confiou na Zarp para gerar leads e crescer.",
       "list": [
-        {"name": "Sarah Martinez", "role": "CEO, TechFlow Solutions", "content": "Diego e seu time transformaram toda nossa presença digital. As conversões aumentaram 280% em apenas 3 meses.", "rating": 5, "image": "/images/sarah-martinez-testimonial.png"},
-        {"name": "Michael Chen", "role": "Fundador, EcoVenture", "content": "Trabalhar com a Zarp Studio mudou o jogo. Eles criaram uma experiência completa de marca que ressoa com nosso público.", "rating": 5, "image": "/images/michael-chen-testimonial.png"},
-        {"name": "Alexandra Torres", "role": "Diretora de Marketing, FinanceHub", "content": "O ROI que vimos nas campanhas é incrível. A abordagem estratégica elevou nossa marca além das expectativas.", "rating": 5, "image": "/images/alexandra-torres-testimonial.png"}
+        {"name": "Sarah Martinez", "role": "CEO, TechFlow Solutions", "content": "A Zarp transformou nossa geração de leads. Passamos de 10 para 120 leads qualificados por mês. As conversões aumentaram 280% em 3 meses.", "rating": 5, "image": "/images/sarah-martinez-testimonial.png"},
+        {"name": "Michael Chen", "role": "Fundador, EcoVenture", "content": "Finalmente encontramos uma agência que entende de vendas, não só de design. Nosso custo por lead caiu 60% e a qualidade melhorou.", "rating": 5, "image": "/images/michael-chen-testimonial.png"},
+        {"name": "Alexandra Torres", "role": "Diretora de Marketing, FinanceHub", "content": "ROI de 4.2x no primeiro trimestre. A Zarp construiu um sistema de geração de leads que funciona enquanto dormimos.", "rating": 5, "image": "/images/alexandra-torres-testimonial.png"}
       ]
     },
     "awards": {
-      "titleLine1": "Você Merece",
-      "titleLine2": "O Melhor",
-      "subtitle": "Reconhecimento valida nosso compromisso com a excelência.",
+      "titleLine1": "Resultados",
+      "titleLine2": "Comprovados",
+      "subtitle": "Números que falam por si. Leads gerados, vendas fechadas, negócios crescidos.",
       "list": [
         {"title": "Melhor Agência Digital", "year": "2024", "organization": "Marketing Excellence Awards", "iconKey": "trophy"},
         {"title": "Inovação em Design", "year": "2023", "organization": "Web Design Awards", "iconKey": "star"},
@@ -156,8 +156,8 @@
   },
   "metadata": {
     "home": {
-      "title": "Zarp Studio - Agência Digital & Estúdio Criativo",
-      "description": "Elevamos marcas ambiciosas além do horizonte, criando experiências digitais que se destacam da concorrência."
+      "title": "Zarp Studio - Geração de Leads & Growth Digital",
+      "description": "Não vendemos sites bonitos, geramos leads para o seu negócio. Sistemas completos de atração, qualificação e conversão de clientes."
     },
     "contact": {
       "title": "Contato - Zarp Studio",
@@ -165,52 +165,52 @@
     },
     "about": {
       "title": "Sobre - Zarp Studio",
-      "description": "Conheça a Zarp Studio, uma agência digital e estúdio criativo especializado em elevar sua marca com soluções digitais estratégicas."
+      "description": "Conheça a Zarp Studio, especialistas em geração de leads e crescimento digital. Construímos sistemas que transformam tráfego em clientes pagantes."
     },
     "work": {
       "title": "Portfólio - Zarp Studio",
-      "description": "Explore nosso portfólio de projetos digitais inovadores e veja como transformamos a presença online de nossos clientes."
+      "description": "Veja como geramos leads e crescimento real para nossos clientes. Resultados mensuráveis, não apenas projetos bonitos."
     },
     "blog": {
       "title": "Blog - Zarp Studio",
-      "description": "Insights, tendências e estratégias sobre design digital, desenvolvimento web e crescimento de negócios."
+      "description": "Estratégias práticas de geração de leads, tráfego pago, conversão e crescimento digital para o seu negócio."
     },
     "careers": {
       "title": "Carreiras - Zarp Studio",
-      "description": "Junte-se ao nosso time de elite. Estamos sempre procurando talentos excepcionais para construir experiências digitais que definem a década."
+      "description": "Junte-se ao time que gera milhões em leads para clientes. Procuramos talentos obcecados por resultados e crescimento."
     }
   },
   "roadmap": {
-    "sectionLabel": "Workflow Insany",
-    "title": "Processo de trabalho",
-    "subtitle": "insano para resultados excepcionais.",
-    "description": "Conheça o processo aplicado em mais de 200 projetos",
-    "marquee": ["ÚNICOS", "DIGITAIS", "CRIATIVOS"],
+    "sectionLabel": "Processo Zarp",
+    "title": "Como Geramos Leads",
+    "subtitle": "para o seu negócio crescer.",
+    "description": "O método testado em mais de 200 projetos",
+    "marquee": ["ESTRATÉGIA", "EXECUÇÃO", "RESULTADOS"],
     "steps": [
       {
         "id": "01",
-        "title": "UX Design",
-        "subtitle": "Definição do escopo do projeto.",
-        "description": "Na Insany, adotamos uma abordagem prática para garantir experiências excepcionais aos usuários em nossos projetos. Começamos com um planejamento detalhado e pesquisas para entender as necessidades dos usuários. Criamos estruturas de informação intuitivas e cuidamos da escolha das palavras para transmitir informações de forma clara e eficaz. Realizamos análises rigorosas e testes extensivos para garantir uma experiência de usuário excepcional."
+        "title": "Estratégia",
+        "subtitle": "Entendemos seu mercado e concorrência.",
+        "description": "Na Zarp, começamos analisando seu negócio, público-alvo e objetivos de crescimento. Identificamos as melhores oportunidades de geração de leads através de pesquisa de mercado, análise de concorrentes e mapeamento da jornada do cliente. Definimos KPIs claros e criamos uma estratégia personalizada focada em resultados mensuráveis desde o primeiro dia."
       },
       {
         "id": "02",
-        "title": "UI Design",
-        "subtitle": "Etapa de criação do projeto",
-        "description": "Adotamos um processo completo e eficiente para garantir resultados excepcionais em UI Design. Começamos com uma imersão no projeto para entender as necessidades do cliente, do público-alvo e dos objetivos. Criamos moodboards inspiradores e utilizamos wireframes detalhados para esboçar a estrutura e o layout da interface. Desenvolvemos protótipos interativos para testar e validar o design antes da implementação final, refinando a experiência do usuário. Por fim, preparamos um handoff completo para fornecer todas as especificações necessárias aos desenvolvedores."
+        "title": "Execução",
+        "subtitle": "Construímos o ecossistema completo.",
+        "description": "Desenvolvemos landing pages de alta conversão, configuramos campanhas de tráfego pago (Google Ads e Meta Ads), implementamos automações de CRM e criamos funis de vendas otimizados. Cada elemento é projetado para capturar, qualificar e nutrir leads até a conversão. Design bonito que vende, não apenas decora."
       },
       {
         "id": "03",
-        "title": "Código",
-        "subtitle": "Código semântico e otimizado para web",
-        "description": "Na Insany, nosso fluxo de desenvolvimento é sólido e estruturado para garantir o sucesso de nossos projetos. Começamos definindo uma estrutura sólida, incluindo requisitos claros e arquitetura de informações. Desenvolvemos uma arquitetura Front-End robusta, garantindo uma base sólida para o design da interface do usuário. Utilizamos tecnologias modernas para codificar de forma eficiente, focando na qualidade, desempenho e compatibilidade. Realizamos testes rigorosos para garantir a qualidade do projeto. Após revisões detalhadas, preparamos o lançamento. Nosso fluxo de desenvolvimento visa resultados consistentes e insanos em cada projeto entregue."
+        "title": "Otimização",
+        "subtitle": "Melhoramos continuamente seus resultados.",
+        "description": "Na Zarp, monitoramos métricas em tempo real e fazemos ajustes constantes para maximizar seu ROI. Realizamos testes A/B, otimizamos campanhas, refinamos copy e melhoramos taxas de conversão. Nosso objetivo é simples: mais leads qualificados, menor custo por aquisição e crescimento sustentável do seu negócio."
       }
     ],
     "peopleUserCentered": {
-      "line1": "PEOPLE",
-      "line2": "USER",
-      "line3": "CENTERED",
-      "description": "Pensamos na experiência de ponta a ponta, integrando marca e serviço digital. Construímos soluções para alcançar o potencial máximo do seu negócio, impactando as métricas que importam."
+      "line1": "LEADS",
+      "line2": "GROWTH",
+      "line3": "FOCUSED",
+      "description": "Pensamos no funil completo, da primeira impressão até a venda. Construímos sistemas de geração de leads que impactam diretamente sua receita."
     }
   },
   "contact": {

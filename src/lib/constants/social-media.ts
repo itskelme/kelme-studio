@@ -43,14 +43,14 @@ export const SOCIAL_MEDIA_PLATFORMS: Record<SocialPlatformKey, SocialMediaPlatfo
     displayName: 'Instagram',
     icon: RiInstagramLine,
     baseUrl: 'https://instagram.com',
-    username: 'itskelme_'
+    username: 'zarpstudio'
   },
   LinkedIn: {
     name: 'LinkedIn',
     displayName: 'LinkedIn',
     icon: RiLinkedinBoxLine,
-    baseUrl: 'https://linkedin.com/in',
-    username: 'kelme'
+    baseUrl: 'https://linkedin.com/in/company',
+    username: 'zarpstudio'
   },
   Twitter: {
     name: 'Twitter',
@@ -64,13 +64,6 @@ export const SOCIAL_MEDIA_PLATFORMS: Record<SocialPlatformKey, SocialMediaPlatfo
     displayName: 'X',
     icon: RiTwitterXLine,
     baseUrl: 'https://x.com',
-    username: 'itskelme'
-  },
-  GitHub: {
-    name: 'GitHub',
-    displayName: 'GitHub',
-    icon: RiGithubLine,
-    baseUrl: 'https://github.com',
     username: 'itskelme'
   }
 };

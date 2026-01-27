@@ -183,7 +183,7 @@
   "footer": {
     "title": "Have an idea?",
     "titleHighlight": "Let's build it.",
-    "subtitle": "We help ambitious brands define their digital future. Open for new partnerships for Q4 2024.",
+    "subtitle": "We don't sell pretty websites, we generate leads for your business. Complete systems that attract, qualify, and convert your ideal customers. Open for new partnerships for Q4 2024.",
     "emailUs": "Email Us",
     "whatsapp": "WhatsApp",
     "sitemap": "Sitemap",
@@ -296,36 +296,36 @@
     ]
   },
   "roadmap": {
-    "sectionLabel": "Workflow Insany",
-    "title": "Work Process",
-    "subtitle": "insane for exceptional results.",
-    "description": "Discover the process applied in over 200 projects",
-    "marquee": ["UNIQUE", "DIGITAL", "CREATIVE"],
+    "sectionLabel": "Zarp Process",
+    "title": "How We Generate Leads",
+    "subtitle": "to grow your business.",
+    "description": "The method tested in over 200 projects",
+    "marquee": ["STRATEGY", "EXECUTION", "RESULTS"],
     "steps": [
       {
         "id": "01",
-        "title": "UX Design",
-        "subtitle": "Project scope definition.",
-        "description": "At Insany, we adopt a practical approach to ensure exceptional user experiences in our projects. We start with detailed planning and research to understand user needs. We create intuitive information structures and carefully choose words to transmit information clearly and effectively. We conduct rigorous analysis and extensive testing to ensure an exceptional user experience."
+        "title": "Strategy",
+        "subtitle": "We understand your market and competition.",
+        "description": "At Zarp, we start by analyzing your business, target audience, and growth objectives. We identify the best lead generation opportunities through market research, competitor analysis, and customer journey mapping. We define clear KPIs and create a personalized strategy focused on measurable results from day one."
       },
       {
         "id": "02",
-        "title": "UI Design",
-        "subtitle": "Project creation stage",
-        "description": "We adopt a complete and efficient process to ensure exceptional results in UI Design. We start with project immersion to understand client needs, target audience, and goals. We create inspiring moodboards and use detailed wireframes to sketch the interface structure and layout. We develop interactive prototypes to test and validate the design before final implementation, refining the user experience. Finally, we prepare a complete handoff to provide all necessary specifications to developers."
+        "title": "Execution",
+        "subtitle": "We build the complete ecosystem.",
+        "description": "We develop high-converting landing pages, set up paid traffic campaigns (Google Ads and Meta Ads), implement CRM automations, and create optimized sales funnels. Every element is designed to capture, qualify, and nurture leads until conversion. Beautiful design that sells, not just decorates."
       },
       {
         "id": "03",
-        "title": "Code",
-        "subtitle": "Semantic and optimized web code",
-        "description": "At Insany, our development flow is solid and structured to ensure our projects' success. We start by defining a solid structure, including clear requirements and information architecture. We develop a robust Front-End architecture, ensuring a solid foundation for the user interface design. We use modern technologies to code efficiently, focusing on quality, performance, and compatibility. We conduct rigorous tests to ensure project quality. After detailed reviews, we prepare for launch. Our development flow aims for consistent and insane results in every project delivered."
+        "title": "Optimization",
+        "subtitle": "We continuously improve your results.",
+        "description": "At Zarp, we monitor metrics in real-time and make constant adjustments to maximize your ROI. We conduct A/B tests, optimize campaigns, refine copy, and improve conversion rates. Our goal is simple: more qualified leads, lower cost per acquisition, and sustainable business growth."
       }
     ],
     "peopleUserCentered": {
-      "line1": "PEOPLE",
-      "line2": "USER",
-      "line3": "CENTERED",
-      "description": "We think about the end-to-end experience, integrating brand and digital service. We build solutions to reach your business's maximum potential, impacting the metrics that matter."
+      "line1": "LEADS",
+      "line2": "GROWTH",
+      "line3": "FOCUSED",
+      "description": "We think about the complete funnel, from first impression to sale. We build lead generation systems that directly impact your revenue."
     }
   },
   "contact": {
@@ -456,23 +456,23 @@
     }
   },
   "founder": {
-    "greeting": "Hi, I'm",
-    "name": "Diego Kelme.",
+    "greeting": "Meet",
+    "name": "Zarp Studio.",
     "paragraphs": [
-      "If you've navigated the digital landscapes of <span class=\"text-white font-medium\">Orlando</span>, <span class=\"text-white font-medium\">Porto</span>, or <span class=\"text-white font-medium\">Florianópolis</span>, you've likely seen my work... even if you didn't know it was me.",
-      "I'm the guy big brands call when \"good enough\" stops converting.",
-      "While I'm notably known as the <strong>Tech Lead</strong> who simplifies the complex...",
-      "I'm also the leader of a <span class=\"text-white border-b border-white/30 pb-0.5\">complete elite squad</span>. We are a team of senior designers and developers who move faster than agencies ten times our size."
+      "Zarp Studio was born after some years working in multinational companies, like <span class=\"text-white font-medium\">Google</span> and <span class=\"text-white font-medium\">RDStation</span>, experiencing marketing up close, immersing myself in technology, positioning, and digital growth in different markets, one thing became clear...",
+      "Most agencies sell you a website and disappear. <strong>We're not most agencies.</strong>",
+      "We're the team that puts your company on <span class=\"text-white border-b border-white/30 pb-0.5\">Google's first page</span>, drives qualified leads to your door, and builds the complete funnel that turns browsers into buyers.",
+      "Beautiful design? Sure. But only if it makes your phone ring and your bank account grow."
     ],
-    "quote": "I know that sounds bold. But in a world of templates and AI-generated noise, authority is the only currency that matters.",
-    "closingParagraph": "My real journey began with a single obsession: How do we merge perfect code with perfect design to build not just websites, but revenue engines?",
-    "ctaLabel": "Here is the answer:",
+    "quote": "Making it clear: We don't sell pretty websites, we generate leads for your business. That's our mission.",
+    "closingParagraph": "",
+    "ctaLabel": "See how we do it:",
     "cta": "See Our Results"
   },
   "metadata": {
     "home": {
       "title": "Zarp Studio - Digital Experiences That Convert",
-      "description": "We craft insane digital experiences for ambitious brands. No fluff, just high-converting design and engineering."
+      "description": "We don't sell pretty websites, we generate leads for your business. Complete systems for attracting, qualifying, and converting customers."
     },
     "contact": {
       "title": "Contact - Zarp Studio",
@@ -480,19 +480,19 @@
     },
     "about": {
       "title": "About - Zarp Studio",
-      "description": "Meet Zarp Studio, a digital agency and creative studio specialized in elevating your brand with strategic digital solutions."
+      "description": "Meet Zarp Studio, specialists in lead generation and digital growth. We build systems that transform traffic into paying customers."
     },
     "work": {
       "title": "Portfolio - Zarp Studio",
-      "description": "Explore our portfolio of innovative digital projects and see how we transform our clients' online presence."
+      "description": "See how we generate leads and real growth for our clients. Measurable results, not just pretty projects."
     },
     "blog": {
       "title": "Blog - Zarp Studio",
-      "description": "Insights, trends and strategies about digital design, web development and business growth."
+      "description": "Practical strategies for lead generation, paid traffic, conversion, and digital growth for your business."
     },
     "careers": {
       "title": "Careers - Zarp Studio",
-      "description": "Join our elite squad. We're always looking for exceptional talent to build digital experiences that define the decade."
+      "description": "Join the team that generates millions in leads for clients. We seek talent obsessed with results and growth."
     }
   }
 

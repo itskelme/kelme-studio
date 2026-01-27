@@ -7,7 +7,6 @@ import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { AppLocale, locales } from '@/i18n/routing';
 import { generatePageMetadata } from '@/lib/metadata';
-import { GridOverlay } from '@/presentation/components/atoms/grid-overlay';
 import { CustomCursor } from '@/presentation/components/atoms/custom-cursor';
 import { Navbar } from '@/presentation/components/organisms/page-layout/navbar';
 import { Footer } from '@/presentation/components/organisms/page-layout/footer';
@@ -56,7 +55,6 @@ export default async function RootLayout({
     <html lang={locale} className={`${manrope.variable} ${oswald.variable} antialiased scroll-smooth`}>
       <body className="font-sans bg-black text-gray-100 overflow-x-hidden">
         <CustomCursor />
-        <GridOverlay />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
