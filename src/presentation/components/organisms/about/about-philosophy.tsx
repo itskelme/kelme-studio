@@ -13,7 +13,7 @@ export function AboutPhilosophy() {
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 min-h-[60vh] relative overflow-hidden group">
           <img 
-            src="/images/about/my-team-at-zarp-2026.jpeg" 
+            src="/images/about/my-team-at-zarp-2026.png" 
             alt="Zarp Studio Team 2026" 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
           />

@@ -36,7 +36,7 @@ export function Founder() {
           >
             <div className="relative aspect-3/4 overflow-hidden bg-white/5">
               <Image 
-                src="/images/about/my-team-at-zarp-2026.jpeg"
+                src="/images/about/my-team-at-zarp-2026.png"
                 alt="Zarp Studio Team 2026" 
                 fill
                 className="object-cover contrast-100 group-hover:scale-105 transition-transform duration-700 ease-out"
