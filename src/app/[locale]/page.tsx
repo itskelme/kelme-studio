@@ -7,6 +7,7 @@ import { Testimonials } from '@/presentation/components/organisms/home/testimoni
 import { FAQ } from '@/presentation/components/organisms/home/faq';
 import { SalesCTA } from '@/presentation/components/organisms/home/sales-cta';
 import { Roadmap } from '@/presentation/components/organisms/home/roadmap';
+import { SeoResults } from '@/presentation/components/organisms/home/seo-results';
 import { AppLocale, routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
@@ -46,6 +47,7 @@ export default async function HomeLocalePage({ params }:{ params: Promise<{ loca
       <Marquee />
       <Services />
       <Roadmap />
+      <SeoResults />
       <Work />
       <Founder />
       <Testimonials />

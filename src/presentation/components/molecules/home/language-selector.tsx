@@ -7,8 +7,6 @@ import { RiArrowDownSLine } from "@remixicon/react";
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 
-import { getLocale } from "next-intl/server";
-
 const languages = [
   { code: 'pt', label: 'Português', country: 'BR' },
   { code: 'en', label: 'English', country: 'US' }
@@ -19,8 +17,32 @@ export function LanguageSelector() {
   const router = useRouter();
   const pathname = usePathname();
   const [selected, setSelected] = useState(locale);
+  const [mounted, setMounted] = useState(false);
+  
+  // Wait for client-side hydration to complete before rendering DropdownMenu
+  // This prevents Radix UI ID mismatch between server and client
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  
   useEffect(() => setSelected(locale), [locale]);
   const current = languages.find(l => l.code === selected) || languages[0];
+
+  // Render a placeholder with matching dimensions during SSR to prevent layout shift
+  if (!mounted) {
+    return (
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        className="flex items-center gap-2 px-3 py-2 hover:bg-white/10 transition-colors rounded-none border border-white/20 mix-blend-difference"
+        disabled
+      >
+        <ReactCountryFlag countryCode={current.country} svg className="rounded-full" style={{ width: 16, height: 16, objectFit: 'cover' }} />
+        <span className="font-bold text-xs uppercase tracking-widest text-white">{current.code}</span>
+        <RiArrowDownSLine className="h-4 w-4 text-white" />
+      </Button>
+    );
+  }
 
   return (
     <DropdownMenu>

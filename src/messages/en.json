@@ -708,5 +708,43 @@
       "title": "Careers - Zarp Studio",
       "description": "Join the team that generates millions in leads for clients. We seek talent obsessed with results and growth."
     }
+  },
+  "seoResults": {
+    "sectionLabel": "Proven Results",
+    "title": "Dominate Google.",
+    "subtitle": {
+      "part1": "Rank #1 in your",
+      "part2": "at"
+    },
+    "niches": {
+      "lawyers": "Lawyer Services Searches",
+      "dentists": "Dentalcare Searches",
+      "realtors": "Real Estate Searches",
+      "restaurants": "Food Searches",
+      "clinics": "Healthcare Searches"
+    },
+    "cities": {
+      "orlando": "Orlando",
+      "miami": "Miami",
+      "tampa": "Tampa",
+      "jacksonville": "Jacksonville",
+      "austin": "Austin"
+    },
+    "cardTitle": "Google Search Console",
+    "cardSubtitle": "Performance over time",
+    "lastMonths": "Last 3 months",
+    "metrics": {
+      "clicks": "Total Visits",
+      "impressions": "Impressions",
+      "ctr": "Avg. CTR",
+      "position": "Avg. Position"
+    },
+    "months": {
+      "month1": "3 months ago",
+      "month2": "6 weeks ago",
+      "month3": "Today"
+    },
+    "ctaText": "Ready to see these results for your business?",
+    "ctaButton": "Get Your Free SEO Audit"
   }
 }

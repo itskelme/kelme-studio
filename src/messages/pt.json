@@ -859,5 +859,43 @@
     "sendRequest": "Enviar Solicitação",
     "requestReceived": "Solicitação Recebida",
     "receivedMessage": "Recebemos seu briefing. Um estrategista revisará seus requisitos e entrará em contato dentro de 24 horas para agendar uma chamada de descoberta."
+  },
+  "seoResults": {
+    "sectionLabel": "Resultados Comprovados",
+    "title": "Domine o Google.",
+    "subtitle": {
+      "part1": "Fique em 1º no seu nicho de",
+      "part2": "e em"
+    },
+    "niches": {
+      "lawyers": "Advocacia",
+      "dentists": "Odontologia",
+      "realtors": "Imobiliário",
+      "restaurants": "Restaurantes",
+      "clinics": "Clínicas"
+    },
+    "cities": {
+      "orlando": "São Paulo",
+      "miami": "Rio de Janeiro",
+      "tampa": "Florianópolis",
+      "jacksonville": "Curitiba",
+      "austin": "Belo Horizonte"
+    },
+    "cardTitle": "Google Search Console",
+    "cardSubtitle": "Performance ao longo do tempo",
+    "lastMonths": "Últimos 3 meses",
+    "metrics": {
+      "clicks": "Cliques Totais",
+      "impressions": "Impressões",
+      "ctr": "CTR Média",
+      "position": "Posição Média"
+    },
+    "months": {
+      "month1": "3 meses atrás",
+      "month2": "6 semanas atrás",
+      "month3": "Hoje"
+    },
+    "ctaText": "Pronto para ver esses resultados no seu negócio?",
+    "ctaButton": "Solicitar Auditoria SEO Grátis"
   }
 }
