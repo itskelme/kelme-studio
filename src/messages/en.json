@@ -716,7 +716,7 @@
     "sectionLabel": "Proven Results",
     "title": "Dominate Google.",
     "subtitle": {
-      "part1": "Rank #1 in your",
+      "part1": "Rank #1 in Google",
       "part2": "at"
     },
     "niches": {
@@ -747,6 +747,7 @@
       "month2": "6 weeks ago",
       "month3": "Today"
     },
+    "seoStartMarker": "SEO Strategy Started",
     "ctaText": "Ready to see these results for your business?",
     "ctaButton": "Get Your Free SEO Audit"
   }

@@ -329,6 +329,57 @@ export function SeoResults() {
                     ease: "easeOut"
                   }}
                 />
+                
+                {/* SEO Strategy Start Marker - 6 weeks ago (42 days) */}
+                {(() => {
+                  const seoStartIndex = 90 - 42; // 48 days from start
+                  const markerX = getX(seoStartIndex);
+                  return (
+                    <>
+                      {/* Vertical dashed line - starts below the label */}
+                      <motion.line
+                        x1={markerX}
+                        y1={28}
+                        x2={markerX}
+                        y2={chartHeight}
+                        stroke="rgba(255,255,255,0.3)"
+                        strokeWidth="1"
+                        strokeDasharray="6 4"
+                        initial={{ opacity: 0 }}
+                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                        transition={{ duration: 0.5, delay: 1.2 }}
+                      />
+                      {/* Label with background and text */}
+                      <motion.g
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.5, delay: 1.0 }}
+                        style={{ transformOrigin: `${markerX}px 14px` }}
+                      >
+                        <rect
+                          x={markerX - 55}
+                          y={4}
+                          width={110}
+                          height={20}
+                          rx={4}
+                          fill="rgba(34, 197, 94, 0.15)"
+                          stroke="rgba(34, 197, 94, 0.5)"
+                          strokeWidth={1}
+                        />
+                        <text
+                          x={markerX}
+                          y={18}
+                          textAnchor="middle"
+                          fill="#22c55e"
+                          fontSize="10"
+                          fontWeight="600"
+                        >
+                          {t("seoStartMarker")}
+                        </text>
+                      </motion.g>
+                    </>
+                  );
+                })()}
               </svg>
               
               {/* X-axis labels */}
@@ -443,18 +494,7 @@ export function SeoResults() {
               </div>
             </div>
             
-            {/* Growth Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 2.5 }}
-              className="absolute top-16 right-6 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 flex items-center gap-2"
-            >
-              <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-              <span className="text-blue-400 font-bold text-sm">Total Clicks</span>
-            </motion.div>
+           
           </div>
           
           {/* CTA Below Card */}
