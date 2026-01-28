@@ -288,27 +288,30 @@
     ]
   },
   "testimonials": {
-    "sectionLabel": "Social Proof",
-    "title": "Client Obsession.",
-    "subtitle": "We don't just collect logos. We collect success stories. Here is what happens when you work with the best.",
+    "sectionLabel": "Reviews",
+    "title": "What Clients Say.",
+    "subtitle": "Real feedback from business owners who trusted us with their growth.",
     "items": [
       {
-        "quote": "Zarp Studio didn't just build a website; they architected a digital flagship. Our conversion rates doubled within the first month of launch. The authority we now command in our market is undeniable.",
-        "author": "Alex Rivera",
-        "role": "CMO, Nebula Fintech",
-        "metric": "+200% Conversions"
+        "quote": "Honestly didn't expect this kind of result. We were getting maybe 3-4 leads a month before, now we're at 40+. The landing page they built actually converts. Best investment we made this year.",
+        "author": "Rafael M.",
+        "role": "Owner, RMT Consulting",
+        "metric": "+40 leads/month",
+        "image": "/images/testimonials/rafael.png"
       },
       {
-        "quote": "I've worked with top agencies in NYC and London. Diego's team operates at a different frequency. Faster, sharper, and obsessively detailed. They understand that design is a revenue function.",
-        "author": "Sarah Jenkins",
-        "role": "Founder, Velvet Fashion",
-        "metric": "3x ROAS"
+        "quote": "Finally an agency that gets it. No fluff, no endless meetings. They asked the right questions, delivered fast, and our Google ranking went from page 5 to page 1 in about 2 months. Worth every penny.",
+        "author": "Jessica T.",
+        "role": "Marketing Dir., Coastal Law Group",
+        "metric": "Page 1 on Google",
+        "image": "/images/testimonials/jessica.png"
       },
       {
-        "quote": "The ROI was immediate. They simplified our complex ecosystem into a seamless user journey. A masterclass in execution that positioned us exactly where we needed to be: at the top.",
-        "author": "Marcus Chen",
-        "role": "Director, Quantum SaaS",
-        "metric": "Series B Secured"
+        "quote": "I was skeptical at first because we'd been burned by agencies before. But these guys actually care about results. They even followed up a month later to help us optimize. Our cost per lead dropped by half.",
+        "author": "Marcia L.",
+        "role": "Founder, Bella Med Spa",
+        "metric": "50% lower CPL",
+        "image": "/images/testimonials/marcia.png"
       }
     ]
   },

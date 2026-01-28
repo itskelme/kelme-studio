@@ -228,27 +228,30 @@
     "cta": "Ver Nossos Resultados"
   },
   "testimonials": {
-    "sectionLabel": "Prova Social",
-    "title": "Obsessão pelo Cliente.",
-    "subtitle": "Resultados reais de quem confiou na Zarp para gerar leads e crescer.",
+    "sectionLabel": "Avaliações",
+    "title": "O Que Dizem.",
+    "subtitle": "Feedback real de empresários que confiaram no nosso trabalho.",
     "items": [
       {
-        "quote": "A Zarp Studio não apenas construiu um site; arquitetou um flagship digital. Nossas taxas de conversão dobraram no primeiro mês de lançamento. A autoridade que agora comandamos no mercado é inegável.",
-        "author": "Alex Rivera",
-        "role": "CMO, Nebula Fintech",
-        "metric": "+200% Conversões"
+        "quote": "Sinceramente não esperava esse resultado. A gente recebia uns 3-4 leads por mês antes, agora tá na casa dos 40+. A landing page que fizeram realmente converte. Melhor investimento que fizemos esse ano.",
+        "author": "Rafael M.",
+        "role": "Dono, RMT Consultoria",
+        "metric": "+40 leads/mês",
+        "image": "/images/testimonials/rafael.png"
       },
       {
-        "quote": "Trabalhei com as melhores agências de NYC e Londres. O time do Diego opera em uma frequência diferente. Mais rápido, mais afiado e obsessivamente detalhista. Eles entendem que design é uma função de receita.",
-        "author": "Sarah Jenkins",
-        "role": "Fundadora, Velvet Fashion",
-        "metric": "3x ROAS"
+        "quote": "Finalmente uma agência que entende. Sem enrolação, sem reuniões infinitas. Fizeram as perguntas certas, entregaram rápido, e nosso ranking no Google foi da página 5 pra página 1 em uns 2 meses. Valeu cada centavo.",
+        "author": "Jessica T.",
+        "role": "Dir. de Marketing, Coastal Law Group",
+        "metric": "Página 1 no Google",
+        "image": "/images/testimonials/jessica.png"
       },
       {
-        "quote": "O ROI foi imediato. Eles simplificaram nosso ecossistema complexo em uma jornada de usuário perfeita. Uma masterclass em execução que nos posicionou exatamente onde precisávamos estar: no topo.",
-        "author": "Marcus Chen",
-        "role": "Diretor, Quantum SaaS",
-        "metric": "Série B Garantida"
+        "quote": "Eu tava cético no começo porque já tínhamos sido queimados por outras agências. Mas esses caras realmente se importam com resultado. Ainda ligaram um mês depois pra ajudar a otimizar. Nosso custo por lead caiu pela metade.",
+        "author": "Marcia L.",
+        "role": "Fundadora, Bella Med Spa",
+        "metric": "50% menor CPL",
+        "image": "/images/testimonials/marcia.png"
       }
     ]
   },
@@ -865,12 +868,12 @@
     "title": "Domine o Google.",
     "subtitle": {
       "part1": "Fique em 1º no seu nicho de",
-      "part2": "e em"
+      "part2": "em"
     },
     "niches": {
       "lawyers": "Advocacia",
       "dentists": "Odontologia",
-      "realtors": "Imobiliário",
+      "realtors": "Imobiliária",
       "restaurants": "Restaurantes",
       "clinics": "Clínicas"
     },
