@@ -26,7 +26,7 @@ const ProjectCard = ({ project, index }: { project: WorkPageProps["projects"][0]
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700"
+              className="object-cover transition-all duration-700"
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500" />
           </motion.div>
@@ -42,7 +42,7 @@ const ProjectCard = ({ project, index }: { project: WorkPageProps["projects"][0]
               {project.client}
             </span>
             <span className="text-secondary text-xs font-bold uppercase tracking-widest">
-              {project.year}
+              {project.category}
             </span>
           </div>
         
