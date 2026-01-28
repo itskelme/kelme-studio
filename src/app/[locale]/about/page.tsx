@@ -2,7 +2,8 @@ import { setRequestLocale } from "next-intl/server";
 import { AppLocale, routing } from "@/i18n/routing";
 import { AboutHero } from "@/presentation/components/organisms/about/about-hero";
 import { AboutPhilosophy } from "@/presentation/components/organisms/about/about-philosophy";
-import { AboutVentures } from "@/presentation/components/organisms/about/about-ventures";
+
+import { AboutCopywriting } from "@/presentation/components/organisms/about/about-copywriting";
 import { AboutOrigin } from "@/presentation/components/organisms/about/about-origin";
 import { AboutCTA } from "@/presentation/components/organisms/about/about-cta";
 import { Metadata } from "next";
@@ -38,7 +39,7 @@ export default async function AboutPage({
     <>
       <AboutHero />
       <AboutPhilosophy />
-      <AboutVentures />
+      <AboutCopywriting />
       <AboutOrigin />
       <AboutCTA />
     </>

@@ -35,9 +35,9 @@ export function AboutHero() {
               />
             </div>
             <div className="md:w-1/2 text-secondary text-sm md:text-base leading-relaxed space-y-6">
-              <p>{hook.text1}</p>
+              <p dangerouslySetInnerHTML={{ __html: hook.text1 }} />
               <p dangerouslySetInnerHTML={{ __html: hook.text2 }} />
-              <p>{hook.text3}</p>
+              <p dangerouslySetInnerHTML={{ __html: hook.text3 }} />
             </div>
           </div>
         </motion.div>

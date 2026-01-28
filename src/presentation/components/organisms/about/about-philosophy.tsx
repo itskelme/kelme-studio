@@ -13,14 +13,14 @@ export function AboutPhilosophy() {
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 min-h-[60vh] relative overflow-hidden group">
           <img 
-            src="/images/about/diego-kelme-portrait-2.jpg" 
-            alt="Diego Kelme" 
+            src="/images/about/my-team-at-zarp-2026.jpeg" 
+            alt="Zarp Studio Team 2026" 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-12 left-12">
-            <h2 className="font-display text-9xl font-bold text-white opacity-10 leading-none">DIEGO</h2>
-            <h2 className="font-display text-9xl font-bold text-white opacity-10 leading-none ml-12">KELME</h2>
+            <h2 className="font-display text-9xl font-bold text-white opacity-10 leading-none">ZARP</h2>
+            <h2 className="font-display text-9xl font-bold text-white opacity-10 leading-none ml-12">STUDIO</h2>
           </div>
         </div>
         

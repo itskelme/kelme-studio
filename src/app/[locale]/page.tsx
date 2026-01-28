@@ -1,5 +1,5 @@
 import { Hero } from '@/presentation/components/organisms/home/hero';
-import { Marquee } from '@/presentation/components/molecules/marquee';
+import { Marquee } from '@/presentation/components/molecules/home/marquee';
 import { Services } from '@/presentation/components/organisms/home/services';
 import { Work } from '@/presentation/components/organisms/home/work';
 import { Founder } from '@/presentation/components/organisms/home/founder';

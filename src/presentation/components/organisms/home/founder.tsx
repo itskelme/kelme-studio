@@ -17,7 +17,7 @@ export function Founder() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="font-oswald font-bold text-[25vw] leading-none text-white/[0.02] uppercase whitespace-nowrap"
+          className="font-oswald font-bold text-[25vw] leading-none text-white/2 uppercase whitespace-nowrap"
         >
           Tech Lead
         </motion.span>
@@ -36,8 +36,8 @@ export function Founder() {
           >
             <div className="relative aspect-3/4 overflow-hidden bg-white/5">
               <Image 
-                src="/images/about/diego-kelme-portrait.jpg"
-                alt="Diego Kelme" 
+                src="/images/about/my-team-at-zarp-2026.jpeg"
+                alt="Zarp Studio Team 2026" 
                 fill
                 className="object-cover contrast-100 group-hover:scale-105 transition-transform duration-700 ease-out"
               />

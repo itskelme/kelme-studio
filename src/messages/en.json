@@ -8,22 +8,46 @@
     "menus": {
       "development": {
         "title": "Development",
-        "items": ["WordPress", "Shopify", "Landing Pages", "Micro-SaaS", "MVP"]
+        "items": [
+          "WordPress",
+          "Shopify",
+          "Landing Pages",
+          "Micro-SaaS",
+          "MVP"
+        ]
       },
       "marketing": {
         "title": "Marketing",
-        "items": ["Paid Ads", "Social Media", "Email Marketing", "SEO"]
+        "items": [
+          "Paid Ads",
+          "Social Media",
+          "Email Marketing",
+          "SEO"
+        ]
       },
       "strategy": {
         "title": "Strategy",
-        "items": ["Branding", "UI/UX Research"]
+        "items": [
+          "Branding",
+          "UI/UX Research"
+        ]
       },
       "video": {
         "title": "Video",
-        "items": ["VSL", "Creative Ads"]
+        "items": [
+          "VSL",
+          "Creative Ads"
+        ]
       },
-      "work": ["Recent Projects", "Case Studies", "Success Stories"],
-      "insights": ["Blog", "Tools"]
+      "work": [
+        "Recent Projects",
+        "Case Studies",
+        "Success Stories"
+      ],
+      "insights": [
+        "Blog",
+        "Tools"
+      ]
     }
   },
   "hero": {
@@ -37,7 +61,7 @@
         "Real Estate Firms"
       ]
     },
-    "subtitle": "We don’t just build websites. We build digital ecosystems that attract, qualify, and convert high-value leads for your business.",
+    "subtitle": "We build complete lead generation systems. From paid traffic to optimized funnels, we put qualified customers in front of your business every single day.",
     "buttons": {
       "talkToDiego": "Start Project",
       "viewWork": "View Work"
@@ -51,23 +75,43 @@
     "list": [
       {
         "category": "Lead Generation",
-        "description": "Complete client acquisition systems. From paid ads to sales funnels, we ensure a steady flow of opportunities.",
-        "items": ["Google Ads", "Meta Ads", "Sales Funnels"]
+        "description": "Complete client acquisition funnel strategies. From paid ads to sales funnels, we ensure a steady flow of opportunities.",
+        "items": [
+          "Google Ads",
+          "Meta Ads",
+          "Sales Funnels"
+        ],
+        "icon": "target"
       },
       {
-        "category": "High-Converting Web Design",
+        "category": "Websites Designed to Conversion",
         "description": "Websites designed to sell. We transform visitors into clients with strategic layouts and persuasive copy.",
-        "items": ["Landing Pages", "Institutional Sites", "CRO"]
+        "items": [
+          "Landing Pages",
+          "Institutional Sites",
+          "CRO"
+        ],
+        "icon": "layout"
       },
       {
-        "category": "SEO & Authority",
+        "category": "SEO & Google Ranking",
         "description": "Dominate Google searches. We position your brand as the market leader to attract qualified organic traffic.",
-        "items": ["Technical SEO", "Content Marketing", "Google Business Profile"]
+        "items": [
+          "Technical SEO",
+          "Content Marketing",
+          "Google Business Profile"
+        ],
+        "icon": "search"
       },
       {
-        "category": "Automation & CRM",
+        "category": "Automations & CRM",
         "description": "Never lose a lead. We implement automations that nurture your contacts and increase sales efficiency.",
-        "items": ["CRM Setup", "Email Marketing", "Chatbots"]
+        "items": [
+          "CRM Setup",
+          "Email Marketing",
+          "Chatbots"
+        ],
+        "icon": "zap"
       }
     ]
   },
@@ -79,12 +123,94 @@
     "viewButton": "View all works",
     "viewAllProjects": "View All Projects",
     "items": [
-      {"id": 1, "slug": "steez-drink", "title": "Steez Drink", "category": "E-COMMERCE", "description": "Minimalist website for a low-carb beverage brand with age verification and integrated payment system.", "image": "/images/works/work_banner_steez-min.png", "year": "2023", "clientName": "Steez", "tags": ["Vercel", "Next.js", "E-commerce"]},
-      {"id": 2, "slug": "turbinou-insta", "title": "TurbinouInsta", "category": "E-COMMERCE", "description": "Complete platform for Instagram influence marketing, with payment system and metrics dashboard.", "image": "/images/works/work_banner_turbinouinsta-min.png", "year": "2022", "clientName": "TurbinouInsta", "tags": ["Digital Marketing", "Web App"]},
-      {"id": 3, "slug": "pppi", "title": "PPPI - Trademark Registration", "category": "BRANDING", "description": "Institutional website for a company specialized in trademark registration and protection, with online consultation system.", "image": "/images/works/work_banner_pppi-min.png", "year": "2024", "clientName": "PPPI", "tags": ["WordPress", "Branding"]},
-      {"id": 4, "slug": "flikta", "title": "Flikta", "category": "SAAS", "description": "Platform for managing campaigns with influencers, with AI optimization and real-time ROI metrics.", "image": "/images/works/work_banner_flikta-min.png", "year": "2024", "clientName": "Flikta", "tags": ["SaaS", "Next.js", "AI"]},
-      {"id": 5, "slug": "ponte-americas", "title": "Ponte Américas", "category": "LANDING PAGE", "description": "Modern landing page for a logistics and international trade company connecting the Americas.", "image": "/images/works/work_banner_ponteamericas-min.png", "year": "2025", "clientName": "Ponte Américas", "tags": ["Landing Page", "Next.js", "Corporate"]},
-      {"id": 6, "slug": "pandami", "title": "Pandami", "category": "AI SAAS", "description": "AI-powered visagism platform that analyzes facial features to recommend personalized hairstyles and beauty treatments.", "image": "/images/works/work_banner_pandami-min.png", "year": "2025", "clientName": "Pandami", "tags": ["AI", "SaaS", "Beauty Tech"]}
+      {
+        "id": 1,
+        "slug": "steez-drink",
+        "title": "Steez Drink",
+        "category": "E-COMMERCE",
+        "description": "Minimalist website for a low-carb beverage brand with age verification and integrated payment system.",
+        "image": "/images/works/work_banner_steez-min.png",
+        "year": "2023",
+        "clientName": "Steez",
+        "tags": [
+          "Vercel",
+          "Next.js",
+          "E-commerce"
+        ]
+      },
+      {
+        "id": 2,
+        "slug": "turbinou-insta",
+        "title": "TurbinouInsta",
+        "category": "E-COMMERCE",
+        "description": "Complete platform for Instagram influence marketing, with payment system and metrics dashboard.",
+        "image": "/images/works/work_banner_turbinouinsta-min.png",
+        "year": "2022",
+        "clientName": "TurbinouInsta",
+        "tags": [
+          "Digital Marketing",
+          "Web App"
+        ]
+      },
+      {
+        "id": 3,
+        "slug": "pppi",
+        "title": "PPPI - Trademark Registration",
+        "category": "BRANDING",
+        "description": "Institutional website for a company specialized in trademark registration and protection, with online consultation system.",
+        "image": "/images/works/work_banner_pppi-min.png",
+        "year": "2024",
+        "clientName": "PPPI",
+        "tags": [
+          "WordPress",
+          "Branding"
+        ]
+      },
+      {
+        "id": 4,
+        "slug": "flikta",
+        "title": "Flikta",
+        "category": "SAAS",
+        "description": "Platform for managing campaigns with influencers, with AI optimization and real-time ROI metrics.",
+        "image": "/images/works/work_banner_flikta-min.png",
+        "year": "2024",
+        "clientName": "Flikta",
+        "tags": [
+          "SaaS",
+          "Next.js",
+          "AI"
+        ]
+      },
+      {
+        "id": 5,
+        "slug": "ponte-americas",
+        "title": "Ponte Américas",
+        "category": "LANDING PAGE",
+        "description": "Modern landing page for a logistics and international trade company connecting the Americas.",
+        "image": "/images/works/work_banner_ponteamericas-min.png",
+        "year": "2025",
+        "clientName": "Ponte Américas",
+        "tags": [
+          "Landing Page",
+          "Next.js",
+          "Corporate"
+        ]
+      },
+      {
+        "id": 6,
+        "slug": "pandami",
+        "title": "Pandami",
+        "category": "AI SAAS",
+        "description": "AI-powered visagism platform that analyzes facial features to recommend personalized hairstyles and beauty treatments.",
+        "image": "/images/works/work_banner_pandami-min.png",
+        "year": "2025",
+        "clientName": "Pandami",
+        "tags": [
+          "AI",
+          "SaaS",
+          "Beauty Tech"
+        ]
+      }
     ]
   },
   "notFound": {
@@ -99,25 +225,40 @@
     "uiux": {
       "title": "Lead Generation",
       "description": "Complete client acquisition systems. We ensure a steady flow of opportunities.",
-      "tags": ["Ads", "Funnels", "Social"]
+      "tags": [
+        "Ads",
+        "Funnels",
+        "Social"
+      ]
     },
     "development": {
       "title": "High-Converting Sites",
       "description": "Development focused on turning visitors into paying clients.",
-      "tags": ["Landing Pages", "Institutional", "Speed"]
+      "tags": [
+        "Landing Pages",
+        "Institutional",
+        "Speed"
+      ]
     },
     "branding": {
       "title": "SEO & Authority",
       "description": "Strategic positioning so your business is found by those who need it.",
-      "tags": ["Google", "Content", "Local"]
+      "tags": [
+        "Google",
+        "Content",
+        "Local"
+      ]
     },
     "growth": {
       "title": "Automation",
       "description": "Automatic processes to nurture leads and close more sales.",
-      "tags": ["CRM", "Email", "Chat"]
+      "tags": [
+        "CRM",
+        "Email",
+        "Chat"
+      ]
     }
   },
-
   "faq": {
     "sectionLabel": "Common Questions",
     "title": "Details & Logistics.",
@@ -190,7 +331,11 @@
     "resources": "Resources",
     "socials": "Socials",
     "socialTitle": "Social",
-    "socialLinks": ["Instagram", "Twitter", "LinkedIn"],
+    "socialLinks": [
+      "Instagram",
+      "Twitter",
+      "LinkedIn"
+    ],
     "home": "Home",
     "work": "Work",
     "services": "Services",
@@ -300,7 +445,11 @@
     "title": "How We Generate Leads",
     "subtitle": "to grow your business.",
     "description": "The method tested in over 200 projects",
-    "marquee": ["STRATEGY", "EXECUTION", "RESULTS"],
+    "marquee": [
+      "STRATEGY",
+      "EXECUTION",
+      "RESULTS"
+    ],
     "steps": [
       {
         "id": "01",
@@ -403,55 +552,82 @@
   },
   "about": {
     "hook": {
-      "title": "I don't sell pretty websites.",
-      "subtitle": "People don't buy from me because I know code. They buy from me because I engineer <span class=\"text-white font-bold border-b border-[#C0392B]\">reality-bending sales funnels</span>.",
-      "text1": "If you are looking for a \"yes man\" to build a template, close this tab.",
-      "text2": "My clients partner with me because they know one thing: <strong>I double revenue.</strong>",
-      "text3": "I deliver digital products so dopaminergic, with copy so visceral and design so aggressive, that it doesn't just attract leads—it fascinates them. It converts violently. From complex nutraceuticals to high-load SaaS applications, I build engines for scalability."
+      "title": "We don't sell pretty websites.",
+      "subtitle": "Zarp Studio was born after some years working in multinational companies, like <span class=\"text-white font-medium\">Google</span> and <span class=\"text-white font-medium\">RDStation</span>, experiencing marketing up close, immersing in technology, positioning, and digital growth in different markets, one thing became clear...",
+      "text1": "Most agencies sell you a website and disappear. <strong>We're not most agencies.</strong>",
+      "text2": "We're the team that puts your company on <span class=\"text-white border-b border-white/30 pb-0.5\">Google's first page</span>, drives qualified leads to your door, and builds the complete funnel that turns browsers into buyers.",
+      "text3": "Beautiful design? Sure. But only if it makes your phone ring and your bank account grow. <strong>Making it clear: We don't sell pretty websites, we generate leads for your business. That's our mission.</strong>"
     },
     "philosophy": {
-      "label": "The Philosophy",
+      "label": "Our Approach",
+      "title": "Strategy First.\nExecution Second.",
+      "text1": "Most agencies focus on deliverables. We focus on results.",
+      "text2": "Every campaign, every landing page, every automation serves one purpose: <strong>Generating qualified leads that convert.</strong>",
+      "text3": "We operate at the intersection of data-driven marketing and human psychology. Whether it's Google Ads, Meta campaigns, or SEO, our goal is to create systems that consistently deliver leads. We don't just build funnels; we engineer revenue growth."
+    },
+    "copywriting": {
+      "label": "Our Approach to Copy",
       "title": "Code is Cheap.\nPsychology is Expensive.",
-      "text1": "Most agencies focus on the tool. I focus on the mind.",
-      "text2": "Every pixel I place and every line of code I write serves a singular purpose: <strong>Scaling the Offer.</strong>",
-      "text3": "I operate at the intersection of IEEE-standard engineering precision and raw human emotion. Whether it's a high-ticket funnel or a mobile app, the goal is to trigger a biological response in the user. We don't want them to just browse; we want them to feel a compulsion to act."
+      "subtitle": "At Zarp Studio, our copywriting is in service of conversions. We strive to engineer every word for maximum impact.",
+      "cards": [
+        {
+          "title": "Customer-First Language",
+          "boldStatement": "Your customers are why you exist.",
+          "description": "We write in their language, address their pain points, and speak to their desires. Every headline is designed for them. Every CTA is crafted to remove friction. When customers don't convert, we rewrite until they do."
+        },
+        {
+          "title": "Conversion Velocity",
+          "boldStatement": "We operate with extreme urgency.",
+          "description": "Speed matters in marketing. We test copy variations rapidly, iterate based on data, and optimize without compromising quality. When conversion rates drop, we fix them immediately. Our words are built for impact, not ego."
+        },
+        {
+          "title": "Trust Through Clarity",
+          "boldStatement": "Trust is hard earned and easily lost.",
+          "description": "We never use manipulative tactics or false scarcity. Our copy is honest, transparent, and builds genuine trust. We approach messaging thoughtfully, ensuring every claim is backed by value—because trust converts better than tricks."
+        },
+        {
+          "title": "Data-Driven Storytelling",
+          "boldStatement": "We only follow the crowd when they're right.",
+          "description": "We use A/B testing, heat maps, and user behavior data to inform every word. Our bold messaging often breaks industry norms—and we do what converts best for your customers, even if it hasn't been done before."
+        }
+      ]
     },
     "ventures": {
-      "label": "Skin in the Game",
-      "title": "I don't just build for clients.\nI build businesses.",
+      "label": "Our Team",
+      "title": "We practice what we preach.\nWe build and scale businesses.",
       "zarpy": {
         "name": "Zarpy",
         "role": "Partner & Tech Lead",
-        "description": "Revolutionizing logistics and mobility. We don't just move things; we engineer the flow of commerce."
+        "description": "Revolutionizing logistics with technology. We apply the same growth strategies we use for clients to scale our own ventures."
       },
       "pppi": {
         "name": "PPPI",
         "role": "Strategic Partner",
-        "description": "High-level industrial solutions. Complex engineering meets digital efficiency."
+        "description": "Industrial solutions powered by digital efficiency. Real-world proof that our systems work at scale."
       },
       "pandami": {
         "name": "Pandami",
-        "role": "Co-Founder",
-        "description": "A digital ecosystem built for scale. From MVP to market dominance."
+        "role": "Co-Founded",
+        "description": "From MVP to market leader. A testament to our ability to build and scale digital ecosystems."
       }
     },
     "origin": {
-      "title": "Origin & Foundations",
+      "title": "Our Foundation",
       "fromAcre": {
-        "title": "From Acre to Floripa",
-        "description": "Born in Acre, forged in resilience. I moved to Florianópolis, Brazil's Silicon Island, to immerse myself in the heart of technology. This journey from the deep Amazon to a tech capital defines my approach: grounded, resilient, yet relentlessly futuristic."
+        "title": "Based in Orlando",
+        "description": "Operating from Orlando, Florida, our team combines global marketing expertise with deep understanding of the US market. We've worked with companies across North America and internationally, delivering lead generation systems that drive real results."
       },
       "ieee": {
-        "title": "IEEE Standards",
-        "description": "I support and adhere to IEEE (Institute of Electrical and Electronics Engineers) standards. My work isn't just \"creative\"; it's engineered. It's built on protocols that ensure stability, security, and scalability."
+        "title": "Technical Excellence",
+        "description": "Our development follows industry best practices and engineering standards. Every system we build is designed for stability, security, and scalability—because your lead generation can't afford downtime."
       },
       "pillars": {
-        "title": "The Unseen Pillars",
-        "description": "My leadership is quietly guided by the principles of the Order of DeMolay—loyalty, comradeship, and fidelity. Spiritually, I find balance in Spiritism, which keeps my ego in check and my empathy for the end-user high. I build for people, not just for metrics."
+        "title": "Our Values",
+        "description": "We're guided by transparency, results-driven execution, and genuine partnership with our clients. We build for sustainable growth, not quick wins. Our success is measured by your ROI, not our portfolio."
       }
     },
     "cta": {
-      "title": "Ready to Dominate?",
+      "title": "Ready to Scale Your Leads?",
       "button": "Start The Project"
     }
   },
@@ -495,5 +671,4 @@
       "description": "Join the team that generates millions in leads for clients. We seek talent obsessed with results and growth."
     }
   }
-
 }

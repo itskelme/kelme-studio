@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "@remixicon/react";
 import { Button } from "@/presentation/components/atoms/ui/button";
-import { LanguageSelector } from "@/presentation/components/molecules/language-selector";
+import { LanguageSelector } from "@/presentation/components/molecules/home/language-selector";
 import { Link } from "@/i18n/navigation";
 import { NavItem, MegaDropdown } from "@/presentation/components/organisms/page-layout/navbar-components/mega-dropdown";
 import { useTranslations, useMessages } from "next-intl";

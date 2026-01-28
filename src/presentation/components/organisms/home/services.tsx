@@ -1,24 +1,29 @@
 "use client"
 
 import React from "react"
-import { RiLayoutMasonryLine, RiCodeSSlashLine, RiPenNibLine, RiRocket2Line } from "@remixicon/react"
+import { RiTargetLine, RiLayoutLine, RiSearchLine, RiFlashlightLine, RiRocket2Line } from "@remixicon/react"
 import { useMessages, useTranslations } from 'next-intl'
 import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 
-const iconMap: Record<string, React.ReactElement> = {
-  "UI/UX Design": <RiLayoutMasonryLine className="w-6 h-6" />,
-  Development: <RiCodeSSlashLine className="w-6 h-6" />,
-  Desenvolvimento: <RiCodeSSlashLine className="w-6 h-6" />,
-  Branding: <RiPenNibLine className="w-6 h-6" />,
-  Growth: <RiRocket2Line className="w-6 h-6" />,
-  Crescimento: <RiRocket2Line className="w-6 h-6" />,
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  target: RiTargetLine,
+  layout: RiLayoutLine,
+  search: RiSearchLine,
+  zap: RiFlashlightLine,
+}
+
+interface Service {
+  category: string
+  description: string
+  items: string[]
+  icon: string
 }
 
 export function Services() {
   const messages: any = useMessages()
   const t = useTranslations()
-  const services: { number: string; category: string; description: string; items: string[] }[] = messages.services.list
+  const services: Service[] = messages.services.list
 
   return (
     <section id="services" className="py-32 border-b border-white/10 bg-black relative">
@@ -36,31 +41,55 @@ export function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10 border border-white/10">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-black p-12 group hover:bg-surface transition-colors duration-500"
-            >
-              <div className="mb-6 text-white/50 group-hover:text-white transition-colors">
-                {iconMap[service.category] || <RiCodeSSlashLine className="w-6 h-6" />}
-              </div>
-              <h4 className="text-2xl font-oswald uppercase font-bold mb-4">{service.category}</h4>
-              <p className="text-secondary mb-8 text-sm leading-relaxed max-w-sm">
-                {service.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {service.items.slice(0, 3).map((tag) => (
-                  <span key={tag} className="text-xs border border-white/10 px-2 py-1 uppercase tracking-wider text-secondary rounded-none">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          {services.map((service, index) => {
+            const IconComponent = iconMap[service.icon] || RiTargetLine
+            
+            return (
+              <motion.div
+                key={service.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-black p-12 group hover:bg-white/5 transition-all duration-500 relative overflow-hidden cursor-pointer"
+              >
+                {/* Hover gradient effect */}
+                <div className="absolute inset-0 bg-linear-to-br from-white/0 via-white/0 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  <motion.div 
+                    className="mb-6 text-white/40 group-hover:text-white transition-all duration-500"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <IconComponent className="w-8 h-8" />
+                  </motion.div>
+                  
+                  <h4 className="text-2xl font-oswald uppercase font-bold mb-4 group-hover:text-white transition-colors duration-300">
+                    {service.category}
+                  </h4>
+                  
+                  <p className="text-secondary mb-8 text-sm leading-relaxed max-w-sm group-hover:text-white/80 transition-colors duration-300">
+                    {service.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {service.items.slice(0, 3).map((tag, tagIndex) => (
+                      <motion.span 
+                        key={tag}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 + tagIndex * 0.05 }}
+                        className="text-xs border border-white/10 px-3 py-1.5 uppercase tracking-wider text-secondary rounded-none group-hover:border-white/30 group-hover:text-white/90 transition-all duration-300"
+                      >
+                        {tag}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
         <div className="mt-16 text-center">
           <Link 

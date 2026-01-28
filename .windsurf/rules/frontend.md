@@ -1,5 +1,5 @@
 ---
-trigger: glob
+trigger: always_on
 globs: **/*.ts, **/*.tsx, **/*.js, **/*.jsx
 ---
 
@@ -28,7 +28,7 @@ Senior Next.js 16 developer with React 19, TypeScript strict mode, and Clean Arc
 | **UI**        | ShadCN UI, Magic UI (magicui.design), Remix Icons              |
 | **Data**      | SWR, Axios, Server Actions                                     |
 | **State**     | Zustand (persistence only), React Hook Form + Zod              |
-| **i18n**      | next-intl (pt/en)                                              |
+| **i18n**      | next-intl (always english is the prefered and primary reference language)                                              |
   
 ---  
   
@@ -295,7 +295,8 @@ All library documentation available through **Context7 MCP**. Reference URLs for
 ### Configuration  
   
 - Use next-intl for multi-language support  
-- Supported locales: Portuguese (pt), English (en)  
+- Review supported locales via messages folder's files
+- The en.ts is the dictionary SSOT 
 - Locale files organized by feature/domain  
 - Server-side locale detection  
   

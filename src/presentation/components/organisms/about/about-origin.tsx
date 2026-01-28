@@ -22,8 +22,7 @@ export function AboutOrigin() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <div className="lg:col-span-4">
             <h2 className="font-display text-4xl font-bold uppercase mb-8">
-              {origin.title.split('&')[0]} <span className="text-[#C0392B]">&</span> <br />
-              {origin.title.split('&')[1]}
+              {origin.title}
             </h2>
             <div className="w-12 h-1 bg-[#C0392B] mb-8" />
           </div>
