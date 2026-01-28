@@ -5,6 +5,7 @@ import { CareersPositions } from "@/presentation/components/organisms/careers/ca
 import { CareersForm } from "@/presentation/components/organisms/careers/careers-form";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
+import { MainLayout } from "@/presentation/components/templates";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -33,18 +34,20 @@ export default async function CareersPage({
   setRequestLocale(locale);
   
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden pt-32 pb-20">
-      {/* Background Ambience */}
-      <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <CareersHero />
+    <MainLayout>
+      <section className="min-h-screen bg-black relative overflow-hidden pt-32 pb-20">
+        {/* Background Ambience */}
+        <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          <CareersPositions />
-          <CareersForm />
+        <div className="container mx-auto px-6 relative z-10">
+          <CareersHero />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <CareersPositions />
+            <CareersForm />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </MainLayout>
   );
 }

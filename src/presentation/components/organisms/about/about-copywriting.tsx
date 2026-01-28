@@ -14,7 +14,7 @@ export function AboutCopywriting() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mb-16 max-w-3xl">
-          <h3 className="text-[#C0392B] font-bold tracking-widest uppercase mb-6 text-sm">
+          <h3 className="text-accent font-bold tracking-widest uppercase mb-6 text-sm">
             {copywriting.label}
           </h3>
           <h2 
@@ -38,7 +38,7 @@ export function AboutCopywriting() {
               className="group"
             >
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold uppercase mb-4 text-white group-hover:text-[#C0392B] transition-colors duration-300">
+              <h3 className="text-xl md:text-2xl font-bold uppercase mb-4 text-white group-hover:text-accent transition-colors duration-300">
                 {card.title}
               </h3>
 

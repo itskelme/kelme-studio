@@ -7,18 +7,24 @@
  * Email addresses
  */
 export const CONTACT_EMAIL = {
-  primary: 'hello@zarp.studio',
-  alternative: 'contato@kelmestudio.com',
+  primary: 'info@zarpstudio.com',
+  brazil: 'info@zarpstudio.com',
 } as const;
 
 /**
  * Phone numbers
  */
 export const CONTACT_PHONE = {
+  us: {
+    number: '+13213332825',
+    formatted: '+1 (321) 333-2825',
+    telUrl: 'tel:+13213332825',
+  },
   brazil: {
     number: '+55 48 99151-5420',
     formatted: '+55 48 99151-5420',
     whatsappUrl: 'https://wa.me/5548991515420',
+    telUrl: 'tel:+5548991515420',
   },
 } as const;
 
@@ -38,16 +44,15 @@ export const COMMUNITY_PLATFORMS = {
  */
 export const OFFICE_LOCATIONS = [
   {
-    id: 'florianopolis',
-    title: 'Florianópolis',
+    id: 'orlando',
+    title: 'Orlando',
     address: [
-      'Rua Exemplo, 123',
-      'Centro',
-      'Florianópolis - SC',
-      'Brasil',
+      'Orlando',
+      'Florida',
+      'United States',
     ],
-    phone: CONTACT_PHONE.brazil.number,
-    phoneHref: CONTACT_PHONE.brazil.whatsappUrl,
+    phone: CONTACT_PHONE.us.number,
+    phoneHref: CONTACT_PHONE.us.telUrl,
     whatsappHref: CONTACT_PHONE.brazil.whatsappUrl,
   },
 ] as const;

@@ -23,7 +23,7 @@ export function CommunityLeadMagnet() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 bg-white/5 border border-white/10 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden group">
           
           {/* Decorative "Exclusive" Tag */}
-          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-1.5 sm:gap-2 text-[#C0392B] text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-1.5 sm:gap-2 text-accent text-[10px] sm:text-xs font-bold uppercase tracking-widest">
             <RiLock2Line className="w-3 h-3 sm:w-4 sm:h-4" />
             <span>{community.badge}</span>
           </div>
@@ -95,8 +95,8 @@ export function CommunityLeadMagnet() {
                     This is exactly what I was stuck on. The value here is insane.
                   </p>
                 </div>
-                <div className="bg-white/5 p-2 sm:p-3 border-l-2 border-[#C0392B] max-w-[85%]">
-                  <p className="text-[9px] sm:text-[10px] text-[#C0392B] font-bold uppercase mb-1">
+                <div className="bg-white/5 p-2 sm:p-3 border-l-2 border-accent max-w-[85%]">
+                  <p className="text-[9px] sm:text-[10px] text-accent font-bold uppercase mb-1">
                     System <span className="text-white/30 text-[7px] sm:text-[8px] ml-1 sm:ml-2">BOT</span>
                   </p>
                   <p className="text-[10px] sm:text-xs text-gray-300 leading-tight">

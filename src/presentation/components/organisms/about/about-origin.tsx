@@ -24,13 +24,13 @@ export function AboutOrigin() {
             <h2 className="font-display text-4xl font-bold uppercase mb-8">
               {origin.title}
             </h2>
-            <div className="w-12 h-1 bg-[#C0392B] mb-8" />
+            <div className="w-12 h-1 bg-accent mb-8" />
           </div>
 
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <RiCompass3Fill className="w-6 h-6 text-[#C0392B] shrink-0 mt-1" />
+                <RiCompass3Fill className="w-6 h-6 text-accent shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold uppercase tracking-widest text-sm mb-2">
                     {origin.fromAcre.title}
@@ -42,7 +42,7 @@ export function AboutOrigin() {
               </div>
 
               <div className="flex items-start gap-4">
-                <RiFlashlightFill className="w-6 h-6 text-[#C0392B] shrink-0 mt-1" />
+                <RiFlashlightFill className="w-6 h-6 text-accent shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold uppercase tracking-widest text-sm mb-2">
                     {origin.ieee.title}
@@ -56,7 +56,7 @@ export function AboutOrigin() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <RiScales3Fill className="w-6 h-6 text-[#C0392B] shrink-0 mt-1" />
+                <RiScales3Fill className="w-6 h-6 text-accent shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold uppercase tracking-widest text-sm mb-2">
                     {origin.pillars.title}

@@ -3,15 +3,16 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { RiArrowRightLine, RiMailLine, RiMapPinLine, RiPhoneLine } from "@remixicon/react"
-import { useMessages, useTranslations } from "next-intl"
+import { useMessages, useTranslations, useLocale } from "next-intl"
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
-import { CONTACT_PHONE } from "@/lib/constants/contact"
+import { CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants/contact"
 import { Testimonials } from "@/presentation/components/organisms/home/testimonials"
 import { FAQ } from "@/presentation/components/organisms/home/faq"
 import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
+import { CallScheduler } from "./call-scheduler"
 
 const createFormSchema = (t: any) => z.object({
   name: z.string().min(2, { message: t("errors.nameRequired") }),
@@ -44,6 +45,8 @@ type FormValues = z.infer<ReturnType<typeof createFormSchema>>;
 
 export function ContactV2() {
   const t = useTranslations("contact")
+  const locale = useLocale();
+  const isEnglish = locale === "en";
   
   // Create schema with translations
   const formSchema = createFormSchema(t);
@@ -86,89 +89,116 @@ export function ContactV2() {
 
   return (
     <>
-      <section className="min-h-screen bg-black relative overflow-hidden pt-32 pb-20">
+      <section className="min-h-screen bg-black relative overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
         {/* Background Ambience */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#C0392B]/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[300px] sm:w-[450px] md:w-[600px] h-[300px] sm:h-[450px] md:h-[600px] bg-accent/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[250px] sm:w-[400px] md:w-[500px] h-[250px] sm:h-[400px] md:h-[500px] bg-white/5 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px] pointer-events-none" />
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start justify-center">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-24 items-start justify-center">
             
             {/* Left Column: Context */}
             <div className="w-full lg:w-5/12 lg:sticky lg:top-32">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               >
-                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#C0392B] mb-4">
+                <h2 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-accent mb-3 sm:mb-4">
                   {t("getInTouch")}
                 </h2>
-                <h1 className="font-display text-5xl md:text-7xl font-bold uppercase leading-[0.9] mb-8">
+                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold uppercase leading-[0.95] sm:leading-[0.9] mb-4 sm:mb-6 md:mb-8">
                   {t("formTitle")}
                 </h1>
                 
-                <p className="text-secondary text-lg leading-relaxed mb-12 max-w-md">
+                <p className="text-secondary text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 md:mb-12 max-w-md">
                   {t("formSubtitle")}
                 </p>
 
-                <div className="space-y-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
-                      <RiMailLine className="w-5 h-5 text-white" />
+                <div className="space-y-4 sm:space-y-6 md:space-y-8">
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className="flex items-start gap-3 sm:gap-4"
+                  >
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 border border-accent/30 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
+                      <RiMailLine className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-2">Email</h4>
-                      <a href="mailto:hello@zarp.studio" className="text-secondary hover:text-white transition-colors">
-                        hello@zarp.studio
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white mb-1 sm:mb-2">Email</h4>
+                      <a href={`mailto:${CONTACT_EMAIL.primary}`} className="text-secondary hover:text-accent transition-colors text-sm sm:text-base">
+                        {CONTACT_EMAIL.primary}
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
-                      <RiPhoneLine className="w-5 h-5 text-white" />
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    className="flex items-start gap-3 sm:gap-4"
+                  >
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 border border-accent/30 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
+                      <RiPhoneLine className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-2">
-                        {t("whatsapp")}
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white mb-1 sm:mb-2">
+                        {isEnglish ? t("callUs") : t("whatsapp")}
                       </h4>
-                      <a href={CONTACT_PHONE.brazil.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-white transition-colors">
-                        {CONTACT_PHONE.brazil.formatted}
+                      <a 
+                        href={isEnglish ? CONTACT_PHONE.us.telUrl : CONTACT_PHONE.brazil.whatsappUrl} 
+                        target={isEnglish ? undefined : "_blank"} 
+                        rel={isEnglish ? undefined : "noopener noreferrer"} 
+                        className="text-secondary hover:text-accent transition-colors text-sm sm:text-base"
+                      >
+                        {isEnglish ? CONTACT_PHONE.us.formatted : CONTACT_PHONE.brazil.formatted}
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 border border-white/20 flex items-center justify-center shrink-0">
-                      <RiMapPinLine className="w-5 h-5 text-white" />
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                    className="flex items-start gap-3 sm:gap-4"
+                  >
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 border border-accent/30 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
+                      <RiMapPinLine className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-2">
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white mb-1 sm:mb-2">
                         {t("ourOffices")}
                       </h4>
-                      <p className="text-secondary">
+                      <p className="text-secondary text-sm sm:text-base">
                         {t("city")} <br />
                         {t("country")}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
 
             {/* Right Column: Form */}
-            <div className="w-full lg:w-6/12 bg-[#0A0A0A] p-8 md:p-12 border border-white/5 rounded-2xl">
-              {!isSubmitted ? (
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              className="w-full lg:w-6/12 bg-[#0A0A0A] p-4 sm:p-6 md:p-8 lg:p-12 border border-white/5 rounded-xl sm:rounded-2xl"
+            >
+              {isEnglish ? (
+                <CallScheduler />
+              ) : !isSubmitted ? (
                 <motion.form 
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
                   onSubmit={handleSubmit(onSubmit)}
-                  className="flex flex-col gap-8"
+                  className="flex flex-col gap-5 sm:gap-6 md:gap-8"
                 >
                   <div className="group relative">
-                    <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'name' || hasValue('name') ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                    <label className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'name' || hasValue('name') ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                       {t("fullName")}
                     </label>
                     <Controller
@@ -178,7 +208,7 @@ export function ContactV2() {
                         <input
                           {...field}
                           type="text"
-                          className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-white transition-colors"
+                          className="w-full bg-transparent border-b border-white/20 py-2.5 sm:py-3 text-sm sm:text-base text-white focus:outline-none focus:border-accent transition-colors"
                           onFocus={() => handleFocus('name')}
                           onBlur={(e) => {
                             field.onBlur();
@@ -187,24 +217,24 @@ export function ContactV2() {
                         />
                       )}
                     />
-                    {errors.name && <span className="text-xs text-red-500 mt-1">{errors.name.message}</span>}
+                    {errors.name && <span className="text-[10px] sm:text-xs text-red-500 mt-1">{errors.name.message}</span>}
                   </div>
 
                   <div className="group">
-                    <label className="text-xs font-bold uppercase tracking-widest text-secondary block mb-4">
+                    <label className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-secondary block mb-3 sm:mb-4">
                       {t("contactMethod")}
                     </label>
-                    <div className="flex gap-4">
+                    <div className="flex gap-2 sm:gap-4">
                       <button
                         type="button"
                         onClick={() => {
                           setValue('contactMethod', 'whatsapp');
-                          setValue('contactValue', ''); // Clear value on switch
+                          setValue('contactValue', '');
                         }}
-                        className={`py-3 px-6 border text-sm uppercase tracking-wider transition-all duration-300 w-1/2 md:w-auto ${
+                        className={`py-2.5 sm:py-3 px-4 sm:px-6 border text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 flex-1 sm:flex-none ${
                            contactMethod === 'whatsapp' 
-                            ? 'bg-white text-black border-white' 
-                            : 'bg-transparent text-secondary border-white/20 hover:border-white hover:text-white'
+                            ? 'bg-accent text-white border-accent shadow-md shadow-accent/20' 
+                            : 'bg-transparent text-secondary border-white/20 hover:border-accent/50 hover:text-white'
                         }`}
                       >
                         WhatsApp
@@ -213,12 +243,12 @@ export function ContactV2() {
                         type="button"
                         onClick={() => {
                            setValue('contactMethod', 'email');
-                           setValue('contactValue', ''); // Clear value on switch
+                           setValue('contactValue', '');
                         }}
-                        className={`py-3 px-6 border text-sm uppercase tracking-wider transition-all duration-300 w-1/2 md:w-auto ${
+                        className={`py-2.5 sm:py-3 px-4 sm:px-6 border text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 flex-1 sm:flex-none ${
                            contactMethod === 'email' 
-                            ? 'bg-white text-black border-white' 
-                            : 'bg-transparent text-secondary border-white/20 hover:border-white hover:text-white'
+                            ? 'bg-accent text-white border-accent shadow-md shadow-accent/20' 
+                            : 'bg-transparent text-secondary border-white/20 hover:border-accent/50 hover:text-white'
                         }`}
                       >
                         Email
@@ -229,7 +259,7 @@ export function ContactV2() {
                   <div className="group relative">
                     {contactMethod === 'whatsapp' ? (
                       <div className="phone-input-container">
-                        <label className={`text-xs font-bold uppercase tracking-widest block mb-2 text-secondary`}>
+                        <label className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-1.5 sm:mb-2 text-secondary`}>
                           WhatsApp
                         </label>
                         <Controller
@@ -240,9 +270,9 @@ export function ContactV2() {
                               defaultCountry="BR"
                               value={value}
                               onChange={onChange}
-                              className="bg-transparent border-b border-white/20 py-3 text-white focus-within:border-white transition-colors flex items-center"
+                              className="bg-transparent border-b border-white/20 py-2.5 sm:py-3 text-white focus-within:border-accent transition-colors flex items-center"
                               numberInputProps={{
-                                className: "bg-transparent border-none text-white focus:outline-none w-full ml-2 placeholder-white/30 h-full",
+                                className: "bg-transparent border-none text-sm sm:text-base text-white focus:outline-none w-full ml-2 placeholder-white/30 h-full",
                               }}
                             />
                           )}
@@ -276,7 +306,7 @@ export function ContactV2() {
                       </div>
                     ) : (
                       <>
-                        <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'contactValue' || hasValue('contactValue') ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                        <label className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'contactValue' || hasValue('contactValue') ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                           Email
                         </label>
                         <Controller
@@ -286,7 +316,7 @@ export function ContactV2() {
                             <input
                               {...field}
                               type="email"
-                              className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-white transition-colors"
+                              className="w-full bg-transparent border-b border-white/20 py-2.5 sm:py-3 text-sm sm:text-base text-white focus:outline-none focus:border-accent transition-colors"
                               onFocus={() => handleFocus('contactValue')}
                               onBlur={(e) => {
                                 field.onBlur();
@@ -297,14 +327,14 @@ export function ContactV2() {
                         />
                       </>
                     )}
-                    {errors.contactValue && <span className="text-xs text-red-500 mt-1">{errors.contactValue.message}</span>}
+                    {errors.contactValue && <span className="text-[10px] sm:text-xs text-red-500 mt-1">{errors.contactValue.message}</span>}
                   </div>
 
                   <div className="group">
-                    <label className="text-xs font-bold uppercase tracking-widest text-[#27D182] block mb-4">
+                    <label className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent block mb-3 sm:mb-4">
                       {t("budget")} (Opcional)
                     </label>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
                       {budgetOptions.map((opt) => (
                         <button
                           key={opt.value}
@@ -313,10 +343,10 @@ export function ContactV2() {
                              const current = watch('budget');
                              setValue('budget', current === opt.value ? '' : opt.value);
                           }}
-                          className={`py-2 px-2 border text-[11px] md:text-xs uppercase tracking-wider transition-all duration-300 ${
+                          className={`py-2 sm:py-2.5 px-2 border text-[10px] sm:text-xs uppercase tracking-wider transition-all duration-300 rounded-sm ${
                             watch('budget') === opt.value 
-                              ? 'bg-white text-black border-white' 
-                              : 'bg-transparent text-secondary border-white/20 hover:border-white hover:text-white'
+                              ? 'bg-accent text-white border-accent shadow-md shadow-accent/20' 
+                              : 'bg-transparent text-secondary border-white/20 hover:border-accent/50 hover:text-white'
                           }`}
                         >
                           {opt.label}
@@ -326,7 +356,7 @@ export function ContactV2() {
                   </div>
 
                   <div className="group relative">
-                    <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'message' || hasValue('message') ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                    <label className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'message' || hasValue('message') ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                       {t("aboutProject")}
                     </label>
                     <Controller
@@ -335,8 +365,8 @@ export function ContactV2() {
                       render={({ field }) => (
                          <textarea
                           {...field}
-                          rows={4}
-                          className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-white transition-colors resize-none"
+                          rows={3}
+                          className="w-full bg-transparent border-b border-white/20 py-2.5 sm:py-3 text-sm sm:text-base text-white focus:outline-none focus:border-accent transition-colors resize-none"
                           onFocus={() => handleFocus('message')}
                           onBlur={(e) => {
                             field.onBlur();
@@ -345,43 +375,49 @@ export function ContactV2() {
                         />
                       )}
                     />
-                    {errors.message && <span className="text-xs text-red-500 mt-1">{errors.message.message}</span>}
+                    {errors.message && <span className="text-[10px] sm:text-xs text-red-500 mt-1">{errors.message.message}</span>}
                   </div>
 
-                  <div className="flex justify-end pt-4">
+                  <div className="flex justify-end pt-3 sm:pt-4">
                     <button 
                       type="submit"
-                      className="bg-[#C0392B] text-white px-10 py-4 text-sm uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-3 w-full md:w-auto justify-center"
+                      className="bg-accent text-white px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center shadow-lg shadow-accent/20"
                     >
                       <span>{t("sendMessage")}</span>
-                      <RiArrowRightLine className="w-4 h-4" />
+                      <RiArrowRightLine className="w-3 h-3 sm:w-4 sm:h-4" />
                     </button>
                   </div>
                 </motion.form>
               ) : (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="h-full flex flex-col items-center justify-center text-center p-12 min-h-[400px]"
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  className="flex flex-col items-center justify-center text-center p-6 sm:p-10 md:p-12 min-h-[350px] sm:min-h-[400px]"
                 >
-                  <div className="w-20 h-20 bg-[#27D182] flex items-center justify-center mb-6 text-black rounded-full">
-                    <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <motion.div 
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                    className="w-16 h-16 sm:w-20 sm:h-20 bg-accent flex items-center justify-center mb-5 sm:mb-6 text-white rounded-full shadow-lg shadow-accent/30"
+                  >
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                  </div>
-                  <h3 className="text-3xl font-display font-bold uppercase mb-4">{t("successTitle")}</h3>
-                  <p className="text-secondary max-w-md">
+                  </motion.div>
+                  <h3 className="text-2xl sm:text-3xl font-display font-bold uppercase mb-3 sm:mb-4">{t("successTitle")}</h3>
+                  <p className="text-secondary max-w-md text-sm sm:text-base">
                     {t("successMessage")}
                   </p>
                   <button 
                     onClick={() => setIsSubmitted(false)}
-                    className="mt-8 text-sm uppercase tracking-widest border-b border-white pb-1 hover:text-[#27D182]"
+                    className="mt-6 sm:mt-8 text-xs sm:text-sm uppercase tracking-widest border-b border-white/50 pb-1 hover:text-accent hover:border-accent transition-colors"
                   >
                     {t("sendAnother")}
                   </button>
                 </motion.div>
               )}
-            </div>
+            </motion.div>
 
           </div>
         </div>

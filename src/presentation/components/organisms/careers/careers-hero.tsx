@@ -14,7 +14,7 @@ export function CareersHero() {
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-xs font-bold uppercase tracking-[0.2em] text-[#C0392B] mb-4"
+        className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4"
       >
         {careers.label}
       </motion.h2>

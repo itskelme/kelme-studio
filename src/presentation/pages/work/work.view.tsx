@@ -38,7 +38,7 @@ const ProjectCard = ({ project, index }: { project: WorkPageProps["projects"][0]
 
         <div className="relative z-10">
           <div className="flex justify-between items-start mb-4 border-b border-white/10 pb-4">
-            <span className="text-[#C0392B] text-xs font-bold uppercase tracking-widest">
+            <span className="text-accent text-xs font-bold uppercase tracking-widest">
               {project.client}
             </span>
             <span className="text-secondary text-xs font-bold uppercase tracking-widest">
@@ -86,8 +86,8 @@ export function WorkPageView({ projects, messages }: WorkPageProps & { messages:
               transition={{ delay: 0.2 }}
               className="flex items-center gap-4 mb-6"
             >
-              <div className="w-12 h-px bg-[#C0392B]" />
-              <span className="text-[#C0392B] text-xs font-bold uppercase tracking-[0.2em]">
+              <div className="w-12 h-px bg-accent" />
+              <span className="text-accent text-xs font-bold uppercase tracking-[0.2em]">
                 {messages.sectionLabel}
               </span>
             </motion.div>
@@ -99,7 +99,7 @@ export function WorkPageView({ projects, messages }: WorkPageProps & { messages:
               className="font-display text-6xl md:text-8xl font-bold uppercase leading-[0.9] text-white mb-8"
             >
               {messages.sectionTitle}
-              <span className="text-[#C0392B]">.</span>
+              <span className="text-accent">.</span>
             </motion.h2>
             
             <motion.p 

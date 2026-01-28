@@ -5,6 +5,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { AppLocale, routing } from '@/i18n/routing';
 import { WorkPageView } from "@/presentation/pages/work";
 import type { WorkProject } from "@/presentation/pages/work";
+import { MainLayout } from "@/presentation/components/templates";
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -51,8 +52,8 @@ export default async function WorkPage({
   };
   
   return (
-    <main>
+    <MainLayout>
       <WorkPageView projects={projects} messages={messages} />
-    </main>
+    </MainLayout>
   );
 }

@@ -11,7 +11,7 @@ export function AboutHero() {
 
   return (
     <section className="relative pt-40 pb-20 md:pt-60 md:pb-40 px-6 border-b border-white/10">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#C0392B] opacity-[0.03] blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent opacity-[0.03] blur-[150px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto relative z-10">
         <motion.div 
@@ -22,7 +22,7 @@ export function AboutHero() {
         >
           <h1 className="font-display text-6xl md:text-8xl font-bold uppercase leading-[0.9] mb-12">
             {hook.title.split('.')[0]}. <br />
-            <span className="text-secondary line-through decoration-[#C0392B] decoration-4">
+            <span className="text-secondary line-through decoration-accent decoration-4">
               {hook.title.split('.')[1]}.
             </span>
           </h1>

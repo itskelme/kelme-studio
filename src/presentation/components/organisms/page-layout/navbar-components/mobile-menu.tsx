@@ -270,7 +270,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           transition={{ delay: 0.5 }}
         >
           <Link href="/contact" onClick={onClose}>
-            <div className="text-4xl font-oswald uppercase font-bold tracking-tighter text-[#C0392B] hover:text-[#C0392B]/80 transition-colors text-center">
+            <div className="text-4xl font-oswald uppercase font-bold tracking-tighter text-accent hover:text-accent/80 transition-colors text-center">
               {letsTalkLabel}
             </div>
           </Link>

@@ -47,7 +47,7 @@ export function CareersPositions() {
             className="group cursor-pointer"
           >
             <div className="flex justify-between items-start mb-2">
-              <span className="text-xs font-bold text-[#C0392B] uppercase tracking-widest">{role.department}</span>
+              <span className="text-xs font-bold text-accent uppercase tracking-widest">{role.department}</span>
               <RiAddLine className="text-secondary group-hover:text-white transition-colors" />
             </div>
             <h4 className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors mb-1">

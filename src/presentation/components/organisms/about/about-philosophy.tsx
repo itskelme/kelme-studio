@@ -25,7 +25,7 @@ export function AboutPhilosophy() {
         </div>
         
         <div className="lg:w-1/2 p-12 md:p-24 flex flex-col justify-center bg-surface">
-          <h3 className="text-[#C0392B] font-bold tracking-widest uppercase mb-6 text-sm">
+          <h3 className="text-accent font-bold tracking-widest uppercase mb-6 text-sm">
             {philosophy.label}
           </h3>
           <h2 

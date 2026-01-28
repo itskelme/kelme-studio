@@ -1,14 +1,16 @@
 "use client"
 
-import { useMessages } from 'next-intl'
+import { useMessages, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { motion } from "framer-motion"
-import { RiMailLine, RiWhatsappLine } from "@remixicon/react";
+import { RiMailLine, RiWhatsappLine, RiPhoneLine } from "@remixicon/react";
 import { getSocialIcon, getSocialUrl } from '@/lib/constants/social-media';
 import { CONTACT_EMAIL, CONTACT_PHONE, getEmailHref } from '@/lib/constants/contact';
 
 export function Footer() {
   const messages: any = useMessages()
+  const locale = useLocale();
+  const isEnglish = locale === "en";
   const f = messages.footer
   
   const containerVariants = {
@@ -73,17 +75,29 @@ export function Footer() {
 								</span>
 								<RiMailLine className="w-5 h-5" />
 							</a>
-							<a
-								href={CONTACT_PHONE.brazil.whatsappUrl}
-								target="_blank"
-								rel="noreferrer"
-								className="group flex items-center justify-between border border-white/20 px-6 py-4 bg-white/5 hover:bg-[#25D366] hover:border-[#25D366] hover:text-black transition-all duration-300"
-							>
-								<span className="text-sm uppercase tracking-widest font-bold">
-									{f.whatsapp || "WhatsApp"}
-								</span>
-								<RiWhatsappLine className="w-5 h-5" />
-							</a>
+							{isEnglish ? (
+								<a
+									href={CONTACT_PHONE.us.telUrl}
+									className="group flex items-center justify-between border border-white/20 px-6 py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-300"
+								>
+									<span className="text-sm uppercase tracking-widest font-bold">
+										{f.callUs || "Call Us"}
+									</span>
+									<RiPhoneLine className="w-5 h-5" />
+								</a>
+							) : (
+								<a
+									href={CONTACT_PHONE.brazil.whatsappUrl}
+									target="_blank"
+									rel="noreferrer"
+									className="group flex items-center justify-between border border-white/20 px-6 py-4 bg-white/5 hover:bg-[#25D366] hover:border-[#25D366] hover:text-black transition-all duration-300"
+								>
+									<span className="text-sm uppercase tracking-widest font-bold">
+										{f.whatsapp || "WhatsApp"}
+									</span>
+									<RiWhatsappLine className="w-5 h-5" />
+								</a>
+							)}
 						</motion.div>
 					</div>
 
@@ -161,7 +175,7 @@ export function Footer() {
 										href="/#faq"
 										className="hover:text-white transition-colors block w-max"
 									>
-										FAQ
+										{f.faq || "FAQ"}
 									</a>
 								</li>
 								<li>
@@ -235,12 +249,12 @@ export function Footer() {
 							{f.privacyPolicy || "Privacy Policy"}
 						</Link>
 						<Link href="/terms" className="hover:text-white transition-colors">
-							{f.termsOfUse || "Terms of Service"}
+							{f.termsOfService || "Terms of Service"}
 						</Link>
 					</div>
 					<div className="flex gap-1">
-						<span>© 2026 ZARP STUDIO. All rights reserved.</span>{" "}
-						<span className="text-white">Designed in the Dark.</span>
+						<span>{f.copyright || "© 2026 ZARP STUDIO. All rights reserved."}</span>{" "}
+						<span className="text-white">{f.tagline || "Designed in the Dark."}</span>
 					</div>
 				</div>
 			</div>

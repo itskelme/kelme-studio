@@ -24,7 +24,7 @@ export function AboutCTA() {
         
         <Link 
           href="/contact"
-          className="inline-flex items-center gap-4 bg-white text-black px-12 py-6 text-lg uppercase tracking-widest font-bold hover:bg-[#C0392B] hover:text-white transition-all duration-300"
+          className="inline-flex items-center gap-4 bg-white text-black px-12 py-6 text-lg uppercase tracking-widest font-bold hover:bg-accent hover:text-white transition-all duration-300"
         >
           {cta.button} <RiArrowRightLine />
         </Link>

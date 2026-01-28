@@ -1,3 +1,5 @@
+import { EXTERNAL_LINKS } from "@/lib/constants/links";
+
 export interface WorkDetail {
   id: string;
   slug: string;
@@ -33,7 +35,7 @@ export const works: WorkDetail[] = [
     solution: "We engineered a headless e-commerce solution using Next.js and Shopify. The design utilizes deep blacks and vibrant typography to pop the product cans. We implemented a custom age-gate that remembers the user's choice without nagging, and a one-page checkout flow that dramatically increased conversion rates compared to standard templates.",
     services: ["UI/UX Design", "Full Stack Development", "E-commerce Strategy"],
     stack: ["Next.js", "Shopify Storefront API", "Tailwind CSS", "Vercel"],
-    link: "https://steez-drink.com", // Placeholder if real link unknown, but using structure
+    link: EXTERNAL_LINKS.STEEZ_DRINK,
     images: [
        { src: "/images/works/work_banner_steez-min.png", alt: "Steez Homepage", colSpan: 2 },
        // Placeholders for now, will start with hero reused
@@ -70,7 +72,7 @@ export const works: WorkDetail[] = [
     solution: "We created a refined, professional, yet modern identity. The website features a step-by-step interactive consultation form that qualifies leads before they reach a human. The design inspires trust through typography and structure, moving away from the dusty law firm aesthetic.",
     services: ["Brand Identity", "Web Design", "WordPress Development"],
     stack: ["WordPress", "PHP", "Custom Theme", "GSAP"],
-    link: "https://pppi.com.br",
+    link: EXTERNAL_LINKS.PPPI,
     images: [
         { src: "/images/works/work_banner_pppi-min.png", alt: "PPPI Homepage", colSpan: 2 }
     ]
@@ -88,7 +90,7 @@ export const works: WorkDetail[] = [
     solution: "We designed a dark-mode, data-rich dashboard that aggregates metrics from API integrations. The interface uses data visualization best practices to make complex trends obvious at a glance. AI algorithms suggest optimizations in real-time.",
     services: ["SaaS Product Design", "Frontend Implementation", "Data Visualization"],
     stack: ["Next.js", "Recharts", "OpenAI API", "Tailwind CSS"],
-    link: "https://flikta.com",
+    link: EXTERNAL_LINKS.FLIKTA,
     images: [
         { src: "/images/works/work_banner_flikta-min.png", alt: "Flikta Analytics", colSpan: 2 }
     ]
@@ -106,7 +108,7 @@ export const works: WorkDetail[] = [
     solution: "We built a high-performance landing page with scroll-triggered animations that tell the story of a seamless logistics chain. Usage of map visualizations and clean iconography communicates their reach without needing walls of text.",
     services: ["Landing Page Design", "Copywriting", "Development"],
     stack: ["Next.js", "Framer Motion", "React Hook Form"],
-    link: "https://ponteamericas.com",
+    link: EXTERNAL_LINKS.PONTE_AMERICAS,
     images: [
         { src: "/images/works/work_banner_ponteamericas-min.png", alt: "Hero Section", colSpan: 2 }
     ]
@@ -124,7 +126,7 @@ export const works: WorkDetail[] = [
     solution: "We created a mobile-first web app that feels like a native application. The scan interface is intuitive, and the results page presents recommendations with high-quality imagery and clear explanations. The branding balances tech-minimalism with beauty-industry elegance.",
     services: ["Product Strategy", "UI/UX Design", "Full Stack Development"],
     stack: ["Next.js", "TensorFlow.js", "PWA", "Tailwind CSS"],
-    link: "https://pandami.ai",
+    link: EXTERNAL_LINKS.PANDAMI,
     images: [
         { src: "/images/works/work_banner_pandami-min.png", alt: "Scanning Interface", colSpan: 2 }
     ]

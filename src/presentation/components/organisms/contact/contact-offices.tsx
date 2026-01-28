@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl";
 import { MapPin, Phone } from "lucide-react";
 
+import { CONTACT_PHONE } from "@/lib/constants/contact";
+
 /**
  * Componente que exibe os escritórios da empresa
  */
@@ -18,7 +20,7 @@ export function ContactOffices() {
         </p>
       </header>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
         {offices.map((office, index) => (
           <OfficeCard 
             key={index}
@@ -26,6 +28,7 @@ export function ContactOffices() {
             address={office.address}
             phone={office.phone}
             phoneHref={office.phoneHref}
+            whatsappHref={office.whatsappHref}
           />
         ))}
       </div>
@@ -36,18 +39,22 @@ export function ContactOffices() {
 /**
  * Dados dos escritórios
  */
-const offices = [
+const offices: {
+  titleKey: string;
+  address: string[];
+  phone: string;
+  phoneHref: string;
+  whatsappHref?: string;
+}[] = [
   {
-    titleKey: "florianopolis",
+    titleKey: "florianopolis", // This key maps to "Orlando, Florida" in the i18n files now
     address: [
-      "ImpactHub - Passeio Primavera",
-      "Rod. José Carlos Daux, 4150",
-      "Florianópolis, SC",
-      "Brasil"
+      "Orlando",
+      "Florida",
+      "United States"
     ],
-    phone: "+55 48 99151-5420",
-    phoneHref: "https://wa.me/5548991515420",
-    whatsappHref: "https://wa.me/5548991515420"
+    phone: CONTACT_PHONE.us.formatted,
+    phoneHref: CONTACT_PHONE.us.telUrl,
   }
 ];
 

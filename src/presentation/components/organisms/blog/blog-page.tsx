@@ -88,7 +88,7 @@ export function BlogV2() {
   return (
     <section className="min-h-screen bg-black relative overflow-hidden pt-32 pb-20">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#C0392B]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10">
         
@@ -97,7 +97,7 @@ export function BlogV2() {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-bold uppercase tracking-[0.2em] text-[#C0392B] mb-4"
+            className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4"
           >
             Insights & Articles
           </motion.h2>
@@ -107,7 +107,7 @@ export function BlogV2() {
             transition={{ delay: 0.1 }}
             className="font-display text-6xl md:text-8xl font-bold uppercase leading-[0.9] text-white mb-8"
           >
-            Blog<span className="text-[#C0392B]">.</span>
+            Blog<span className="text-accent">.</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -150,12 +150,12 @@ export function BlogV2() {
                   alt={featuredPost.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute top-4 left-4 bg-[#C0392B] text-white text-xs font-bold uppercase px-3 py-1 tracking-widest">
+                <div className="absolute top-4 left-4 bg-accent text-white text-xs font-bold uppercase px-3 py-1 tracking-widest">
                   Featured
                 </div>
               </div>
               <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <span className="text-[#C0392B] text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="text-accent text-xs font-bold uppercase tracking-widest mb-4">
                   {featuredPost.category}
                 </span>
                 <h3 className="font-display text-3xl md:text-4xl font-bold uppercase leading-tight mb-4 group-hover:text-gray-300 transition-colors">
@@ -202,7 +202,7 @@ export function BlogV2() {
                   />
                 </div>
               </div>
-              <span className="text-[#C0392B] text-xs font-bold uppercase tracking-widest block mb-3">
+              <span className="text-accent text-xs font-bold uppercase tracking-widest block mb-3">
                 {post.category}
               </span>
               <h3 className="font-display text-xl font-bold uppercase leading-tight mb-3 group-hover:text-gray-300 transition-colors">
@@ -226,7 +226,7 @@ export function BlogV2() {
         {/* Newsletter CTA */}
         <div className="mt-32 border border-white/10 bg-white/5 p-12 text-center">
           <h3 className="font-display text-3xl md:text-4xl font-bold uppercase mb-4">
-            Stay Updated<span className="text-[#C0392B]">.</span>
+            Stay Updated<span className="text-accent">.</span>
           </h3>
           <p className="text-secondary mb-8 max-w-xl mx-auto">
             Receba insights exclusivos sobre design, desenvolvimento e estratégia digital diretamente no seu email.
@@ -237,7 +237,7 @@ export function BlogV2() {
               placeholder="seu@email.com"
               className="flex-1 bg-transparent border border-white/20 px-6 py-3 text-white placeholder:text-secondary focus:outline-none focus:border-white transition-colors"
             />
-            <button className="bg-white text-black px-8 py-3 text-sm uppercase tracking-widest font-bold hover:bg-[#C0392B] hover:text-white transition-all">
+            <button className="bg-white text-black px-8 py-3 text-sm uppercase tracking-widest font-bold hover:bg-accent hover:text-white transition-all">
               Subscribe
             </button>
           </div>

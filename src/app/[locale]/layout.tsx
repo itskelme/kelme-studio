@@ -8,8 +8,6 @@ import { Metadata } from 'next';
 import { AppLocale, locales } from '@/i18n/routing';
 import { generatePageMetadata } from '@/lib/metadata';
 import { CustomCursor } from '@/presentation/components/atoms/custom-cursor';
-import { Navbar } from '@/presentation/components/organisms/page-layout/navbar';
-import { Footer } from '@/presentation/components/organisms/page-layout/footer';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -41,6 +39,12 @@ export async function generateMetadata({
   });
 }
 
+/**
+ * Root Layout - Base HTML structure only
+ * Navbar/Footer are handled by route group layouts:
+ * - (main) - includes Navbar + Footer
+ * - (immersive) - no Navbar/Footer (e.g., work project details)
+ */
 export default async function RootLayout({ 
   children,
   params 
@@ -56,9 +60,7 @@ export default async function RootLayout({
       <body className="font-sans bg-black text-gray-100 overflow-x-hidden">
         <CustomCursor />
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
           {children}
-          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

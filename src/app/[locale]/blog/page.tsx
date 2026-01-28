@@ -3,6 +3,7 @@ import { AppLocale, routing } from "@/i18n/routing";
 import { BlogV2 } from "@/presentation/components/organisms/blog/blog-page";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
+import { MainLayout } from "@/presentation/components/templates";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -30,5 +31,9 @@ export default async function BlogPage({
   const { locale } = await params;
   setRequestLocale(locale);
   
-  return <BlogV2 />;
+  return (
+    <MainLayout>
+      <BlogV2 />
+    </MainLayout>
+  );
 }

@@ -3,6 +3,7 @@ import { AppLocale, routing } from "@/i18n/routing";
 import { ContactV2 } from "@/presentation/components/organisms/contact/contact-v2";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
+import { MainLayout } from "@/presentation/components/templates";
 
 // Permite SSG para cada locale
 export function generateStaticParams() {
@@ -61,5 +62,9 @@ export default async function ContactPage({
   const { locale } = await params;
   setRequestLocale(locale);
   
-  return <ContactV2 />;
+  return (
+    <MainLayout>
+      <ContactV2 />
+    </MainLayout>
+  );
 }

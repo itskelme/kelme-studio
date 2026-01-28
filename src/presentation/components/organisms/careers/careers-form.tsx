@@ -54,7 +54,7 @@ export function CareersForm() {
             {/* Name & Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="group relative">
-                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'name' || formState.name ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'name' || formState.name ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                   {careers.fullName} *
                 </label>
                 <input 
@@ -67,7 +67,7 @@ export function CareersForm() {
                 />
               </div>
               <div className="group relative">
-                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'email' || formState.email ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'email' || formState.email ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                   {careers.emailAddress} *
                 </label>
                 <input 
@@ -84,7 +84,7 @@ export function CareersForm() {
             {/* WhatsApp & Area */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="group relative">
-                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'whatsapp' || formState.whatsapp ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'whatsapp' || formState.whatsapp ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                   {careers.whatsapp} *
                 </label>
                 <input 
@@ -118,7 +118,7 @@ export function CareersForm() {
             {/* LinkedIn & Portfolio */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="group relative">
-                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'linkedin' || formState.linkedin ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'linkedin' || formState.linkedin ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                   {careers.linkedinUrl} *
                 </label>
                 <div className="relative">
@@ -134,7 +134,7 @@ export function CareersForm() {
                 </div>
               </div>
               <div className="group relative">
-                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'portfolio' || formState.portfolio ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+                <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'portfolio' || formState.portfolio ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                   {careers.portfolioUrl}
                 </label>
                 <input 
@@ -149,7 +149,7 @@ export function CareersForm() {
 
             {/* Salary */}
             <div className="group relative">
-              <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'salary' || formState.salary ? '-top-3 text-[#C0392B] text-[10px]' : 'top-3 text-secondary'}`}>
+              <label className={`text-xs font-bold uppercase tracking-widest absolute transition-all duration-300 ${activeField === 'salary' || formState.salary ? '-top-3 text-accent text-[10px]' : 'top-3 text-secondary'}`}>
                 {careers.salaryExpectations} *
               </label>
               <input 
@@ -169,7 +169,7 @@ export function CareersForm() {
               </label>
               <label className="flex flex-col items-center justify-center w-full h-32 border border-white/20 border-dashed hover:border-white hover:bg-white/5 transition-all cursor-pointer group/upload">
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                  <RiUploadCloud2Line className="w-8 h-8 mb-3 text-secondary group-hover/upload:text-[#C0392B] transition-colors" />
+                  <RiUploadCloud2Line className="w-8 h-8 mb-3 text-secondary group-hover/upload:text-accent transition-colors" />
                   <p className="text-xs text-secondary uppercase tracking-wider">
                     {formState.cv ? formState.cv.name : <span className="group-hover/upload:text-white transition-colors">{careers.uploadText}</span>}
                   </p>
@@ -183,7 +183,7 @@ export function CareersForm() {
             <div className="flex justify-end pt-4">
               <button 
                 type="submit"
-                className="bg-white text-black px-12 py-4 text-sm uppercase tracking-widest font-bold hover:bg-[#C0392B] hover:text-white transition-all duration-300 flex items-center gap-3"
+                className="bg-white text-black px-12 py-4 text-sm uppercase tracking-widest font-bold hover:bg-accent hover:text-white transition-all duration-300 flex items-center gap-3"
               >
                 <span>{careers.submitApplication}</span>
                 <RiArrowRightLine className="w-4 h-4" />

@@ -57,10 +57,10 @@ export function Founder() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full md:w-7/12 relative"
           >
-            <div className="absolute -top-12 right-0 w-20 h-20 border-t-4 border-r-4 border-[#C0392B] opacity-80 hidden md:block" />
+            <div className="absolute -top-12 right-0 w-20 h-20 border-t-4 border-r-4 border-accent opacity-80 hidden md:block" />
 
             <h2 className="font-oswald text-5xl md:text-7xl font-bold uppercase leading-[0.9] mb-8">
-              {f.greeting} <span className="text-[#C0392B]">{f.name}</span>
+              {f.greeting} <span className="text-accent">{f.name}</span>
             </h2>
 
             <div className="space-y-6 text-secondary text-lg md:text-xl font-light leading-relaxed">
@@ -69,7 +69,7 @@ export function Founder() {
               ))}
 
               {f.quote && (
-                <div className="py-6 my-6 border-l-2 border-[#C0392B] pl-8 bg-white/5">
+                <div className="py-6 my-6 border-l-2 border-accent pl-8 bg-white/5">
                   <p className="text-white italic text-xl font-serif">
                     "{f.quote}"
                   </p>
@@ -81,13 +81,13 @@ export function Founder() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
                     href="/#work" 
-                    className="inline-block border border-[#C0392B] text-[#C0392B] px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-[#C0392B] hover:text-white transition-colors rounded-none text-center"
+                    className="inline-block border border-accent text-accent px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-accent hover:text-white transition-colors rounded-none text-center"
                   >
                     {f.cta || "See Our Results"}
                   </Link>
                   <Link 
                     href="/contact" 
-                    className="inline-block bg-[#C0392B] text-white px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-red-700 transition-colors rounded-none text-center"
+                    className="inline-block bg-accent text-white px-8 py-4 text-sm uppercase tracking-widest font-bold hover:bg-accent/80 transition-colors rounded-none text-center"
                   >
                     {messages.hero.buttons?.talkToDiego || "Start Project"}
                   </Link>

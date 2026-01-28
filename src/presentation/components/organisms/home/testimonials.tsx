@@ -26,7 +26,7 @@ export function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#C0392B] mb-4">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
               {testimonials.sectionLabel}
             </h2>
             <h3 className="font-display text-5xl md:text-7xl font-bold uppercase leading-none text-white">
@@ -58,12 +58,12 @@ export function Testimonials() {
               className="group relative bg-white/5 border border-white/10 p-8 flex flex-col justify-between hover:bg-white/10 hover:border-white/20 transition-all duration-300"
             >
               {/* Metric Badge */}
-              <div className="absolute top-0 right-0 bg-[#C0392B] text-white text-[10px] font-bold uppercase px-3 py-1 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold uppercase px-3 py-1 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {item.metric}
               </div>
 
               <div>
-                <div className="flex gap-1 mb-6 text-[#C0392B]">
+                <div className="flex gap-1 mb-6 text-accent">
                   {[...Array(5)].map((_, i) => (
                     <RiStarFill key={i} className="w-4 h-4" />
                   ))}
