@@ -18,7 +18,7 @@ export function SalesCTA() {
     <section className="relative py-24 bg-black border-t border-b border-white/10 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-[#27D182] opacity-[0.03] blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-accent opacity-[0.03] blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-6 relative">
@@ -29,16 +29,15 @@ export function SalesCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full lg:w-[65%] bg-white/5 border-2 border-[#27D182]/30 hover:border-[#27D182] p-8 md:p-12 relative overflow-hidden group transition-all duration-300"
+            className="w-full lg:w-[65%] bg-white/5 border-2 border-accent/30 hover:border-accent p-8 md:p-12 relative overflow-hidden group transition-all duration-300"
           >
-            {/* Badge */}
-            <div className="absolute top-4 right-4 flex items-center gap-2 text-[#27D182] text-xs font-bold uppercase tracking-widest">
+            <div className="absolute top-4 right-4 flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest">
               <RiSparklingLine className="w-4 h-4" />
               <span>{salesCta.badge}</span>
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-[#27D182] font-bold tracking-widest uppercase mb-4 text-sm">
+              <h3 className="text-accent font-bold tracking-widest uppercase mb-4 text-sm">
                 {salesCta.label}
               </h3>
               <h2 className="font-oswald text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[0.9] text-white mb-6">
@@ -55,8 +54,8 @@ export function SalesCTA() {
               <div className="space-y-3 mb-8">
                 {salesCta.benefits.map((benefit: string, index: number) => (
                   <div key={index} className="flex items-center gap-3 text-white/80">
-                    <div className="w-5 h-5 rounded-full bg-[#27D182]/20 flex items-center justify-center shrink-0">
-                      <RiCheckLine className="w-3 h-3 text-[#27D182]" />
+                    <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                      <RiCheckLine className="w-3 h-3 text-accent" />
                     </div>
                     <span className="text-sm">{benefit}</span>
                   </div>
@@ -65,7 +64,7 @@ export function SalesCTA() {
               
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-3 bg-[#27D182] hover:bg-[#1fb56d] text-black px-8 py-4 text-sm uppercase tracking-widest font-bold transition-all group/btn"
+                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/80 text-black px-8 py-4 text-sm uppercase tracking-widest font-bold transition-all group/btn"
               >
                 <RiCalendarLine className="w-5 h-5" />
                 <span>{salesCta.primaryCta}</span>
@@ -74,7 +73,7 @@ export function SalesCTA() {
             </div>
 
             {/* Decorative gradient overlay */}
-            <div className="absolute inset-0 bg-linear-to-br from-[#27D182]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
           </motion.div>
 
           {/* Secondary CTA - Referral Program */}

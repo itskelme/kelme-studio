@@ -32,11 +32,11 @@ export function Services() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-20">
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-4">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
             {t("services.label", { default: "What We Do" })}
           </h2>
           <h3 className="font-oswald text-5xl md:text-7xl font-bold uppercase leading-none">
-            {messages.services.sectionTitle}<span className="text-secondary">.</span>
+            {messages.services.sectionTitle}<span className="text-accent">.</span>
           </h3>
         </div>
 
@@ -58,14 +58,14 @@ export function Services() {
                 
                 <div className="relative z-10">
                   <motion.div 
-                    className="mb-6 text-white/40 group-hover:text-white transition-all duration-500"
+                    className="mb-6 text-accent/60 group-hover:text-accent transition-all duration-500"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <IconComponent className="w-8 h-8" />
                   </motion.div>
                   
-                  <h4 className="text-2xl font-oswald uppercase font-bold mb-4 group-hover:text-white transition-colors duration-300">
+                  <h4 className="text-2xl font-oswald uppercase font-bold mb-4 group-hover:text-accent transition-colors duration-300">
                     {service.category}
                   </h4>
                   
@@ -80,7 +80,7 @@ export function Services() {
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 + tagIndex * 0.05 }}
-                        className="text-xs border border-white/10 px-3 py-1.5 uppercase tracking-wider text-secondary rounded-none group-hover:border-white/30 group-hover:text-white/90 transition-all duration-300"
+                        className="text-xs border border-white/10 px-3 py-1.5 uppercase tracking-wider text-secondary rounded-none group-hover:border-accent/50 group-hover:text-accent transition-all duration-300"
                       >
                         {tag}
                       </motion.span>

@@ -209,15 +209,8 @@ export function CallScheduler() {
         t={t} 
       />
 
-      {/* Mobile Step Label */}
-      <div className="sm:hidden text-center">
-        <p className="text-xs uppercase tracking-widest text-accent font-bold">
-          {t("step")} {step}: {t(STEPS[step - 1].labelKey)}
-        </p>
-      </div>
-
       {/* Form */}
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 sm:gap-6 mt-2">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-6">
         <AnimatePresence mode="wait" custom={direction}>
           {step === 1 && (
             <motion.div

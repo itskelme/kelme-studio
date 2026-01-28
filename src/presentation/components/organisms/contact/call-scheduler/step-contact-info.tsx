@@ -130,17 +130,17 @@ export function ContactInfoStep({
           <label className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-secondary block mb-1.5 sm:mb-2">
             {t("phone")} *
           </label>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
             {/* Country Selector */}
             <Controller
               name="phoneCountry"
               control={control}
               render={({ field }) => (
-                <div className="relative">
+                <div className="relative shrink-0">
                   <select
                     {...field}
                     onChange={(e) => onCountryChange(e.target.value as CountryCode)}
-                    className="appearance-none bg-white/5 border border-white/20 hover:border-accent/50 focus:border-accent rounded-lg px-3 py-2.5 sm:py-3 text-sm text-white focus:outline-none cursor-pointer transition-all duration-200 pr-8"
+                    className="w-full sm:w-auto appearance-none bg-white/5 border border-white/20 hover:border-accent/50 focus:border-accent rounded-lg px-2 sm:px-3 py-2.5 sm:py-3 text-xs sm:text-sm text-white focus:outline-none cursor-pointer transition-all duration-200 pr-7 sm:pr-8"
                   >
                     {variant === "br" ? (
                       <>

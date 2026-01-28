@@ -21,11 +21,11 @@ export function FAQ() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-4">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
               {faq.sectionLabel}
             </h2>
             <h3 className="font-display text-5xl md:text-7xl font-bold uppercase leading-none mb-6">
-              {faq.title}
+              {faq.title}<span className="text-accent">?</span>
             </h3>
           </div>
 
@@ -40,7 +40,7 @@ export function FAQ() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="border border-white/10 bg-white/5 overflow-hidden"
+                  className={`border bg-white/5 overflow-hidden transition-colors ${isOpen ? 'border-accent/50' : 'border-white/10'}`}
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -49,7 +49,7 @@ export function FAQ() {
                     <span className="font-display text-lg md:text-xl font-bold uppercase text-white pr-4">
                       {item.question}
                     </span>
-                    <span className="shrink-0 w-8 h-8 flex items-center justify-center border border-white/20 text-white">
+                    <span className={`shrink-0 w-8 h-8 flex items-center justify-center border transition-colors ${isOpen ? 'border-accent bg-accent text-white' : 'border-white/20 text-white hover:border-accent hover:text-accent'}`}>
                       {isOpen ? (
                         <RiSubtractLine className="w-5 h-5" />
                       ) : (

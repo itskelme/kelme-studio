@@ -63,7 +63,7 @@
     },
     "subtitle": "We build complete lead generation systems. From paid traffic to optimized funnels, we put qualified customers in front of your business every single day.",
     "buttons": {
-      "talkToDiego": "Start Project",
+      "talkToDiego": "Book a Free Call",
       "viewWork": "View Work"
     },
     "scrollToExplore": "Scroll to explore"
@@ -261,7 +261,7 @@
   },
   "faq": {
     "sectionLabel": "Common Questions",
-    "title": "Details & Logistics.",
+    "title": "Still have questions",
     "cantFind": "Can't find what you're looking for?",
     "emailUs": "Email us directly.",
     "questions": [
@@ -357,7 +357,7 @@
     "work": "Work",
     "services": "Services",
     "pricing": "Pricing",
-    "insights": "Insights",
+    "insights": "Learning Content",
     "careers": "Careers",
     "brandAssets": "Brand Assets",
     "privacyPolicy": "Privacy Policy",
@@ -497,9 +497,9 @@
     }
   },
   "contact": {
-    "formTitle": "Schedule a Call",
-    "formSubtitle": "Book a time to discuss your project and discover how we can bring your vision to life.",
-    "getInTouch": "Get In Touch",
+    "formTitle": "Book a Call",
+    "formSubtitle": "Let's have a time to discuss your website traffic and discover how we can bring new leads to you everyday.",
+    "getInTouch": "It's free",
     "responseTime": "We'll respond within 24 hours",
     "ndaAvailable": "We sign NDAs if requested",
     "dedicatedTeam": "Access to dedicated specialists",

@@ -115,42 +115,42 @@ export function ContactV2() {
                   {t("formSubtitle")}
                 </p>
 
-                <div className="space-y-4 sm:space-y-6 md:space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                   <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="flex items-start gap-3 sm:gap-4"
+                    className="flex items-start gap-3"
                   >
                     <div className="w-8 h-8 sm:w-10 sm:h-10 border border-accent/30 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
                       <RiMailLine className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white mb-1 sm:mb-2">Email</h4>
-                      <a href={`mailto:${CONTACT_EMAIL.primary}`} className="text-secondary hover:text-accent transition-colors text-sm sm:text-base">
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white mb-1">Email</h4>
+                      <a href={`mailto:${CONTACT_EMAIL.primary}`} className="text-secondary hover:text-accent transition-colors text-xs sm:text-sm break-all">
                         {CONTACT_EMAIL.primary}
                       </a>
                     </div>
                   </motion.div>
 
                   <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
-                    className="flex items-start gap-3 sm:gap-4"
+                    className="flex items-start gap-3"
                   >
                     <div className="w-8 h-8 sm:w-10 sm:h-10 border border-accent/30 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
                       <RiPhoneLine className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white mb-1 sm:mb-2">
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white mb-1">
                         {isEnglish ? t("callUs") : t("whatsapp")}
                       </h4>
                       <a 
                         href={isEnglish ? CONTACT_PHONE.us.telUrl : CONTACT_PHONE.brazil.whatsappUrl} 
                         target={isEnglish ? undefined : "_blank"} 
                         rel={isEnglish ? undefined : "noopener noreferrer"} 
-                        className="text-secondary hover:text-accent transition-colors text-sm sm:text-base"
+                        className="text-secondary hover:text-accent transition-colors text-xs sm:text-sm"
                       >
                         {isEnglish ? CONTACT_PHONE.us.formatted : CONTACT_PHONE.brazil.formatted}
                       </a>
@@ -158,21 +158,20 @@ export function ContactV2() {
                   </motion.div>
 
                   <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
-                    className="flex items-start gap-3 sm:gap-4"
+                    className="flex items-start gap-3"
                   >
                     <div className="w-8 h-8 sm:w-10 sm:h-10 border border-accent/30 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
                       <RiMapPinLine className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white mb-1 sm:mb-2">
+                      <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white mb-1">
                         {t("ourOffices")}
                       </h4>
-                      <p className="text-secondary text-sm sm:text-base">
-                        {t("city")} <br />
-                        {t("country")}
+                      <p className="text-secondary text-xs sm:text-sm">
+                        {t("city")}, {t("country")}
                       </p>
                     </div>
                   </motion.div>
