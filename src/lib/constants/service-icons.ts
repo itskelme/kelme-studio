@@ -40,7 +40,7 @@ export type ServiceIconKey =
   | 'Email Marketing'
   | 'SEO'
   | 'Branding'
-  | 'UI/UX Research'
+  | 'UI/UX Design'
   | 'VSL'
   | 'Creative Ads';
 
@@ -60,7 +60,7 @@ export const SERVICE_ICONS: Record<ServiceIconKey, React.ComponentType<any>> = {
   "Email Marketing": RiMailLine,
   "SEO": RiSearchLine,
   "Branding": RiBrushLine,
-  "UI/UX Research": RiFigmaLine,
+  "UI/UX Design": RiFigmaLine,
   "VSL": RiVideoLine,
   "Creative Ads": RiPaintBrushLine
 };

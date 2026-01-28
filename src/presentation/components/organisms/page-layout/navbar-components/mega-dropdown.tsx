@@ -62,7 +62,7 @@ export const MegaDropdown: React.FC<MegaDropdownProps> = ({ isOpen, sections, on
 
   return (
     <div 
-      className="absolute top-full left-0 w-full bg-black/40 backdrop-blur-xl border-t border-white/10 py-8"
+      className="absolute top-full left-0 w-full bg-black/90 backdrop-blur-xl border-t border-white/10 py-8"
       onClick={() => onClose()}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

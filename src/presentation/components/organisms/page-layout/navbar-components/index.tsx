@@ -62,7 +62,7 @@ export function Navbar() {
 	}, [activeDropdown]);
 
 	// Define classes baseadas no estado de scroll com v2 styling
-	const containerClass = `fixed top-0 left-0 right-0 z-50 px-6 bg-black/50 transition-all duration-300  text-white ${isScrolled ? "py-4" : "py-6"}`;
+	const containerClass = `fixed top-0 left-0 right-0 z-50 px-6 bg-black/90 transition-all duration-300  text-white ${isScrolled ? "py-4" : "py-6"}`;
 
 	// Estilos embutidos com v2 design
 	const styles = {

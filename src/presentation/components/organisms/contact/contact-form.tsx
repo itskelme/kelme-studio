@@ -1,9 +1,66 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { GradientButton } from "@/presentation/components/atoms/ui/gradient-button";
 import { Check, AlertCircle } from "lucide-react";
+
+/**
+ * Phone format configuration per country
+ */
+const PHONE_CONFIG = {
+  BR: { code: "+55", maxDigits: 11, mask: "(##) #####-####", placeholder: "(11) 99999-9999" },
+  US: { code: "+1", maxDigits: 10, mask: "(###) ###-####", placeholder: "(555) 123-4567" },
+  PT: { code: "+351", maxDigits: 9, mask: "### ### ###", placeholder: "912 345 678" },
+} as const;
+
+type CountryCode = keyof typeof PHONE_CONFIG;
+
+/**
+ * Apply phone mask to input value
+ */
+function applyPhoneMask(value: string, country: CountryCode): string {
+  // Remove all non-digits
+  const digits = value.replace(/\D/g, "");
+  const config = PHONE_CONFIG[country];
+  
+  // Limit to max digits
+  const limitedDigits = digits.slice(0, config.maxDigits);
+  
+  // Apply mask
+  let result = "";
+  let digitIndex = 0;
+  
+  for (const char of config.mask) {
+    if (digitIndex >= limitedDigits.length) break;
+    if (char === "#") {
+      result += limitedDigits[digitIndex];
+      digitIndex++;
+    } else {
+      result += char;
+    }
+  }
+  
+  return result;
+}
+
+/**
+ * Form validation schema with Zod
+ */
+const createFormSchema = (t: ReturnType<typeof useTranslations>) => z.object({
+  fullName: z.string().min(2, { message: t("errors.nameRequired") }),
+  email: z.string().email({ message: t("errors.invalidEmail") }),
+  phone: z.string().optional(),
+  country: z.enum(["BR", "US", "PT"]).default("US"),
+  budget: z.string().min(1, { message: "Budget is required" }),
+  message: z.string().min(10, { message: t("errors.messageRequired") }),
+  signNDA: z.boolean().optional(),
+});
+
+type FormData = z.infer<ReturnType<typeof createFormSchema>>;
 
 /**
  * Estilos do formulário
@@ -17,8 +74,11 @@ const formStyles = {
   },
   label: "block text-sm font-medium mb-2 text-[#F7F7F7]",
   input: "w-full px-4 py-3 bg-[#0F0E0D] border border-[#27D182]/20 text-[#F7F7F7] placeholder-[#D7D7D7]/40 focus:outline-none focus:border-[#27D182] transition-colors rounded-none",
+  inputError: "w-full px-4 py-3 bg-[#0F0E0D] border border-red-500 text-[#F7F7F7] placeholder-[#D7D7D7]/40 focus:outline-none focus:border-red-400 transition-colors rounded-none",
   select: "w-full px-4 py-3 bg-[#0F0E0D] border border-[#27D182]/20 text-[#F7F7F7] focus:outline-none focus:border-[#27D182] transition-colors appearance-none rounded-none cursor-pointer",
-  checkbox: "w-5 h-5 border-2 border-[#27D182]/30 bg-[#0F0E0D] checked:bg-[#27D182] checked:border-[#27D182] focus:ring-2 focus:ring-[#27D182]/50 transition-all cursor-pointer rounded-none"
+  checkbox: "w-5 h-5 border-2 border-[#27D182]/30 bg-[#0F0E0D] checked:bg-[#27D182] checked:border-[#27D182] focus:ring-2 focus:ring-[#27D182]/50 transition-all cursor-pointer rounded-none",
+  errorText: "text-red-400 text-xs mt-1",
+  countrySelect: "w-24 px-2 py-3 bg-[#0F0E0D] border border-[#27D182]/20 border-r-0 text-[#F7F7F7] focus:outline-none focus:border-[#27D182] transition-colors rounded-none cursor-pointer"
 };
 
 /**
@@ -35,22 +95,84 @@ const formBenefits = [
  */
 export function ContactForm() {
   const t = useTranslations("contact");
-  const [isLoading, setIsLoading] = useState(false);
+  const formSchema = createFormSchema(t);
+  
+  const {
+    register,
+    handleSubmit,
+    control,
+    watch,
+    setValue,
+    reset,
+    formState: { errors, isSubmitting, isSubmitSuccessful }
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      country: "US",
+      budget: "",
+      message: "",
+      signNDA: false
+    }
+  });
+  
   const [formState, setFormState] = useState<"idle" | "success" | "error">("idle");
   
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
+  // Watch country and phone for real-time masking
+  const selectedCountry = watch("country") as CountryCode;
+  const phoneValue = watch("phone") || "";
+  
+  // Apply mask when phone value changes
+  useEffect(() => {
+    const maskedValue = applyPhoneMask(phoneValue, selectedCountry);
+    if (maskedValue !== phoneValue) {
+      setValue("phone", maskedValue, { shouldValidate: false });
+    }
+  }, [phoneValue, selectedCountry, setValue]);
+  
+  // Handle phone input with character limit
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value;
+    const config = PHONE_CONFIG[selectedCountry];
     
+    // Extract only digits
+    const digits = rawValue.replace(/\D/g, "");
+    
+    // Check if we're at max digits
+    if (digits.length <= config.maxDigits) {
+      const maskedValue = applyPhoneMask(rawValue, selectedCountry);
+      setValue("phone", maskedValue, { shouldValidate: true });
+    }
+    // If over limit, don't update (prevents typing)
+  };
+  
+  // Handle country change - reset phone
+  const handleCountryChange = (newCountry: CountryCode) => {
+    setValue("country", newCountry);
+    setValue("phone", "", { shouldValidate: false });
+  };
+  
+  const onSubmit = async (data: FormData) => {
     try {
+      // Format phone with country code
+      const config = PHONE_CONFIG[data.country as CountryCode];
+      const fullPhone = data.phone ? `${config.code} ${data.phone}` : "";
+      
+      console.log("Form submitted:", { ...data, phone: fullPhone });
+      
       // Simular envio do formulário (substitua por sua implementação real)
       await new Promise(resolve => setTimeout(resolve, 1500));
       setFormState("success");
     } catch (error) {
       setFormState("error");
-    } finally {
-      setIsLoading(false);
     }
+  };
+  
+  const resetForm = () => {
+    setFormState("idle");
+    reset();
   };
   
   return (
@@ -67,34 +189,91 @@ export function ContactForm() {
       </div>
       
       {formState === "success" ? (
-        <SuccessMessage resetForm={() => setFormState("idle")} />
+        <SuccessMessage resetForm={resetForm} />
       ) : formState === "error" ? (
-        <ErrorMessage resetForm={() => setFormState("idle")} />
+        <ErrorMessage resetForm={resetForm} />
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <FormField
-            id="fullName"
-            label={t("fullName")}
-            type="text"
-            required
-            placeholder={t("fullNamePlaceholder")}
-          />
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Full Name */}
+          <div>
+            <label htmlFor="fullName" className={formStyles.label}>
+              {t("fullName")} *
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              {...register("fullName")}
+              className={errors.fullName ? formStyles.inputError : formStyles.input}
+              placeholder={t("fullNamePlaceholder")}
+            />
+            {errors.fullName && (
+              <p className={formStyles.errorText}>{errors.fullName.message}</p>
+            )}
+          </div>
           
-          <FormField
-            id="email"
-            label={t("email")}
-            type="email"
-            required
-            placeholder={t("emailPlaceholder")}
-          />
+          {/* Email */}
+          <div>
+            <label htmlFor="email" className={formStyles.label}>
+              {t("email")} *
+            </label>
+            <input
+              type="email"
+              id="email"
+              {...register("email")}
+              className={errors.email ? formStyles.inputError : formStyles.input}
+              placeholder={t("emailPlaceholder")}
+            />
+            {errors.email && (
+              <p className={formStyles.errorText}>{errors.email.message}</p>
+            )}
+          </div>
           
-          <FormField
-            id="phone"
-            label={t("phone")}
-            type="tel"
-            placeholder={t("phonePlaceholder")}
-          />
+          {/* Phone with Country Selector */}
+          <div>
+            <label htmlFor="phone" className={formStyles.label}>
+              {t("phone")}
+            </label>
+            <div className="flex">
+              {/* Country Code Selector */}
+              <Controller
+                name="country"
+                control={control}
+                render={({ field }) => (
+                  <select
+                    {...field}
+                    onChange={(e) => handleCountryChange(e.target.value as CountryCode)}
+                    className={formStyles.countrySelect}
+                  >
+                    <option value="US">🇺🇸 +1</option>
+                    <option value="BR">🇧🇷 +55</option>
+                    <option value="PT">🇵🇹 +351</option>
+                  </select>
+                )}
+              />
+              
+              {/* Phone Input with Mask */}
+              <Controller
+                name="phone"
+                control={control}
+                render={({ field }) => (
+                  <input
+                    type="tel"
+                    id="phone"
+                    value={field.value}
+                    onChange={handlePhoneChange}
+                    onBlur={field.onBlur}
+                    className={`flex-1 ${formStyles.input} border-l-0`}
+                    placeholder={PHONE_CONFIG[selectedCountry].placeholder}
+                  />
+                )}
+              />
+            </div>
+            <p className="text-xs text-[#D7D7D7]/50 mt-1">
+              {PHONE_CONFIG[selectedCountry].maxDigits} digits max
+            </p>
+          </div>
           
+          {/* Budget */}
           <div>
             <label htmlFor="budget" className={formStyles.label}>
               {t("budget")} *
@@ -102,15 +281,15 @@ export function ContactForm() {
             <div className="relative">
               <select
                 id="budget"
-                required
+                {...register("budget")}
                 defaultValue=""
-                className={formStyles.select}
+                className={errors.budget ? formStyles.inputError : formStyles.select}
               >
                 <option value="" disabled>{t("selectBudget")}</option>
-                <option value="5000-15000">R$5.000 - R$15.000</option>
-                <option value="15000-30000">R$15.000 - R$30.000</option>
-                <option value="30000-50000">R$30.000 - R$50.000</option>
-                <option value="50000+">R$50.000+</option>
+                <option value="5000-15000">$5,000 - $15,000</option>
+                <option value="15000-30000">$15,000 - $30,000</option>
+                <option value="30000-50000">$30,000 - $50,000</option>
+                <option value="50000+">$50,000+</option>
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                 <svg className="w-5 h-5 text-[#27D182]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,26 +297,41 @@ export function ContactForm() {
                 </svg>
               </div>
             </div>
+            {errors.budget && (
+              <p className={formStyles.errorText}>{errors.budget.message}</p>
+            )}
           </div>
           
-          <FormField
-            id="message"
-            label={t("aboutProject")}
-            type="textarea"
-            required
-            placeholder={t("aboutProjectPlaceholder")}
-          />
+          {/* Message */}
+          <div>
+            <label htmlFor="message" className={formStyles.label}>
+              {t("aboutProject")} *
+            </label>
+            <textarea
+              id="message"
+              {...register("message")}
+              rows={4}
+              className={errors.message ? formStyles.inputError : formStyles.input}
+              placeholder={t("aboutProjectPlaceholder")}
+            />
+            {errors.message && (
+              <p className={formStyles.errorText}>{errors.message.message}</p>
+            )}
+          </div>
           
+          {/* NDA Checkbox */}
           <div>
             <label className="flex items-center space-x-3 hover:text-[#27D182] cursor-pointer transition-colors group">
               <input 
                 type="checkbox" 
+                {...register("signNDA")}
                 className={formStyles.checkbox} 
               />
               <span className="text-sm">{t("signNDA")}</span>
             </label>
           </div>
           
+          {/* Submit */}
           <div className="pt-4">
             <p className="text-xs text-[#D7D7D7] mb-6">
               {t("privacyNotice")} 
@@ -146,8 +340,8 @@ export function ContactForm() {
               </a>
             </p>
             
-            <GradientButton type="submit" className="w-full" disabled={isLoading}>
-              {isLoading 
+            <GradientButton type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting 
                 ? t("sending")
                 : t("sendMessage")
               }
@@ -169,44 +363,6 @@ function BenefitItem({ text }: { text: string }) {
         <span className="h-4 w-4 rounded-full bg-[#27D182]"></span>
       </span>
       <span className="text-[#F7F7F7]">{text}</span>
-    </div>
-  );
-}
-
-/**
- * Componente de campo de formulário padronizado
- */
-type FormFieldProps = {
-  id: string;
-  label: string;
-  type: "text" | "email" | "tel" | "textarea";
-  required?: boolean;
-  placeholder?: string;
-};
-
-function FormField({ id, label, type, required, placeholder }: FormFieldProps) {
-  return (
-    <div>
-      <label htmlFor={id} className={formStyles.label}>
-        {label} {required && "*"}
-      </label>
-      {type === "textarea" ? (
-        <textarea
-          id={id}
-          required={required}
-          rows={4}
-          className={formStyles.input}
-          placeholder={placeholder}
-        ></textarea>
-      ) : (
-        <input
-          type={type}
-          id={id}
-          required={required}
-          className={formStyles.input}
-          placeholder={placeholder}
-        />
-      )}
     </div>
   );
 }
